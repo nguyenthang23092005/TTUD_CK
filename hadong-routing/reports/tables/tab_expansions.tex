@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Chi phí tính toán mỗi truy vấn trên tập test (Python thuần, CPU; với RL là số bước suy luận chính sách).}
+\label{tab:tab_expansions}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrr}
+\toprule
+Thuật toán & Nút mở rộng TB & Thời gian TB (ms) & P90 (ms) \\
+\midrule
+Dijkstra & 1815.2 & 2.91 & 5.05 \\
+A* & 560.8 & 1.02 & 2.13 \\
+TD-Dijkstra & 1813.7 & 5.12 & 9.00 \\
+TD-A* (plan-once) & 1214.6 & 3.27 & 6.86 \\
+TD-A* (oracle) & 1449.1 & 4.10 & 7.71 \\
+Replan (tổng) & 36418.4 & 119.25 & 269.67 \\
+RL (số bước) & 138.6 & 69.92 & 110.29 \\
+RL+ctg (số bước) & 48.4 & 91.68 & 133.32 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

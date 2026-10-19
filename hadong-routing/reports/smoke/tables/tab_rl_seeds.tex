@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Kết quả RL theo seed (checkpoint tốt nhất theo val; cột Chọn: seed dùng cho bảng chính).}
+\label{tab:tab_rl_seeds}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrc}
+\toprule
+Biến thể & Seed & Bước & Val tới đích (\%) & Tốt nhất tại & Test tới đích (\%) & Test regret (\%) & Huấn luyện (phút) & Chọn \\
+\midrule
+RL cục bộ & 0 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 & x \\
+RL cục bộ & 1 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 &  \\
+RL + ctg (quan sát) & 0 & 3072 & 0.0 & 3072 & 10.0 & 35.43 & 0.2 & x \\
+RL + ctg (quan sát) & 1 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 &  \\
+RL + định hình ctg & 0 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 & x \\
+RL + định hình ctg & 1 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 &  \\
+RL cây-GNN & 0 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.3 & x \\
+RL cây-GNN & 1 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.3 &  \\
+RL LSTM & 0 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 & x \\
+RL LSTM & 1 & 3072 & 0.0 & 3072 & 0.0 & -- & 0.2 &  \\
+RL cây-GNN + BC & 0 & 3072 & 0.0 & 0 & 0.0 & -- & 0.2 & x \\
+RL cây-GNN + BC & 1 & 3072 & 0.0 & 0 & 0.0 & -- & 0.2 &  \\
+RL lai (β + TD-A*) & 0 & 3072 & 100.0 & 3072 & 100.0 & 0.34 & 0.3 & x \\
+RL lai (β + TD-A*) & 1 & 3072 & 100.0 & 3072 & 100.0 & 0.81 & 0.2 &  \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

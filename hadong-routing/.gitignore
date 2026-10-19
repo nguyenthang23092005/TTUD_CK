@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# LaTeX phụ trợ
+reports/paper/*.aux
+reports/paper/*.bbl
+reports/paper/*.blg
+reports/paper/*.log
+reports/paper/*.out
+reports/paper/*.toc
+# log/tensorboard lớn
+results/rl/tb/
+results/smoke/rl/tb/
+results/trial/
+results/*.log

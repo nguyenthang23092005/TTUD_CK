@@ -1,0 +1,4 @@
+A,B,n_pairs,mean_diff_min,ci_lo,ci_hi,mean_diff_pct,A_better_pct,wilcoxon_W,p_value,pair,p_str
+plan_once,dijkstra_length,10,0.16540659706837513,-0.5327571949017156,0.9234988995712421,-1.3257562413517463,40.0,13.0,0.9375,Plan-once TD-A* − Dijkstra (ngắn nhất),0.9375
+replan,plan_once,10,-0.8438087686581749,-1.7664618642627565,-0.200496868837961,-3.931773804335366,40.0,1.0,0.125,Replan TD-A* − Plan-once TD-A*,0.1250
+oracle,replan,10,-0.20246620792906941,-0.4422909199943895,-0.043277546017409955,-1.2030317472181025,40.0,0.0,0.125,Oracle TD-A* (V_real) − Replan TD-A*,0.1250

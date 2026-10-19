@@ -1,0 +1,46 @@
+{
+  "source": "cache:hadong_drive.graphml",
+  "raw_nodes": 3519,
+  "raw_edges": 9063,
+  "self_loops_removed": 9,
+  "parallel_edges_collapsed": 52,
+  "scc_nodes": 3482,
+  "scc_edges": 8944,
+  "nodes_dropped_not_in_scc": 37,
+  "n_nodes": 3482,
+  "n_edges": 8944,
+  "total_length_km": 944.5039267177996,
+  "mean_edge_length_m": 105.60195960619406,
+  "max_out_degree": 5,
+  "mean_out_degree": 2.568638713383113,
+  "maxspeed_tag_coverage": 0.06518336314847943,
+  "bbox": [
+    105.6986126,
+    20.9057546,
+    105.8090502,
+    21.0045947
+  ],
+  "by_group": {
+    "trunk": {
+      "n_edges": 291,
+      "length_km": 44.36399000474584
+    },
+    "primary": {
+      "n_edges": 337,
+      "length_km": 42.52803839118957
+    },
+    "secondary": {
+      "n_edges": 244,
+      "length_km": 33.52756234637606
+    },
+    "tertiary": {
+      "n_edges": 867,
+      "length_km": 106.21240717837287
+    },
+    "residential": {
+      "n_edges": 7205,
+      "length_km": 717.8719287971153
+    }
+  },
+  "named_edges_share": 0.3499552772808587
+}

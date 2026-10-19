@@ -1,0 +1,27 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{So sánh ghép cặp trên các truy vấn cả hai phương pháp cùng tới đích: khoảng tin cậy bootstrap 95\% của hiệu trung bình thời gian và kiểm định Wilcoxon signed-rank.}
+\label{tab:tab_stat_tests}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Cặp (A − B) & n & Hiệu TB (phút) & CI 95\% thấp & CI 95\% cao & Hiệu TB (\%) & A tốt hơn (\%) & p (Wilcoxon) \\
+\midrule
+Plan-once TD-A* − Dijkstra (ngắn nhất) & 200 & -1{,}499 & -1{,}738 & -1{,}270 & -7{,}974 & 78{,}000 & $<10^{-4}$ \\
+Replan TD-A* − Plan-once TD-A* & 200 & -0{,}159 & -0{,}250 & -0{,}084 & -0{,}726 & 36{,}500 & $<10^{-4}$ \\
+Oracle TD-A* − Replan TD-A* & 200 & -0{,}090 & -0{,}142 & -0{,}050 & -0{,}440 & 18{,}500 & $<10^{-4}$ \\
+Replan lười − Replan TD-A* & 200 & 0{,}002 & 0{,}000 & 0{,}004 & 0{,}007 & 0{,}500 & 0{,}0687 \\
+Replan D* Lite − Replan TD-A* & 200 & 0{,}015 & -0{,}036 & 0{,}077 & -0{,}020 & 3{,}500 & 0{,}3037 \\
+Replan + GCN − Replan TD-A* & 200 & -0{,}048 & -0{,}105 & 0{,}005 & -0{,}250 & 10{,}500 & 0{,}0186 \\
+Plan-once + cảm biến − Plan-once TD-A* & 200 & -0{,}081 & -0{,}155 & -0{,}013 & -0{,}316 & 16{,}000 & 0{,}0297 \\
+Plan-once + GCN − Plan-once TD-A* & 200 & -0{,}124 & -0{,}199 & -0{,}055 & -0{,}635 & 26{,}000 & $<10^{-4}$ \\
+Plan-once + GCN − Plan-once + cảm biến & 200 & -0{,}043 & -0{,}093 & 0{,}008 & -0{,}308 & 21{,}500 & 0{,}0002 \\
+Định tuyến P90 − Plan-once TD-A* & 200 & 0{,}015 & -0{,}010 & 0{,}038 & 0{,}188 & 6{,}000 & 0{,}0027 \\
+RL lai (β + TD-A*) − Replan TD-A* & 200 & 0{,}013 & 0{,}004 & 0{,}025 & 0{,}082 & 0{,}000 & 0{,}0009 \\
+RL cây-GNN + BC − Plan-once TD-A* & 154 & 5{,}527 & 4{,}473 & 6{,}798 & 35{,}788 & 3{,}896 & $<10^{-4}$ \\
+RL + ctg (quan sát) − A* (thời gian tự do) & 200 & -0{,}001 & -0{,}079 & 0{,}063 & 0{,}096 & 7{,}000 & 0{,}0002 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

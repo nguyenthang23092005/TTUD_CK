@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Chọn giờ xuất phát trên tập test (bước chờ 10 phút, tối đa 6 lần).}
+\label{tab:tab_departure}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrrr}
+\toprule
+w & Chính sách & Chi phí TB (phút) & Đi TB (phút) & Chờ+đi TB (phút) & Tỉ lệ chờ & Regret (phút) \\
+\midrule
+0.25 & Đi ngay & 12.63 & 12.63 & 12.63 & 0.000 & 0.636 \\
+0.25 & Giờ tối ưu (vét cạn) & 11.99 & 10.99 & 14.99 & 0.100 & 0.000 \\
+0.25 & Q-learning & 12.48 & 11.73 & 14.73 & 0.200 & 0.483 \\
+0.50 & Đi ngay & 12.63 & 12.63 & 12.63 & 0.000 & 0.000 \\
+0.50 & Giờ tối ưu (vét cạn) & 12.63 & 12.63 & 12.63 & 0.000 & 0.000 \\
+0.50 & Q-learning & 13.13 & 12.13 & 14.13 & 0.200 & 0.502 \\
+1.00 & Đi ngay & 12.63 & 12.63 & 12.63 & 0.000 & 0.000 \\
+1.00 & Giờ tối ưu (vét cạn) & 12.63 & 12.63 & 12.63 & 0.000 & 0.000 \\
+1.00 & Q-learning & 12.63 & 12.63 & 12.63 & 0.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

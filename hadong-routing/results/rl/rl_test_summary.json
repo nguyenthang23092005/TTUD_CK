@@ -1,0 +1,380 @@
+[
+  {
+    "incident_set": "main",
+    "variant": "rl",
+    "seed": 0,
+    "success": 0.35,
+    "tt_mean": 22.270344618648174,
+    "steps": 133.425,
+    "runtime_ms": 219.02102900010505
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl",
+    "seed": 1,
+    "success": 0.37,
+    "tt_mean": 21.400767087057226,
+    "steps": 132.65,
+    "runtime_ms": 218.23513749994163
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl",
+    "seed": 2,
+    "success": 0.38,
+    "tt_mean": 22.809755984604973,
+    "steps": 131.72,
+    "runtime_ms": 216.6914520001228
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_ctg",
+    "seed": 0,
+    "success": 0.99,
+    "tt_mean": 18.35229072774052,
+    "steps": 48.63,
+    "runtime_ms": 124.39026349973574
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_ctg",
+    "seed": 1,
+    "success": 1.0,
+    "tt_mean": 18.324518408503458,
+    "steps": 47.26,
+    "runtime_ms": 121.84003299971664
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_ctg",
+    "seed": 2,
+    "success": 0.995,
+    "tt_mean": 18.30935631575495,
+    "steps": 47.99,
+    "runtime_ms": 119.81359349989361
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_hybrid",
+    "seed": 0,
+    "success": 1.0,
+    "tt_mean": 17.36678471953163,
+    "steps": 48.54,
+    "runtime_ms": 309.6698150002703
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_hybrid",
+    "seed": 1,
+    "success": 1.0,
+    "tt_mean": 17.440015185002313,
+    "steps": 48.515,
+    "runtime_ms": 304.3753865002145
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_hybrid",
+    "seed": 2,
+    "success": 1.0,
+    "tt_mean": 17.356909074909336,
+    "steps": 48.76,
+    "runtime_ms": 262.2804294996604
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_lstm",
+    "seed": 0,
+    "success": 0.025,
+    "tt_mean": 22.827960322004277,
+    "steps": 164.64,
+    "runtime_ms": 345.0828745004037
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_lstm",
+    "seed": 1,
+    "success": 0.085,
+    "tt_mean": 23.725879695750066,
+    "steps": 161.83,
+    "runtime_ms": 345.0355370001489
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_lstm",
+    "seed": 2,
+    "success": 0.01,
+    "tt_mean": 19.436832579616322,
+    "steps": 164.72,
+    "runtime_ms": 345.16014449993236
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_shape",
+    "seed": 0,
+    "success": 0.57,
+    "tt_mean": 24.176884540972832,
+    "steps": 114.095,
+    "runtime_ms": 199.04514799975004
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_shape",
+    "seed": 1,
+    "success": 0.495,
+    "tt_mean": 21.96000127912626,
+    "steps": 120.85,
+    "runtime_ms": 209.19998999994277
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_shape",
+    "seed": 2,
+    "success": 0.585,
+    "tt_mean": 24.543422719152083,
+    "steps": 114.76,
+    "runtime_ms": 207.71159749991057
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_tree",
+    "seed": 0,
+    "success": 0.67,
+    "tt_mean": 20.54509231446897,
+    "steps": 98.45,
+    "runtime_ms": 324.12182749998465
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_tree",
+    "seed": 1,
+    "success": 0.74,
+    "tt_mean": 24.14359298237236,
+    "steps": 91.27,
+    "runtime_ms": 307.5188730002992
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_tree",
+    "seed": 2,
+    "success": 0.63,
+    "tt_mean": 20.9292320686083,
+    "steps": 102.695,
+    "runtime_ms": 333.24635399996623
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_tree_bc",
+    "seed": 0,
+    "success": 0.77,
+    "tt_mean": 21.587382785876052,
+    "steps": 85.795,
+    "runtime_ms": 297.9393955002888
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_tree_bc",
+    "seed": 1,
+    "success": 0.86,
+    "tt_mean": 23.542929099580014,
+    "steps": 74.34,
+    "runtime_ms": 271.04115000012825
+  },
+  {
+    "incident_set": "main",
+    "variant": "rl_tree_bc",
+    "seed": 2,
+    "success": 0.765,
+    "tt_mean": 21.611602245341558,
+    "steps": 86.75,
+    "runtime_ms": 297.11927999967884
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl",
+    "seed": 0,
+    "success": 0.355,
+    "tt_mean": 23.47721596761396,
+    "steps": 133.22,
+    "runtime_ms": 222.84078700002283
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl",
+    "seed": 1,
+    "success": 0.38,
+    "tt_mean": 22.501812676134758,
+    "steps": 132.165,
+    "runtime_ms": 204.752337500031
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl",
+    "seed": 2,
+    "success": 0.355,
+    "tt_mean": 25.676930750819032,
+    "steps": 134.185,
+    "runtime_ms": 199.88592749989039
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_ctg",
+    "seed": 0,
+    "success": 0.99,
+    "tt_mean": 18.80802870553939,
+    "steps": 48.605,
+    "runtime_ms": 113.28957450019516
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_ctg",
+    "seed": 1,
+    "success": 1.0,
+    "tt_mean": 18.775622276336303,
+    "steps": 47.26,
+    "runtime_ms": 112.30014299992035
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_ctg",
+    "seed": 2,
+    "success": 0.995,
+    "tt_mean": 18.777580142185073,
+    "steps": 47.98,
+    "runtime_ms": 110.97437200009153
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_hybrid",
+    "seed": 0,
+    "success": 1.0,
+    "tt_mean": 17.728789424015602,
+    "steps": 48.9,
+    "runtime_ms": 211.77066399995965
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_hybrid",
+    "seed": 1,
+    "success": 0.995,
+    "tt_mean": 17.89509596723569,
+    "steps": 49.525,
+    "runtime_ms": 199.6948175000216
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_hybrid",
+    "seed": 2,
+    "success": 1.0,
+    "tt_mean": 17.716194501413543,
+    "steps": 49.14,
+    "runtime_ms": 167.43061749988556
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_lstm",
+    "seed": 0,
+    "success": 0.02,
+    "tt_mean": 20.867179680084675,
+    "steps": 164.62,
+    "runtime_ms": 340.94393499992293
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_lstm",
+    "seed": 1,
+    "success": 0.105,
+    "tt_mean": 24.921806787036523,
+    "steps": 160.48,
+    "runtime_ms": 296.5396730003704
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_lstm",
+    "seed": 2,
+    "success": 0.035,
+    "tt_mean": 32.48188734791954,
+    "steps": 164.185,
+    "runtime_ms": 296.4522259997102
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_shape",
+    "seed": 0,
+    "success": 0.58,
+    "tt_mean": 25.384318941474636,
+    "steps": 114.3,
+    "runtime_ms": 184.24715650024154
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_shape",
+    "seed": 1,
+    "success": 0.49,
+    "tt_mean": 21.647013050529726,
+    "steps": 120.505,
+    "runtime_ms": 191.23479100002442
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_shape",
+    "seed": 2,
+    "success": 0.56,
+    "tt_mean": 23.986788856623402,
+    "steps": 117.375,
+    "runtime_ms": 187.40807250003854
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_tree",
+    "seed": 0,
+    "success": 0.665,
+    "tt_mean": 20.90562960689338,
+    "steps": 100.845,
+    "runtime_ms": 319.8864355000842
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_tree",
+    "seed": 1,
+    "success": 0.71,
+    "tt_mean": 23.351635286231588,
+    "steps": 92.865,
+    "runtime_ms": 303.2285189995673
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_tree",
+    "seed": 2,
+    "success": 0.61,
+    "tt_mean": 20.534025092021608,
+    "steps": 103.8,
+    "runtime_ms": 335.72039900016534
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_tree_bc",
+    "seed": 0,
+    "success": 0.775,
+    "tt_mean": 21.90562706314036,
+    "steps": 85.835,
+    "runtime_ms": 278.8921879996997
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_tree_bc",
+    "seed": 1,
+    "success": 0.845,
+    "tt_mean": 23.40866266007378,
+    "steps": 75.745,
+    "runtime_ms": 248.8492639998003
+  },
+  {
+    "incident_set": "stress",
+    "variant": "rl_tree_bc",
+    "seed": 2,
+    "success": 0.78,
+    "tt_mean": 22.185226388393385,
+    "steps": 86.76,
+    "runtime_ms": 278.0689125002027
+  }
+]

@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Tập con test KHÔNG có sự cố (3 truy vấn).}
+\label{tab:tab_results_noinc}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) \\
+\midrule
+Dijkstra (ngắn nhất) & 100.00 & 19.25 & 8.71 & 34.40 & 5.23 & 0.00 & 12.56 & 5.54 \\
+A* (thời gian tự do) & 100.00 & 20.02 & 8.71 & 36.23 & 7.10 & 5.61 & 13.68 & 5.64 \\
+Plan-once TD-A* & 100.00 & 19.71 & 8.71 & 36.39 & 2.03 & 0.00 & 4.88 & 6.20 \\
+Plan-once + GCN & 100.00 & 19.71 & 8.71 & 36.39 & 2.03 & 0.00 & 4.88 & 6.20 \\
+Replan TD-A* & 100.00 & 19.69 & 8.71 & 36.34 & 1.98 & 0.00 & 4.74 & 6.20 \\
+Replan + GCN & 100.00 & 19.69 & 8.71 & 36.34 & 1.98 & 0.00 & 4.74 & 6.20 \\
+RL lai (β + TD-A*) & 100.00 & 19.06 & 8.71 & 34.82 & 0.43 & 0.00 & 1.02 & 5.63 \\
+Oracle TD-A* & 100.00 & 18.88 & 8.71 & 34.40 & 0.00 & 0.00 & 0.00 & 5.54 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

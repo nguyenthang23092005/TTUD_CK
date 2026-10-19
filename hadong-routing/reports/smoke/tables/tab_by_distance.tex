@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Regret trung bình (\%) so với oracle theo khoảng cách O–D (chuyến tới đích).}
+\label{tab:tab_by_distance}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Nhóm & n & Dijkstra (ngắn nhất) & Plan-once TD-A* & Plan-once + GCN & Replan TD-A* & Replan + GCN & RL lai (β + TD-A*) & RL cây-GNN + BC \\
+\midrule
+ngan (<2.5km) & 3 & 15.43 & 4.11 & 4.11 & 0.00 & 0.00 & 0.00 & -- \\
+trung binh (2.5-4.5km) & 6 & 9.59 & 0.25 & 0.25 & 0.36 & 0.43 & 0.36 & -- \\
+xa (>4.5km) & 1 & 0.00 & 6.09 & 6.09 & 5.93 & 5.93 & 1.28 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

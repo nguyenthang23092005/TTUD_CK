@@ -1,0 +1,9 @@
+method,expanded,runtime_ms,runtime_p90,label,name
+dijkstra_length,1469.2,2.07870999993241,3.6067400002138297,Dijkstra (ngắn nhất),Dijkstra
+astar_length,379.7,0.6427800001801599,1.1681700000735098,A* (ngắn nhất),A*
+td_dijkstra,1465.3,6.0956199999963605,10.913090000485619,TD-Dijkstra (V_base),TD-Dijkstra
+plan_once,978.5,2.50623000001719,3.2838699992680365,Plan-once TD-A*,TD-A* (plan-once)
+oracle,1241.9,2.58388999982339,4.48533999970088,Oracle TD-A* (V_real),TD-A* (oracle)
+replan,17851.7,48.47139000012243,66.77963000010993,Replan TD-A*,Replan (tổng)
+rl,127.7,61.80285000009457,74.64830000026265,"RL (MaskablePPO, cục bộ)",RL (số bước)
+rl_ctg,127.7,78.01834999982016,104.58033999984757,RL + cost-to-go (ablation),RL+ctg (số bước)

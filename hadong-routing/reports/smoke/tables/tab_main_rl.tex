@@ -1,0 +1,24 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Các biến thể RL (seed tốt nhất theo val) và baseline tham lam trên cùng tập test; thời gian/regret chỉ tính trên chuyến tới đích.}
+\label{tab:tab_main_rl}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) \\
+\midrule
+Tham lam cục bộ & 30.00 & 13.94 & 13.84 & 19.50 & 100.39 & 39.84 & 210.99 & 4.71 \\
+RL cục bộ & 0.00 & -- & -- & -- & -- & -- & -- & -- \\
+RL + ctg (quan sát) & 10.00 & 9.63 & 9.63 & 9.63 & 35.43 & 35.43 & 35.43 & 2.66 \\
+RL + định hình ctg & 0.00 & -- & -- & -- & -- & -- & -- & -- \\
+RL cây-GNN & 0.00 & -- & -- & -- & -- & -- & -- & -- \\
+RL LSTM & 0.00 & -- & -- & -- & -- & -- & -- & -- \\
+RL cây-GNN + BC & 0.00 & -- & -- & -- & -- & -- & -- & -- \\
+RL lai (β + TD-A*) & 100.00 & 12.71 & 9.30 & 18.88 & 0.34 & 0.00 & 1.37 & 4.49 \\
+Replan TD-A* & 100.00 & 12.90 & 9.30 & 19.07 & 0.81 & 0.00 & 2.54 & 4.66 \\
+Oracle TD-A* & 100.00 & 12.63 & 9.30 & 18.83 & 0.00 & 0.00 & 0.00 & 4.41 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

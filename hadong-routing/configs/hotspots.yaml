@@ -1,0 +1,66 @@
+# =============================================================================
+# CÁC TRỤC/ĐIỂM NÓNG ÙN TẮC QUANH HÀ ĐÔNG
+#
+# !!! GIẢ ĐỊNH CẦN HIỆU CHỈNH !!!
+# Hệ số nhân (multiplier) và khung giờ dưới đây là GIẢ ĐỊNH của tác giả dựa trên hiểu biết chung về giao thông
+# Hà Đông, KHÔNG phải số đo. Cần hiệu chỉnh theo trải nghiệm thực tế / dữ liệu đo (GPS, camera, Google Traffic).
+#
+# Cách khớp cạnh:
+#   names : chuỗi con của tên đường (không dấu, không phân biệt hoa thường)
+#   refs  : mã đường OSM (ví dụ "QL.6")
+#   center + radius_m : mọi cạnh có trung điểm trong bán kính quanh toạ độ (lat, lon)
+#   name_within_m (tuỳ chọn): chỉ chấp nhận khớp tên khi trong bán kính này quanh center
+# hours: danh sách cửa sổ [giờ_bắt_đầu, giờ_kết_thúc) — hệ số chỉ có hiệu lực trong các cửa sổ này.
+# Toạ độ "center" lấy từ geocode Nominatim (OSM) ngày 19/10/2026.
+# =============================================================================
+
+exclude_name_prefixes: ["ngo ", "ngach ", "hem ", "kiet "]   # ngõ/ngách mang tên trục chính không tính là trục nóng
+
+hotspots:
+  - name: Quang Trung
+    names: ["quang trung"]
+    multiplier: 1.30
+    hours: [[6, 10], [16, 20]]
+  - name: Nguyen Trai
+    names: ["nguyen trai"]
+    multiplier: 1.35
+    hours: [[6, 10], [16, 20]]
+  - name: To Huu (Le Van Luong keo dai)
+    # Trên OSM, đoạn Lê Văn Lương kéo dài trong Hà Đông mang tên "Tố Hữu"
+    names: ["to huu", "le van luong"]
+    multiplier: 1.30
+    hours: [[6, 10], [16, 20]]
+  - name: Van Khe
+    names: ["van khe"]
+    multiplier: 1.20
+    hours: [[7, 9], [16, 19]]
+  - name: Quoc lo 6
+    refs: ["QL.6", "QL6"]
+    names: ["quoc lo 6"]
+    multiplier: 1.25
+    hours: [[6, 10], [16, 20]]
+  - name: Cau Am
+    names: ["cau am"]
+    center: [20.9757146, 105.7768011]
+    radius_m: 250
+    multiplier: 1.35
+    hours: [[6, 10], [16, 20]]
+  - name: Mai Linh
+    names: ["mai linh"]
+    center: [20.9367506, 105.7273762]
+    radius_m: 300
+    multiplier: 1.25
+    hours: [[6, 9], [16, 19]]
+  - name: Ben xe Yen Nghia
+    center: [20.9500711, 105.7472652]
+    radius_m: 350
+    multiplier: 1.30
+    hours: [[5, 9], [15, 20]]
+  - name: Tran Phu
+    names: ["tran phu"]
+    multiplier: 1.25
+    hours: [[6, 10], [16, 20]]
+  - name: Phung Hung
+    names: ["phung hung"]
+    multiplier: 1.20
+    hours: [[7, 9], [16, 19]]

@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Sai số dự báo log-tỉ số vận tốc (mốc h và h+1) trên 4 trường kiểm định độc lập; 1341 cảm biến (15\% cạnh) + cạnh trong bán kính quan sát.}
+\label{tab:tab_forecast}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrr}
+\toprule
+Mô hình & RMSE cạnh chưa quan sát & RMSE mọi cạnh \\
+\midrule
+Dự báo nền V\_base (log-tỉ số = 0) & 0.0860 & 0.0863 \\
+GCN chưa huấn luyện & 0.1616 & 0.1619 \\
+GCN đã huấn luyện & 0.0861 & 0.0864 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

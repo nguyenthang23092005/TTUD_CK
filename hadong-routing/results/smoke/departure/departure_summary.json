@@ -1,0 +1,96 @@
+{
+  "summary": [
+    {
+      "wait_weight": 0.25,
+      "policy": "go_now",
+      "cost_mean": 12.628784677392042,
+      "travel_mean": 12.628784677392042,
+      "total_mean": 12.628784677392042,
+      "wait_share": 0.0,
+      "regret_mean": 0.6364051765288196
+    },
+    {
+      "wait_weight": 0.25,
+      "policy": "oracle_best",
+      "cost_mean": 11.992379500863223,
+      "travel_mean": 10.992379500863223,
+      "total_mean": 14.992379500863223,
+      "wait_share": 0.1,
+      "regret_mean": 0.0
+    },
+    {
+      "wait_weight": 0.25,
+      "policy": "q_learning",
+      "cost_mean": 12.47531932247868,
+      "travel_mean": 11.72531932247868,
+      "total_mean": 14.72531932247868,
+      "wait_share": 0.2,
+      "regret_mean": 0.4829398216154573
+    },
+    {
+      "wait_weight": 0.5,
+      "policy": "go_now",
+      "cost_mean": 12.628784677392042,
+      "travel_mean": 12.628784677392042,
+      "total_mean": 12.628784677392042,
+      "wait_share": 0.0,
+      "regret_mean": 0.0
+    },
+    {
+      "wait_weight": 0.5,
+      "policy": "oracle_best",
+      "cost_mean": 12.628784677392042,
+      "travel_mean": 12.628784677392042,
+      "total_mean": 12.628784677392042,
+      "wait_share": 0.0,
+      "regret_mean": 0.0
+    },
+    {
+      "wait_weight": 0.5,
+      "policy": "q_learning",
+      "cost_mean": 13.13042601276283,
+      "travel_mean": 12.13042601276283,
+      "total_mean": 14.13042601276283,
+      "wait_share": 0.2,
+      "regret_mean": 0.5016413353707889
+    },
+    {
+      "wait_weight": 1.0,
+      "policy": "go_now",
+      "cost_mean": 12.628784677392042,
+      "travel_mean": 12.628784677392042,
+      "total_mean": 12.628784677392042,
+      "wait_share": 0.0,
+      "regret_mean": 0.0
+    },
+    {
+      "wait_weight": 1.0,
+      "policy": "oracle_best",
+      "cost_mean": 12.628784677392042,
+      "travel_mean": 12.628784677392042,
+      "total_mean": 12.628784677392042,
+      "wait_share": 0.0,
+      "regret_mean": 0.0
+    },
+    {
+      "wait_weight": 1.0,
+      "policy": "q_learning",
+      "cost_mean": 12.628784677392042,
+      "travel_mean": 12.628784677392042,
+      "total_mean": 12.628784677392042,
+      "wait_share": 0.0,
+      "regret_mean": 0.0
+    }
+  ],
+  "tt_profile_test_mean": [
+    12.628784677392042,
+    12.0918579443102,
+    11.661216476826322,
+    11.190014155438305,
+    10.708823628003222,
+    10.313961691926835,
+    10.052273573680361
+  ],
+  "share_where_waiting_helps_w1": 0.0,
+  "max_saving_by_waiting_min": 20.827299596606053
+}

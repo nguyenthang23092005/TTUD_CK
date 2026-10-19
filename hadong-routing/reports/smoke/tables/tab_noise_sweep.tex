@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Regret TB (\%) theo mức nhiễu khi không có sự cố.}
+\label{tab:tab_noise_sweep}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+$\sigma$ & Dijkstra (ngắn nhất) & Plan-once TD-A* & Plan-once + GCN & Replan TD-A* & Replan + GCN \\
+\midrule
+0.00 & 8.08 & 0.00 & 0.00 & 0.00 & 0.00 \\
+0.20 & 9.85 & 1.62 & 1.62 & 1.11 & 1.11 \\
+0.40 & 13.64 & 4.86 & 4.86 & 1.25 & 1.25 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

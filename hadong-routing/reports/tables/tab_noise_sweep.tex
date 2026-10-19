@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Regret trung bình (\%) theo mức nhiễu $\sigma$ khi không có sự cố.}
+\label{tab:tab_noise_sweep}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+$\sigma$ & Dijkstra (ngắn nhất) & Plan-once TD-A* & Plan-once + GCN & Replan TD-A* & Replan + GCN \\
+\midrule
+0{,}00 & 10{,}28 & 0{,}00 & 0{,}00 & 0{,}00 & 0{,}00 \\
+0{,}10 & 10{,}61 & 0{,}23 & 0{,}09 & 0{,}11 & 0{,}04 \\
+0{,}20 & 11{,}55 & 1{,}05 & 0{,}33 & 0{,}45 & 0{,}10 \\
+0{,}30 & 13{,}11 & 2{,}46 & 0{,}86 & 1{,}37 & 0{,}38 \\
+0{,}40 & 15{,}44 & 4{,}62 & 1{,}77 & 1{,}92 & 0{,}72 \\
+0{,}50 & 18{,}51 & 7{,}49 & 2{,}41 & 3{,}20 & 0{,}77 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,24 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Kết quả các biến thể học tăng cường (seed tốt nhất theo tập kiểm định) và baseline tham lam trên cùng tập kiểm tra; thời gian và regret chỉ tính trên các chuyến tới đích.}
+\label{tab:tab_main_rl}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) \\
+\midrule
+Tham lam cục bộ & 37{,}50 & 21{,}02 & 17{,}56 & 38{,}70 & 62{,}88 & 43{,}80 & 135{,}28 & 6{,}75 \\
+RL cục bộ & 35{,}00 & 22{,}27 & 18{,}83 & 42{,}88 & 63{,}24 & 35{,}74 & 90{,}16 & 7{,}17 \\
+RL + ctg (quan sát) & 100{,}00 & 18{,}32 & 15{,}23 & 31{,}52 & 5{,}19 & 0{,}82 & 17{,}79 & 6{,}64 \\
+RL + định hình ctg & 57{,}00 & 24{,}18 & 20{,}50 & 43{,}68 & 76{,}11 & 49{,}93 & 183{,}88 & 7{,}87 \\
+RL cây-GNN & 67{,}00 & 20{,}55 & 18{,}60 & 35{,}43 & 39{,}38 & 35{,}44 & 87{,}93 & 7{,}31 \\
+RL LSTM & 2{,}50 & 22{,}83 & 23{,}23 & 29{,}17 & 219{,}06 & 230{,}42 & 307{,}75 & 6{,}36 \\
+RL cây-GNN + BC & 77{,}00 & 21{,}59 & 17{,}74 & 40{,}35 & 37{,}36 & 23{,}74 & 73{,}33 & 7{,}57 \\
+RL lai (β + TD-A*) & 100{,}00 & 17{,}37 & 14{,}47 & 30{,}89 & 0{,}56 & 0{,}00 & 1{,}67 & 6{,}63 \\
+Replan TD-A* & 100{,}00 & 17{,}35 & 14{,}47 & 30{,}89 & 0{,}47 & 0{,}00 & 1{,}18 & 6{,}63 \\
+Oracle TD-A* & 100{,}00 & 17{,}26 & 14{,}47 & 30{,}89 & 0{,}00 & 0{,}00 & 0{,}00 & 6{,}64 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

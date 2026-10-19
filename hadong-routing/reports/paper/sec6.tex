@@ -1,0 +1,52 @@
+% !TEX root = main.tex
+\section{Kết luận}\label{sec:conclusion}
+
+\subsection{Tóm tắt kết quả chính}\label{sec:conclusion:summary}
+
+Đề tài đã xây dựng một khung thực nghiệm hoàn chỉnh cho bài toán tìm đường trong mạng giao thông động trên mạng đường
+OpenStreetMap của quận Hà Đông (\NNodes{} nút, \NEdges{} cạnh, \TotalKm{} km), với vận tốc 24 khung giờ được mô phỏng và môi
+trường thực có nhiễu tương quan cùng sự cố. Trên \NTest{} truy vấn kiểm tra, các kết quả chính là:
+\begin{enumerate}[label=(\arabic*)]
+    \item Tính đến sự phụ thuộc thời gian bằng TD-A* giảm regret từ \DijRegret\% (tuyến ngắn nhất) xuống \PoRegret\% (RQ1).
+    \item Tái lập kế hoạch đưa regret xuống \RpRegret\%, và replan kết hợp dự báo GCN đạt \RpGnnRegret\% --- tốt nhất trong mọi
+    phương pháp khả thi. Replan lười giữ nguyên chất lượng với tốc độ nhanh gấp \LazySpeedup{} lần (RQ2).
+    \item Heuristic cận dưới chính xác giảm \LbReduction\% số nút mở rộng so với TD-Dijkstra (heuristic chim bay chỉ giảm
+    \TdAstarReduction\%); TD-A* biên dịch Numba nhanh gấp \NumbaSpeedup{} lần bản Python.
+    \item RL chọn từng cạnh với quan sát cục bộ chỉ tới đích \RlSuccess\%; quan sát cây kết hợp GNN và học bắt chước nâng lên
+    \RlTreeBcSuccess\% nhưng vẫn kém plan-once rõ rệt. RL lai luôn tới đích với regret \RlHybRegret\%, ngang nhưng không vượt
+    replan (RQ3).
+    \item Định tuyến P90 và Q-learning chọn giờ xuất phát không mang lại lợi ích trong mô phỏng; khi \MaVeh{} xe cùng làm theo
+    một chỉ dẫn, thời gian đi tăng \MaNaiveInc\% và phối hợp tuần tự giảm được \MaCoordGain\% (RQ4).
+\end{enumerate}
+
+\subsection{Đóng góp của đề tài}\label{sec:conclusion:contrib}
+
+\begin{itemize}
+    \item Một khung thực nghiệm mã nguồn mở, tái lập được, chạy trên CPU, từ dữ liệu OpenStreetMap tới báo cáo, trong đó mọi
+    con số được sinh tự động từ kết quả chạy.
+    \item Một mô hình vận tốc 24 khung giờ có cấu trúc cho Hà Đông, bảo đảm tính FIFO có chứng minh (Bổ đề~\ref{bd:fifofix},
+    Mệnh đề~\ref{md:fifoize}).
+    \item Một bộ thuật toán tìm kiếm, tái lập kế hoạch, dự báo và định tuyến theo rủi ro được cài đặt hiệu quả và kiểm chứng
+    bằng 55 kiểm thử đơn vị.
+    \item Một so sánh công bằng giữa tìm kiếm có mô hình và sáu hướng cải tiến học tăng cường trên cùng môi trường, cùng tập
+    kiểm tra, cùng chỉ số, kèm phân tích trung thực về khi nào mỗi hướng có và không có lợi.
+    \item Ứng dụng minh hoạ trực quan và gói Docker để chạy lại trên máy khác.
+\end{itemize}
+
+\subsection{Hạn chế và hướng phát triển}\label{sec:conclusion:future}
+
+\begin{itemize}
+    \item \textbf{Dữ liệu tự mô phỏng.} Đây là hạn chế lớn nhất: kết luận định lượng chỉ đúng trong mô phỏng. Bước tiếp theo
+    quan trọng nhất là hiệu chỉnh tệp điểm nóng, profile theo giờ, độ nhạy loại đường và mô hình nhiễu bằng dữ liệu GPS, dữ
+    liệu xe công nghệ, camera hoặc dịch vụ giao thông thời gian thực.
+    \item \textbf{Mạng đường.} Chưa mô hình hoá đèn tín hiệu, hạn chế rẽ trái/quay đầu và xe máy; phạm vi chỉ là quận cũ cộng
+    500~m. Khi mở rộng ra toàn thành phố, cần các kỹ thuật tiền xử lý như Contraction Hierarchies phiên bản phụ thuộc thời gian.
+    \item \textbf{Dự báo.} GCN hiện chỉ dùng quan sát tức thời; các mô hình không gian--thời gian như DCRNN~\cite{li2018dcrnn}
+    hay STGCN~\cite{yu2018stgcn} với lịch sử nhiều bước có thể dự báo tốt hơn.
+    \item \textbf{Học tăng cường.} Tinh chỉnh sau học bắt chước nên dùng DAgger đầy đủ hoặc ràng buộc khoảng cách KL với chính
+    sách bắt chước để tránh suy giảm; GNN trên đồ thị lân cận thực (thay cho cây) và ngân sách huấn luyện dài hơn; ứng dụng RL
+    ở cấp quyết định cao hơn (chọn hành lang, chọn giờ với đặc trưng phong phú hơn).
+    \item \textbf{Nhiều xe.} Hàm BPR là mô hình đơn giản; cần mô phỏng vi mô hoặc gán luồng động và tính cân bằng người dùng.
+    \item \textbf{Rủi ro.} Dùng ngân hàng kịch bản lớn hơn, mô hình sự cố có xác suất theo từng đoạn đường, hoặc mục tiêu
+    trung bình--phương sai thay cho phân vị.
+\end{itemize}

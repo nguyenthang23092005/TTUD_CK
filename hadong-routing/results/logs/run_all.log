@@ -1,0 +1,125 @@
+2026-10-19 09:22:10,152 | INFO    | run_all | === Pipeline mode=full, các bước: ['graph', 'speeds', 'scenarios', 'train_rl', 'eval_rl', 'departure', 'benchmark', 'plots', 'tests'] ===
+2026-10-19 09:22:10,152 | INFO    | run_all | >>> Bước graph
+2026-10-19 09:22:12,010 | INFO    | graph_builder | Đọc graph đã cache: D:\TTUD_CK\hadong-routing\data\raw\hadong_drive.graphml
+2026-10-19 09:22:13,503 | INFO    | graph_builder | Đồ thị: 3482 nút, 8944 cạnh, 944.5 km; max out-degree 5; maxspeed có tag 6.5%
+2026-10-19 09:22:13,503 | INFO    | graph_builder |   trunk          291 cạnh     44.4 km
+2026-10-19 09:22:13,503 | INFO    | graph_builder |   primary        337 cạnh     42.5 km
+2026-10-19 09:22:13,503 | INFO    | graph_builder |   secondary      244 cạnh     33.5 km
+2026-10-19 09:22:13,503 | INFO    | graph_builder |   tertiary       867 cạnh    106.2 km
+2026-10-19 09:22:13,503 | INFO    | graph_builder |   residential   7205 cạnh    717.9 km
+2026-10-19 09:22:13,503 | INFO    | run_all | <<< Xong graph trong 3.4 s
+2026-10-19 09:22:13,503 | INFO    | run_all | >>> Bước speeds
+2026-10-19 09:22:16,356 | INFO    | speed_model | V_base: v TB 03h=22.8, 08h=13.9, 14h=19.7, 18h=13.6 km/h; FIFO sửa 0 ô; slope max 0.525; kiểm tra số: giảm lớn nhất -6.96e-01 phút
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Quang Trung                  x1.30:   88 cạnh (14.3 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Nguyen Trai                  x1.35:   20 cạnh (1.8 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot To Huu (Le Van Luong keo dai) x1.30:   29 cạnh (4.7 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Van Khe                      x1.20:   33 cạnh (5.5 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Quoc lo 6                    x1.25:  141 cạnh (23.9 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Cau Am                       x1.35:   46 cạnh (4.6 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Mai Linh                     x1.25:    6 cạnh (2.5 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Ben xe Yen Nghia             x1.30:  138 cạnh (9.3 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Tran Phu                     x1.25:   31 cạnh (3.8 km)
+2026-10-19 09:22:16,356 | INFO    | speed_model |   hotspot Phung Hung                   x1.20:   39 cạnh (4.3 km)
+2026-10-19 09:22:16,361 | INFO    | run_all | <<< Xong speeds trong 2.9 s
+2026-10-19 09:22:16,361 | INFO    | run_all | >>> Bước scenarios
+2026-10-19 09:22:18,741 | INFO    | scenarios | Truy vấn: {'train': 600, 'val': 200, 'test': 200}; trùng O–D train/test=0; cạnh sự cố test đã thấy ở train=0; KC TB test=4584 m
+2026-10-19 09:22:18,742 | INFO    | run_all | <<< Xong scenarios trong 2.4 s
+2026-10-19 09:22:18,743 | INFO    | run_all | >>> Bước train_rl
+2026-10-19 09:22:18,743 | INFO    | train | Huấn luyện 6 lượt (maskable_ppo, 400000 timesteps mỗi lượt, 6 tiến trình song song)
+2026-10-19 09:33:06,266 | INFO    | train | rl seed 0: val tốt nhất tới đích 38.0%, regret 76.3% (tại 360000 bước); 626 s
+2026-10-19 09:33:06,266 | INFO    | train | rl seed 1: val tốt nhất tới đích 37.0%, regret 77.0% (tại 360000 bước); 627 s
+2026-10-19 09:33:06,266 | INFO    | train | rl seed 2: val tốt nhất tới đích 35.0%, regret 79.3% (tại 320000 bước); 630 s
+2026-10-19 09:33:06,266 | INFO    | train | rl_ctg seed 0: val tốt nhất tới đích 100.0%, regret 9.5% (tại 240000 bước); 602 s
+2026-10-19 09:33:06,266 | INFO    | train | rl_ctg seed 1: val tốt nhất tới đích 100.0%, regret 9.6% (tại 300000 bước); 606 s
+2026-10-19 09:33:06,266 | INFO    | train | rl_ctg seed 2: val tốt nhất tới đích 100.0%, regret 9.5% (tại 260000 bước); 600 s
+2026-10-19 09:33:06,267 | INFO    | run_all | <<< Xong train_rl trong 647.5 s
+2026-10-19 09:33:06,267 | INFO    | run_all | >>> Bước eval_rl
+2026-10-19 09:33:25,988 | INFO    | evaluate_rl | rl seed 0: tới đích 32.0%, thời gian TB (khi tới) 23.79 phút
+2026-10-19 09:33:39,814 | INFO    | evaluate_rl | rl seed 1: tới đích 32.5%, thời gian TB (khi tới) 21.40 phút
+2026-10-19 09:33:53,456 | INFO    | evaluate_rl | rl seed 2: tới đích 29.5%, thời gian TB (khi tới) 19.78 phút
+2026-10-19 09:34:11,812 | INFO    | evaluate_rl | rl_ctg seed 0: tới đích 99.0%, thời gian TB (khi tới) 19.97 phút
+2026-10-19 09:34:30,635 | INFO    | evaluate_rl | rl_ctg seed 1: tới đích 100.0%, thời gian TB (khi tới) 20.04 phút
+2026-10-19 09:34:40,764 | INFO    | evaluate_rl | rl_ctg seed 2: tới đích 100.0%, thời gian TB (khi tới) 20.04 phút
+2026-10-19 09:34:40,802 | INFO    | run_all | <<< Xong eval_rl trong 94.5 s
+2026-10-19 09:34:40,802 | INFO    | run_all | >>> Bước departure
+2026-10-19 09:34:40,808 | INFO    | departure_time | Tính bảng thời gian oracle cho 600 train + 200 test truy vấn × 5 giờ xuất phát
+2026-10-19 09:34:51,883 | INFO    | departure_time | w=0.25 go_now       chi phí TB 18.35 | đi TB 18.35 | tỉ lệ chờ 0.0% | regret 0.240
+2026-10-19 09:34:51,883 | INFO    | departure_time | w=0.25 oracle_best  chi phí TB 18.11 | đi TB 17.43 | tỉ lệ chờ 4.0% | regret 0.000
+2026-10-19 09:34:51,883 | INFO    | departure_time | w=0.25 q_learning   chi phí TB 18.37 | đi TB 18.07 | tỉ lệ chờ 2.0% | regret 0.259
+2026-10-19 09:34:51,883 | INFO    | departure_time | w=1.00 go_now       chi phí TB 18.35 | đi TB 18.35 | tỉ lệ chờ 0.0% | regret 0.000
+2026-10-19 09:34:51,883 | INFO    | departure_time | w=1.00 oracle_best  chi phí TB 18.35 | đi TB 18.35 | tỉ lệ chờ 0.0% | regret 0.000
+2026-10-19 09:34:51,883 | INFO    | departure_time | w=1.00 q_learning   chi phí TB 18.35 | đi TB 18.35 | tỉ lệ chờ 0.0% | regret 0.000
+2026-10-19 09:34:51,883 | INFO    | run_all | <<< Xong departure trong 11.1 s
+2026-10-19 09:34:51,884 | INFO    | run_all | >>> Bước benchmark
+2026-10-19 09:34:58,180 | INFO    | benchmark | Benchmark cổ điển: 200 truy vấn trong 6.3 s
+2026-10-19 09:35:17,400 | INFO    | benchmark | Xong benchmark + phân tích phụ trong 25.5 s
+2026-10-19 09:35:17,401 | INFO    | run_all | <<< Xong benchmark trong 25.5 s
+2026-10-19 09:35:17,401 | INFO    | run_all | >>> Bước plots
+2026-10-19 09:35:22,212 | INFO    | plots | Đã ghi 143 macro, hình vào D:\TTUD_CK\hadong-routing\reports\figures, bảng vào D:\TTUD_CK\hadong-routing\reports\tables
+2026-10-19 09:35:22,212 | INFO    | run_all | <<< Xong plots trong 4.8 s
+2026-10-19 09:35:22,212 | INFO    | run_all | >>> Bước tests
+2026-10-19 09:35:27,576 | INFO    | run_all | <<< Xong tests trong 5.4 s
+2026-10-19 09:35:27,577 | INFO    | run_all | === Hoàn tất pipeline (13.3 phút) ===
+2026-10-19 19:34:34,574 | INFO    | run_all | === Pipeline mode=full, các bước: ['graph', 'speeds', 'scenarios', 'eval_rl', 'benchmark', 'plots', 'tests'] ===
+2026-10-19 19:34:34,575 | INFO    | run_all | >>> Bước graph
+2026-10-19 19:34:39,699 | INFO    | graph_builder | Đọc graph đã cache: D:\TTUD_CK\hadong-routing\data\raw\hadong_drive.graphml
+2026-10-19 19:34:42,737 | INFO    | graph_builder | Đồ thị: 3482 nút, 8944 cạnh, 944.5 km; max out-degree 5; maxspeed có tag 6.5%
+2026-10-19 19:34:42,737 | INFO    | graph_builder |   trunk          291 cạnh     44.4 km
+2026-10-19 19:34:42,737 | INFO    | graph_builder |   primary        337 cạnh     42.5 km
+2026-10-19 19:34:42,737 | INFO    | graph_builder |   secondary      244 cạnh     33.5 km
+2026-10-19 19:34:42,737 | INFO    | graph_builder |   tertiary       867 cạnh    106.2 km
+2026-10-19 19:34:42,737 | INFO    | graph_builder |   residential   7205 cạnh    717.9 km
+2026-10-19 19:34:42,738 | INFO    | run_all | <<< Xong graph trong 8.2 s
+2026-10-19 19:34:42,738 | INFO    | run_all | >>> Bước speeds
+2026-10-19 19:34:46,894 | INFO    | speed_model | V_base: v TB 03h=22.8, 08h=13.9, 14h=19.7, 18h=13.6 km/h; FIFO sửa 0 ô; slope max 0.525; kiểm tra số: giảm lớn nhất -6.96e-01 phút
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Quang Trung                  x1.30:   88 cạnh (14.3 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Nguyen Trai                  x1.35:   20 cạnh (1.8 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot To Huu (Le Van Luong keo dai) x1.30:   29 cạnh (4.7 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Van Khe                      x1.20:   33 cạnh (5.5 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Quoc lo 6                    x1.25:  141 cạnh (23.9 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Cau Am                       x1.35:   46 cạnh (4.6 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Mai Linh                     x1.25:    6 cạnh (2.5 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Ben xe Yen Nghia             x1.30:  138 cạnh (9.3 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Tran Phu                     x1.25:   31 cạnh (3.8 km)
+2026-10-19 19:34:46,895 | INFO    | speed_model |   hotspot Phung Hung                   x1.20:   39 cạnh (4.3 km)
+2026-10-19 19:34:46,899 | INFO    | run_all | <<< Xong speeds trong 4.2 s
+2026-10-19 19:34:46,899 | INFO    | run_all | >>> Bước scenarios
+2026-10-19 19:34:49,602 | INFO    | scenarios | Truy vấn: {'train': 600, 'val': 200, 'test': 200}; trùng O–D train/test=0; cạnh sự cố test đã thấy ở train=0; KC TB test=4584 m
+2026-10-19 19:34:49,604 | INFO    | run_all | <<< Xong scenarios trong 2.7 s
+2026-10-19 19:34:49,604 | INFO    | run_all | >>> Bước eval_rl
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl           seed 0: tới đích 35.0%, TB (khi tới) 22.27 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl           seed 1: tới đích 37.0%, TB (khi tới) 21.40 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl           seed 2: tới đích 38.0%, TB (khi tới) 22.81 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_ctg       seed 0: tới đích 99.0%, TB (khi tới) 18.35 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_ctg       seed 1: tới đích 100.0%, TB (khi tới) 18.32 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_ctg       seed 2: tới đích 99.5%, TB (khi tới) 18.31 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_hybrid    seed 0: tới đích 100.0%, TB (khi tới) 17.37 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_hybrid    seed 1: tới đích 100.0%, TB (khi tới) 17.44 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_hybrid    seed 2: tới đích 100.0%, TB (khi tới) 17.36 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_lstm      seed 0: tới đích 2.5%, TB (khi tới) 22.83 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_lstm      seed 1: tới đích 8.5%, TB (khi tới) 23.73 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_lstm      seed 2: tới đích 1.0%, TB (khi tới) 19.44 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_shape     seed 0: tới đích 57.0%, TB (khi tới) 24.18 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_shape     seed 1: tới đích 49.5%, TB (khi tới) 21.96 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_shape     seed 2: tới đích 58.5%, TB (khi tới) 24.54 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_tree      seed 0: tới đích 67.0%, TB (khi tới) 20.55 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_tree      seed 1: tới đích 74.0%, TB (khi tới) 24.14 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_tree      seed 2: tới đích 63.0%, TB (khi tới) 20.93 phút
+2026-10-19 19:39:25,393 | INFO    | evaluate_rl | rl_tree_bc   seed 0: tới đích 77.0%, TB (khi tới) 21.59 phút
+2026-10-19 19:39:25,394 | INFO    | evaluate_rl | rl_tree_bc   seed 1: tới đích 86.0%, TB (khi tới) 23.54 phút
+2026-10-19 19:39:25,394 | INFO    | evaluate_rl | rl_tree_bc   seed 2: tới đích 76.5%, TB (khi tới) 21.61 phút
+2026-10-19 19:39:25,400 | INFO    | run_all | <<< Xong eval_rl trong 275.8 s
+2026-10-19 19:39:25,400 | INFO    | run_all | >>> Bước benchmark
+2026-10-19 19:40:15,420 | INFO    | benchmark | Tập chính: 200 truy vấn, 4800 dòng (50 s)
+2026-10-19 19:41:02,337 | INFO    | benchmark | Tập stress xong (97 s)
+2026-10-19 19:42:01,937 | INFO    | benchmark | Quét nhiễu xong (157 s)
+2026-10-19 19:43:05,914 | INFO    | benchmark | Đánh giá độ tin cậy tuyến xong (221 s)
+2026-10-19 19:44:15,729 | INFO    | benchmark | Đo thời gian đơn luồng xong (290 s)
+2026-10-19 19:44:15,729 | INFO    | run_all | <<< Xong benchmark trong 290.3 s
+2026-10-19 19:44:15,730 | INFO    | run_all | >>> Bước plots
+2026-10-19 19:44:23,910 | INFO    | plots | Đã cập nhật mục kết quả trong FEATURES.md
+2026-10-19 19:44:23,910 | INFO    | plots | Đã ghi 481 macro, hình vào D:\TTUD_CK\hadong-routing\reports\figures, bảng vào D:\TTUD_CK\hadong-routing\reports\tables
+2026-10-19 19:44:23,910 | INFO    | run_all | <<< Xong plots trong 8.2 s
+2026-10-19 19:44:23,910 | INFO    | run_all | >>> Bước tests
+2026-10-19 19:44:41,795 | INFO    | run_all | <<< Xong tests trong 17.9 s
+2026-10-19 19:44:41,796 | INFO    | run_all | === Hoàn tất pipeline (10.1 phút) ===

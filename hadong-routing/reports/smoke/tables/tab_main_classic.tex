@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Phương pháp tìm kiếm/dự báo trên tập test chính (10 truy vấn, sự cố vị trí ngẫu nhiên) trong V\_real. Regret so với oracle.}
+\label{tab:tab_main_classic}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) \\
+\midrule
+Dijkstra (ngắn nhất) & 100.00 & 13.49 & 10.56 & 18.83 & 10.38 & 7.92 & 25.62 & 4.33 \\
+A* (thời gian tự do) & 100.00 & 13.39 & 9.65 & 19.06 & 6.33 & 0.00 & 18.18 & 4.44 \\
+Plan-once TD-A* & 100.00 & 13.02 & 9.65 & 19.08 & 1.99 & 0.00 & 6.18 & 4.58 \\
+Plan-once + cảm biến & 100.00 & 12.79 & 9.65 & 18.83 & 1.54 & 0.00 & 4.56 & 4.43 \\
+Plan-once + GCN & 100.00 & 13.02 & 9.65 & 19.08 & 1.99 & 0.00 & 6.18 & 4.58 \\
+Định tuyến P90 & 100.00 & 13.14 & 9.94 & 19.08 & 3.44 & 0.59 & 7.44 & 4.59 \\
+Replan TD-A* & 100.00 & 12.90 & 9.30 & 19.07 & 0.81 & 0.00 & 2.54 & 4.66 \\
+Replan lười & 100.00 & 12.90 & 9.30 & 19.07 & 0.81 & 0.00 & 2.54 & 4.66 \\
+Replan D* Lite & 100.00 & 12.90 & 9.30 & 19.07 & 0.85 & 0.00 & 2.93 & 4.62 \\
+Replan + GCN & 100.00 & 12.90 & 9.30 & 19.07 & 0.85 & 0.00 & 2.93 & 4.64 \\
+Oracle TD-A* & 100.00 & 12.63 & 9.30 & 18.83 & 0.00 & 0.00 & 0.00 & 4.41 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,869 @@
+{
+  "mode": "smoke",
+  "seed": 42,
+  "n": 30,
+  "queries": [
+    {
+      "id": "train_0000",
+      "split": "train",
+      "origin": 184,
+      "dest": 2440,
+      "depart_min": 1186.389,
+      "hour": 19,
+      "sigma": 0.05,
+      "noise_seed": 2302889774,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3155.9,
+      "distance_bin": 1,
+      "ref_hops": 39,
+      "ref_time_base_min": 9.716
+    },
+    {
+      "id": "train_0001",
+      "split": "train",
+      "origin": 1206,
+      "dest": 3390,
+      "depart_min": 17.918,
+      "hour": 0,
+      "sigma": 0.15,
+      "noise_seed": 3546030603,
+      "incidents": [
+        {
+          "edge": 2706,
+          "start_min": 3.6575376689502352,
+          "duration_min": 43.70199456496808,
+          "severity": 0.19010735793099243
+        },
+        {
+          "edge": 4904,
+          "start_min": 3.66140914009401,
+          "duration_min": 104.09184524516652,
+          "severity": 0.3188360626893031
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3412,
+          "start_min": 3.6575376689502352,
+          "duration_min": 43.70199456496808,
+          "severity": 0.19010735793099243
+        },
+        {
+          "edge": 87,
+          "start_min": 3.66140914009401,
+          "duration_min": 104.09184524516652,
+          "severity": 0.3188360626893031
+        }
+      ],
+      "od_dist_m": 3869.7,
+      "distance_bin": 1,
+      "ref_hops": 48,
+      "ref_time_base_min": 7.216
+    },
+    {
+      "id": "train_0002",
+      "split": "train",
+      "origin": 2924,
+      "dest": 2395,
+      "depart_min": 326.572,
+      "hour": 5,
+      "sigma": 0.05,
+      "noise_seed": 218833610,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4116.8,
+      "distance_bin": 1,
+      "ref_hops": 43,
+      "ref_time_base_min": 16.6027
+    },
+    {
+      "id": "train_0003",
+      "split": "train",
+      "origin": 3058,
+      "dest": 2086,
+      "depart_min": 1175.402,
+      "hour": 19,
+      "sigma": 0.15,
+      "noise_seed": 2171322101,
+      "incidents": [
+        {
+          "edge": 264,
+          "start_min": 1169.0578538617508,
+          "duration_min": 100.27854229837905,
+          "severity": 0.14198831721905697
+        },
+        {
+          "edge": 7482,
+          "start_min": 1177.1593044802019,
+          "duration_min": 107.28502628236753,
+          "severity": 0.291177954067869
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5428,
+          "start_min": 1169.0578538617508,
+          "duration_min": 100.27854229837905,
+          "severity": 0.14198831721905697
+        },
+        {
+          "edge": 1408,
+          "start_min": 1177.1593044802019,
+          "duration_min": 107.28502628236753,
+          "severity": 0.291177954067869
+        }
+      ],
+      "od_dist_m": 4522.7,
+      "distance_bin": 2,
+      "ref_hops": 43,
+      "ref_time_base_min": 15.5551
+    },
+    {
+      "id": "train_0004",
+      "split": "train",
+      "origin": 326,
+      "dest": 1799,
+      "depart_min": 1241.809,
+      "hour": 20,
+      "sigma": 0.3,
+      "noise_seed": 2051454473,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1514.6,
+      "distance_bin": 0,
+      "ref_hops": 13,
+      "ref_time_base_min": 5.59
+    },
+    {
+      "id": "train_0005",
+      "split": "train",
+      "origin": 806,
+      "dest": 1169,
+      "depart_min": 1056.404,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 3091200921,
+      "incidents": [
+        {
+          "edge": 6026,
+          "start_min": 1052.8863455980356,
+          "duration_min": 55.39428376772936,
+          "severity": 0.20938178237047358
+        },
+        {
+          "edge": 493,
+          "start_min": 1039.5236960687007,
+          "duration_min": 103.25435101786242,
+          "severity": 0.18316863404674177
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2164,
+          "start_min": 1052.8863455980356,
+          "duration_min": 55.39428376772936,
+          "severity": 0.20938178237047358
+        },
+        {
+          "edge": 767,
+          "start_min": 1039.5236960687007,
+          "duration_min": 103.25435101786242,
+          "severity": 0.18316863404674177
+        }
+      ],
+      "od_dist_m": 5636.0,
+      "distance_bin": 2,
+      "ref_hops": 77,
+      "ref_time_base_min": 32.2621
+    },
+    {
+      "id": "train_0006",
+      "split": "train",
+      "origin": 854,
+      "dest": 1675,
+      "depart_min": 404.544,
+      "hour": 6,
+      "sigma": 0.3,
+      "noise_seed": 2348982610,
+      "incidents": [
+        {
+          "edge": 5435,
+          "start_min": 398.97131021582726,
+          "duration_min": 71.92328277305036,
+          "severity": 0.16547532772340784
+        },
+        {
+          "edge": 4677,
+          "start_min": 389.921991640735,
+          "duration_min": 33.885759109000844,
+          "severity": 0.34191548001182315
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 831,
+          "start_min": 398.97131021582726,
+          "duration_min": 71.92328277305036,
+          "severity": 0.16547532772340784
+        },
+        {
+          "edge": 2997,
+          "start_min": 389.921991640735,
+          "duration_min": 33.885759109000844,
+          "severity": 0.34191548001182315
+        }
+      ],
+      "od_dist_m": 4898.9,
+      "distance_bin": 2,
+      "ref_hops": 51,
+      "ref_time_base_min": 20.4029
+    },
+    {
+      "id": "train_0007",
+      "split": "train",
+      "origin": 2403,
+      "dest": 3458,
+      "depart_min": 1319.682,
+      "hour": 21,
+      "sigma": 0.05,
+      "noise_seed": 2725172371,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5595.3,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 12.0302
+    },
+    {
+      "id": "train_0008",
+      "split": "train",
+      "origin": 1639,
+      "dest": 2210,
+      "depart_min": 1063.691,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 876635713,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3284.5,
+      "distance_bin": 1,
+      "ref_hops": 47,
+      "ref_time_base_min": 16.1938
+    },
+    {
+      "id": "train_0009",
+      "split": "train",
+      "origin": 2790,
+      "dest": 3362,
+      "depart_min": 991.928,
+      "hour": 16,
+      "sigma": 0.3,
+      "noise_seed": 2174376193,
+      "incidents": [
+        {
+          "edge": 7384,
+          "start_min": 991.4425777095681,
+          "duration_min": 55.558842726456575,
+          "severity": 0.12848889874509278
+        },
+        {
+          "edge": 5529,
+          "start_min": 999.6451470130204,
+          "duration_min": 34.66883038464752,
+          "severity": 0.16688044707124583
+        },
+        {
+          "edge": 160,
+          "start_min": 997.7952540233741,
+          "duration_min": 116.50133467783296,
+          "severity": 0.2424209086856107
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5708,
+          "start_min": 991.4425777095681,
+          "duration_min": 55.558842726456575,
+          "severity": 0.12848889874509278
+        },
+        {
+          "edge": 8696,
+          "start_min": 999.6451470130204,
+          "duration_min": 34.66883038464752,
+          "severity": 0.16688044707124583
+        },
+        {
+          "edge": 392,
+          "start_min": 997.7952540233741,
+          "duration_min": 116.50133467783296,
+          "severity": 0.2424209086856107
+        }
+      ],
+      "od_dist_m": 2102.0,
+      "distance_bin": 0,
+      "ref_hops": 30,
+      "ref_time_base_min": 9.6606
+    },
+    {
+      "id": "train_0010",
+      "split": "train",
+      "origin": 2182,
+      "dest": 3172,
+      "depart_min": 1115.316,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 1672306929,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5038.0,
+      "distance_bin": 2,
+      "ref_hops": 69,
+      "ref_time_base_min": 35.0374
+    },
+    {
+      "id": "train_0011",
+      "split": "train",
+      "origin": 2834,
+      "dest": 1046,
+      "depart_min": 710.958,
+      "hour": 11,
+      "sigma": 0.3,
+      "noise_seed": 1400212436,
+      "incidents": [
+        {
+          "edge": 4622,
+          "start_min": 701.6503936215918,
+          "duration_min": 114.45360125794681,
+          "severity": 0.27976541874837224
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5064,
+          "start_min": 701.6503936215918,
+          "duration_min": 114.45360125794681,
+          "severity": 0.27976541874837224
+        }
+      ],
+      "od_dist_m": 5149.7,
+      "distance_bin": 2,
+      "ref_hops": 42,
+      "ref_time_base_min": 13.7144
+    },
+    {
+      "id": "train_0012",
+      "split": "train",
+      "origin": 1635,
+      "dest": 2365,
+      "depart_min": 1049.918,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 17061575,
+      "incidents": [
+        {
+          "edge": 89,
+          "start_min": 1050.6948477678322,
+          "duration_min": 89.71370404152289,
+          "severity": 0.3561819530443465
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 705,
+          "start_min": 1050.6948477678322,
+          "duration_min": 89.71370404152289,
+          "severity": 0.3561819530443465
+        }
+      ],
+      "od_dist_m": 7363.7,
+      "distance_bin": 2,
+      "ref_hops": 58,
+      "ref_time_base_min": 52.4222
+    },
+    {
+      "id": "train_0013",
+      "split": "train",
+      "origin": 2277,
+      "dest": 1929,
+      "depart_min": 1106.012,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 106685689,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1121.5,
+      "distance_bin": 0,
+      "ref_hops": 17,
+      "ref_time_base_min": 6.825
+    },
+    {
+      "id": "train_0014",
+      "split": "train",
+      "origin": 928,
+      "dest": 1669,
+      "depart_min": 980.942,
+      "hour": 16,
+      "sigma": 0.15,
+      "noise_seed": 435647980,
+      "incidents": [
+        {
+          "edge": 7001,
+          "start_min": 977.5629708144753,
+          "duration_min": 100.28582376991837,
+          "severity": 0.1942959798785473
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2994,
+          "start_min": 977.5629708144753,
+          "duration_min": 100.28582376991837,
+          "severity": 0.1942959798785473
+        }
+      ],
+      "od_dist_m": 3826.1,
+      "distance_bin": 1,
+      "ref_hops": 29,
+      "ref_time_base_min": 13.1291
+    },
+    {
+      "id": "train_0015",
+      "split": "train",
+      "origin": 523,
+      "dest": 3049,
+      "depart_min": 1119.272,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 3621388092,
+      "incidents": [
+        {
+          "edge": 6079,
+          "start_min": 1101.379821721554,
+          "duration_min": 97.90846252152818,
+          "severity": 0.1806652799444801
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 273,
+          "start_min": 1101.379821721554,
+          "duration_min": 97.90846252152818,
+          "severity": 0.1806652799444801
+        }
+      ],
+      "od_dist_m": 1945.9,
+      "distance_bin": 0,
+      "ref_hops": 34,
+      "ref_time_base_min": 9.261
+    },
+    {
+      "id": "train_0016",
+      "split": "train",
+      "origin": 52,
+      "dest": 833,
+      "depart_min": 1056.644,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 2550042497,
+      "incidents": [
+        {
+          "edge": 724,
+          "start_min": 1043.1376914569844,
+          "duration_min": 110.61522398845639,
+          "severity": 0.1697257960167734
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4908,
+          "start_min": 1043.1376914569844,
+          "duration_min": 110.61522398845639,
+          "severity": 0.1697257960167734
+        }
+      ],
+      "od_dist_m": 3890.8,
+      "distance_bin": 1,
+      "ref_hops": 45,
+      "ref_time_base_min": 27.299
+    },
+    {
+      "id": "train_0017",
+      "split": "train",
+      "origin": 3253,
+      "dest": 1432,
+      "depart_min": 526.496,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 1127828320,
+      "incidents": [
+        {
+          "edge": 212,
+          "start_min": 533.8502102667653,
+          "duration_min": 40.896208720311314,
+          "severity": 0.12408673848772586
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3999,
+          "start_min": 533.8502102667653,
+          "duration_min": 40.896208720311314,
+          "severity": 0.12408673848772586
+        }
+      ],
+      "od_dist_m": 2722.5,
+      "distance_bin": 1,
+      "ref_hops": 33,
+      "ref_time_base_min": 10.0124
+    },
+    {
+      "id": "train_0018",
+      "split": "train",
+      "origin": 37,
+      "dest": 1049,
+      "depart_min": 488.614,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 3707342626,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4380.9,
+      "distance_bin": 1,
+      "ref_hops": 51,
+      "ref_time_base_min": 17.5282
+    },
+    {
+      "id": "train_0019",
+      "split": "train",
+      "origin": 2157,
+      "dest": 1265,
+      "depart_min": 386.007,
+      "hour": 6,
+      "sigma": 0.3,
+      "noise_seed": 1907928877,
+      "incidents": [
+        {
+          "edge": 3678,
+          "start_min": 393.6324529667075,
+          "duration_min": 34.1369339533812,
+          "severity": 0.2377141867759527
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1458,
+          "start_min": 393.6324529667075,
+          "duration_min": 34.1369339533812,
+          "severity": 0.2377141867759527
+        }
+      ],
+      "od_dist_m": 5114.3,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 13.7416
+    },
+    {
+      "id": "train_0020",
+      "split": "train",
+      "origin": 1309,
+      "dest": 438,
+      "depart_min": 860.376,
+      "hour": 14,
+      "sigma": 0.3,
+      "noise_seed": 4176168039,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2901.6,
+      "distance_bin": 1,
+      "ref_hops": 27,
+      "ref_time_base_min": 9.9103
+    },
+    {
+      "id": "train_0021",
+      "split": "train",
+      "origin": 1017,
+      "dest": 966,
+      "depart_min": 1095.385,
+      "hour": 18,
+      "sigma": 0.05,
+      "noise_seed": 893102216,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2225.8,
+      "distance_bin": 0,
+      "ref_hops": 39,
+      "ref_time_base_min": 16.2641
+    },
+    {
+      "id": "train_0022",
+      "split": "train",
+      "origin": 1739,
+      "dest": 340,
+      "depart_min": 638.098,
+      "hour": 10,
+      "sigma": 0.3,
+      "noise_seed": 2232507000,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5109.7,
+      "distance_bin": 2,
+      "ref_hops": 57,
+      "ref_time_base_min": 15.2927
+    },
+    {
+      "id": "train_0023",
+      "split": "train",
+      "origin": 2726,
+      "dest": 431,
+      "depart_min": 795.338,
+      "hour": 13,
+      "sigma": 0.05,
+      "noise_seed": 3590307947,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3525.8,
+      "distance_bin": 1,
+      "ref_hops": 58,
+      "ref_time_base_min": 22.3109
+    },
+    {
+      "id": "train_0024",
+      "split": "train",
+      "origin": 527,
+      "dest": 902,
+      "depart_min": 761.071,
+      "hour": 12,
+      "sigma": 0.05,
+      "noise_seed": 2735970255,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1814.0,
+      "distance_bin": 0,
+      "ref_hops": 25,
+      "ref_time_base_min": 5.9789
+    },
+    {
+      "id": "train_0025",
+      "split": "train",
+      "origin": 224,
+      "dest": 3005,
+      "depart_min": 420.003,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 4053895953,
+      "incidents": [
+        {
+          "edge": 6756,
+          "start_min": 423.1010198516991,
+          "duration_min": 66.55698021890203,
+          "severity": 0.1318176793466702
+        },
+        {
+          "edge": 4501,
+          "start_min": 418.0642805599262,
+          "duration_min": 68.92903517058164,
+          "severity": 0.23794443951810598
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8765,
+          "start_min": 423.1010198516991,
+          "duration_min": 66.55698021890203,
+          "severity": 0.1318176793466702
+        },
+        {
+          "edge": 808,
+          "start_min": 418.0642805599262,
+          "duration_min": 68.92903517058164,
+          "severity": 0.23794443951810598
+        }
+      ],
+      "od_dist_m": 9560.0,
+      "distance_bin": 2,
+      "ref_hops": 63,
+      "ref_time_base_min": 28.292
+    },
+    {
+      "id": "train_0026",
+      "split": "train",
+      "origin": 3004,
+      "dest": 2575,
+      "depart_min": 757.086,
+      "hour": 12,
+      "sigma": 0.3,
+      "noise_seed": 1097842629,
+      "incidents": [
+        {
+          "edge": 6526,
+          "start_min": 756.2909750509235,
+          "duration_min": 59.137675690122975,
+          "severity": 0.345161762734166
+        },
+        {
+          "edge": 7499,
+          "start_min": 761.4581813647329,
+          "duration_min": 93.65776438899015,
+          "severity": 0.19464981497681483
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3042,
+          "start_min": 756.2909750509235,
+          "duration_min": 59.137675690122975,
+          "severity": 0.345161762734166
+        },
+        {
+          "edge": 2986,
+          "start_min": 761.4581813647329,
+          "duration_min": 93.65776438899015,
+          "severity": 0.19464981497681483
+        }
+      ],
+      "od_dist_m": 8205.2,
+      "distance_bin": 2,
+      "ref_hops": 77,
+      "ref_time_base_min": 27.5038
+    },
+    {
+      "id": "train_0027",
+      "split": "train",
+      "origin": 1442,
+      "dest": 3249,
+      "depart_min": 989.862,
+      "hour": 16,
+      "sigma": 0.05,
+      "noise_seed": 1420570070,
+      "incidents": [
+        {
+          "edge": 4123,
+          "start_min": 973.1089822969519,
+          "duration_min": 105.83927327026346,
+          "severity": 0.18226992791108027
+        },
+        {
+          "edge": 3345,
+          "start_min": 988.2739878759434,
+          "duration_min": 73.40582456415773,
+          "severity": 0.21095122182359027
+        },
+        {
+          "edge": 3357,
+          "start_min": 981.1005499579015,
+          "duration_min": 99.13996591214988,
+          "severity": 0.2812524735378993
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4433,
+          "start_min": 973.1089822969519,
+          "duration_min": 105.83927327026346,
+          "severity": 0.18226992791108027
+        },
+        {
+          "edge": 8374,
+          "start_min": 988.2739878759434,
+          "duration_min": 73.40582456415773,
+          "severity": 0.21095122182359027
+        },
+        {
+          "edge": 3885,
+          "start_min": 981.1005499579015,
+          "duration_min": 99.13996591214988,
+          "severity": 0.2812524735378993
+        }
+      ],
+      "od_dist_m": 1333.8,
+      "distance_bin": 0,
+      "ref_hops": 29,
+      "ref_time_base_min": 9.3895
+    },
+    {
+      "id": "train_0028",
+      "split": "train",
+      "origin": 1474,
+      "dest": 3405,
+      "depart_min": 1057.52,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 3862659605,
+      "incidents": [
+        {
+          "edge": 2802,
+          "start_min": 1045.3006367443477,
+          "duration_min": 101.100769229465,
+          "severity": 0.3592503829540925
+        },
+        {
+          "edge": 149,
+          "start_min": 1053.8563331280372,
+          "duration_min": 60.00063093922179,
+          "severity": 0.19407821177016504
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8557,
+          "start_min": 1045.3006367443477,
+          "duration_min": 101.100769229465,
+          "severity": 0.3592503829540925
+        },
+        {
+          "edge": 2536,
+          "start_min": 1053.8563331280372,
+          "duration_min": 60.00063093922179,
+          "severity": 0.19407821177016504
+        }
+      ],
+      "od_dist_m": 3053.9,
+      "distance_bin": 1,
+      "ref_hops": 47,
+      "ref_time_base_min": 19.9298
+    },
+    {
+      "id": "train_0029",
+      "split": "train",
+      "origin": 2494,
+      "dest": 1967,
+      "depart_min": 1435.426,
+      "hour": 23,
+      "sigma": 0.15,
+      "noise_seed": 2725016865,
+      "incidents": [
+        {
+          "edge": 4697,
+          "start_min": 1444.545931044109,
+          "duration_min": 36.92658698197334,
+          "severity": 0.14528191402151236
+        },
+        {
+          "edge": 3478,
+          "start_min": 1424.598366039934,
+          "duration_min": 44.23084958942307,
+          "severity": 0.12064691451143232
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5861,
+          "start_min": 1444.545931044109,
+          "duration_min": 36.92658698197334,
+          "severity": 0.14528191402151236
+        },
+        {
+          "edge": 147,
+          "start_min": 1424.598366039934,
+          "duration_min": 44.23084958942307,
+          "severity": 0.12064691451143232
+        }
+      ],
+      "od_dist_m": 4813.8,
+      "distance_bin": 2,
+      "ref_hops": 57,
+      "ref_time_base_min": 11.3981
+    }
+  ]
+}

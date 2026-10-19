@@ -1,0 +1,24 @@
+key,value,desc
+graph.buffer\_m,500,vùng đệm quanh ranh giới quận (m)
+graph.free\_flow\_factor,0.9,v\_free = maxspeed × hệ số
+speed.c\_max / v\_min,0.85 / 5.0,chặn trên ùn / vận tốc tối thiểu (km/h)
+speed.profile.peaks,"morning: μ=8.0, σ=1.0, a=0.58; midday: μ=12.5, σ=2.5, a=0.25; evening: μ=18.0, σ=1.2, a=0.62; late\_evening: μ=21.0, σ=1.5, a=0.12",Gaussian tuần hoàn
+speed.road\_sensitivity,"trunk:1.0, primary:0.95, secondary:0.8, tertiary:0.65, residential:0.4",s(nhóm đường)
+speed.direction.beta,0.3,biên độ hệ số hướng
+speed.real\_noise,"correlated, ρ=0.8, k=4, iid=0.3",nhiễu môi trường thực
+speed.fifo.max\_slope,0.9,giới hạn $-d\tau/dt$
+speed.incidents,"hệ số [0.1, 0.4], [30, 120] phút",sự cố
+scenarios.n\_queries,1000,số truy vấn (full)
+scenarios.sigma\_levels,"[0.05, 0.15, 0.3]",mức nhiễu
+scenarios.*on\_route\_prob,"chính 0.0, stress 0.7",xác suất đặt sự cố trên tuyến
+algorithms.replan,"r=400 m, lười θ=0.15",quan sát / replan lười
+algorithms.dstar.refresh\_min,15,chu kỳ dựng lại D* Lite (phút)
+algorithms.alt.n\_landmarks,8,số điểm mốc ALT
+algorithms.risk,"M=30, k=6, q=0.9",định tuyến P90
+forecast,"cảm biến 0.15, GCN 3×32, 1500 bước",dự báo ngắn hạn
+rl.ppo,"lr=0.0003, n\_steps=512×8, batch=256, γ=0.995, ent=0.01",MaskablePPO
+rl.variants,rl=400000; rl\_ctg=400000; rl\_shape=1000000; rl\_tree=800000; rl\_lstm=500000; rl\_tree\_bc=800000; rl\_hybrid=60000,bước huấn luyện / seed
+rl.bc,"1500 tập, 8 epoch, khám phá 0.2",behavior cloning
+env.reward,"time\_weight=1.0, shaping=euclid, shaping\_lambda=1.0, shaping\_ref\_speed\_kmh=30, goal\_bonus=10.0, revisit\_penalty=1.0, timeout\_penalty=10.0, deadend\_penalty=10.0",hệ số thưởng
+departure,"bước 10 phút ×6, w=[1.0, 0.5, 0.25]",chọn giờ xuất phát
+multiagent,"20 xe/tác tử, BPR α=0.5, β=2.0",mô phỏng nhiều xe

@@ -1,0 +1,185 @@
+% !TEX root = main.tex
+\section{Phát biểu bài toán}\label{sec:problem}
+
+\subsection{Mô tả bài toán}\label{sec:problem:desc}
+
+Cho mạng đường lái xe của quận Hà Đông, một điểm đi, một điểm đến và một giờ xuất phát. Vận tốc trên mỗi đoạn đường
+thay đổi theo giờ trong ngày theo một quy luật lặp lại; ta có trong tay một \emph{dự báo} của quy luật đó (gọi là vận
+tốc nền $V_{\text{base}}$). Tuy nhiên ngày thực tế luôn lệch khỏi dự báo: có nhiễu (đường đông hơn hoặc vắng hơn bình
+thường, và độ lệch này lan sang các đoạn lân cận, kéo dài sang các giờ kế tiếp) và có thể xảy ra \emph{sự cố} làm một
+đoạn đường chậm hẳn trong 30--120 phút. Người lái chỉ \emph{quan sát} được vận tốc thực trong một bán kính quanh vị trí
+hiện tại; trong một số thiết lập, có thêm dữ liệu từ các cảm biến cố định trên một phần mạng đường.
+
+Nhiệm vụ là chọn tuyến đường --- hoặc chọn một lần lúc xuất phát, hoặc điều chỉnh liên tục trong khi đi --- sao cho đến
+nơi sớm nhất. Bên cạnh đó có ba bài toán phụ: (i) có nên đợi thêm một khoảng thời gian trước khi xuất phát để tránh
+cao điểm; (ii) chọn tuyến \emph{tin cậy} (ít rủi ro bị trễ) thay vì tuyến nhanh nhất trung bình; (iii) khi nhiều xe
+cùng được dẫn đường, chỉ dẫn nên được phân bổ thế nào để không tự tạo ra ùn tắc mới.
+
+\textbf{Đầu vào} của một truy vấn gồm: nút đi $s$, nút đến $d$, giờ xuất phát $t_0$; đầu vào của hệ thống gồm đồ thị
+đường, vận tốc nền 24 khung giờ, và (tuỳ phương pháp) các quan sát thời gian thực. \textbf{Đầu ra} là dãy cạnh từ $s$ tới
+$d$ (hoặc một chính sách chọn cạnh tiếp theo), cùng thời gian di chuyển thực tế phát sinh khi đi theo nó.
+
+\begin{vd}[Tuyến ngắn nhất không phải lúc nào cũng nhanh nhất]\label{vd:toy}
+Xét một ví dụ \emph{giả định} để minh hoạ: từ $s$ tới $d$ có hai lựa chọn. Tuyến 1 đi trục chính dài $3{,}0$~km; tuyến 2
+đi đường nhánh dài $2{,}4$~km. Lúc 3 giờ sáng, vận tốc trục chính là $50$~km/h và đường nhánh $18$~km/h, nên
+\begin{equation}
+T_1(3\text{h}) = \frac{3{,}0}{50}\cdot 60 = 3{,}6 \text{ phút}, \qquad
+T_2(3\text{h}) = \frac{2{,}4}{18}\cdot 60 \approx 8{,}0 \text{ phút},
+\label{eq:toy3}
+\end{equation}
+tuyến 1 (dài hơn) nhanh hơn hẳn. Lúc 8 giờ sáng, trục chính tắc còn $14$~km/h, đường nhánh còn $13$~km/h:
+\begin{equation}
+T_1(8\text{h}) = \frac{3{,}0}{14}\cdot 60 \approx 12{,}9 \text{ phút}, \qquad
+T_2(8\text{h}) = \frac{2{,}4}{13}\cdot 60 \approx 11{,}1 \text{ phút},
+\label{eq:toy8}
+\end{equation}
+tuyến 2 trở thành tuyến nhanh nhất. Tuyến tối ưu phụ thuộc vào giờ xuất phát.
+\end{vd}
+
+\begin{vd}[Ví dụ thật trong tập kiểm tra]\label{vd:real}
+Truy vấn \ExampleQuery{} trong tập kiểm tra có \ExampleNInc{} sự cố trên hành lang đi (Hình~\ref{fig:route} ở
+Phần~\ref{sec:exp}). Kế hoạch tốt nhất theo dự báo (plan-once) đi thẳng vào đoạn bị sự cố và mất \ExamplePoTT{} phút;
+cơ chế tái lập kế hoạch nhận ra đoạn chậm khi đến gần và vòng tránh, chỉ mất \ExampleRpTT{} phút --- gần bằng lời giải
+của một ``nhà tiên tri'' biết trước toàn bộ tương lai (oracle, \ExampleOrTT{} phút). Ví dụ cho thấy ba yếu tố cốt lõi
+của bài toán: phụ thuộc thời gian, bất định, và quan sát cục bộ.
+\end{vd}
+
+\subsection{Mô hình hoá toán học}\label{sec:problem:model}
+
+\textbf{Đồ thị và hàm thời gian.} Mạng đường được biểu diễn bởi đồ thị có hướng $G=(V,E)$ với $|V|=n$ nút (giao lộ,
+điểm cuối đường) và $|E|=m$ cạnh (đoạn đường một chiều). Mỗi cạnh $e=(u,v)\in E$ có chiều dài $L_e$ (mét). Thời gian
+$t\in\mathbb{R}$ tính bằng phút kể từ 0:00; vận tốc lặp lại với chu kỳ $1440$ phút. Ký hiệu $v_e(t)>0$ (m/phút) là vận tốc
+trên cạnh $e$ tại thời điểm $t$.
+
+\begin{dn}[Hàm thời gian qua cạnh và hàm đến]\label{dn:arrival}
+Thời gian để đi hết cạnh $e$ khi vào cạnh tại thời điểm $t$ và thời điểm ra khỏi cạnh lần lượt là
+\begin{equation}
+\tau_e(t) = \frac{L_e}{v_e(t)},
+\label{eq:tau}
+\end{equation}
+\begin{equation}
+a_e(t) = t + \tau_e(t).
+\label{eq:arrival}
+\end{equation}
+\end{dn}
+
+Một đường đi từ $s$ tới $d$ là dãy cạnh $P=(e_1,\dots,e_k)$ với $e_i=(u_{i-1},u_i)$, $u_0=s$, $u_k=d$. Thời điểm đến
+khi xuất phát lúc $t_0$ được tính bằng cách hợp các hàm đến:
+\begin{equation}
+A(P,t_0) = a_{e_k}\circ a_{e_{k-1}}\circ\cdots\circ a_{e_1}(t_0).
+\label{eq:path-arrival}
+\end{equation}
+
+\begin{dn}[Tính FIFO]\label{dn:fifo}
+Mạng thoả tính \emph{FIFO} (first-in-first-out, đi trước thì đến trước) nếu với mọi cạnh $e$ và mọi $t_1\le t_2$:
+\begin{equation}
+a_e(t_1)\le a_e(t_2).
+\label{eq:fifo}
+\end{equation}
+Khi $\tau_e$ khả vi, điều kiện \eqref{eq:fifo} tương đương với
+\begin{equation}
+\frac{d\tau_e(t)}{dt} \ge -1 \qquad \forall t.
+\label{eq:fifo-deriv}
+\end{equation}
+\end{dn}
+
+\textbf{Bài toán TDSP (lập kế hoạch một lần).} Với tập $\mathcal{P}(s,d)$ các đường đi từ $s$ tới $d$:
+\begin{equation}
+P^\ast = \arg\min_{P\in\mathcal{P}(s,d)} \bigl[A(P,t_0)-t_0\bigr],
+\label{eq:tdsp}
+\end{equation}
+trong đó $v_e(t)$ lấy từ dự báo $V_{\text{base}}$ (phương pháp \emph{plan-once}) hoặc từ môi trường thực $V_{\text{real}}$
+(lời giải \emph{oracle}, chỉ dùng làm cận dưới để đánh giá). Ràng buộc duy nhất là $P$ phải là đường đi hợp lệ trên $G$
+(các cạnh nối tiếp nhau); không cho phép chờ tại nút.
+
+\textbf{Bài toán trực tuyến (tái lập kế hoạch, học tăng cường).} Trạng thái đầy đủ tại bước $k$ gồm vị trí $u_k$, thời
+điểm $t_k$ và toàn bộ trường vận tốc thực $V_{\text{real}}$; nhưng tác tử chỉ quan sát được
+\begin{equation}
+o_k = \Bigl(u_k,\; t_k,\; \bigl\{\tau^{\text{real}}_e(t_k) : e\in\mathcal{N}_r(u_k)\bigr\}\Bigr),
+\label{eq:observation}
+\end{equation}
+với $\mathcal{N}_r(u)$ là tập cạnh có nút đầu cách $u$ không quá $r$ mét. Bài toán là một quá trình quyết định Markov
+quan sát một phần (POMDP): tìm chính sách $\pi$ ánh xạ lịch sử quan sát thành cạnh ra tiếp theo để cực tiểu kỳ vọng thời
+gian đi
+\begin{equation}
+\pi^\ast = \arg\min_\pi \; \mathbb{E}\bigl[T^\pi\bigr], \qquad T^\pi = A(P^\pi,t_0)-t_0 .
+\label{eq:pomdp}
+\end{equation}
+Chất lượng của một phương pháp trên một truy vấn được đo bằng \emph{regret} so với oracle:
+\begin{equation}
+\text{Regret}(\pi) = 100\cdot\left(\frac{T^\pi}{T^{\text{oracle}}}-1\right)\ (\%).
+\label{eq:regret}
+\end{equation}
+
+\textbf{Biến thể theo rủi ro.} Khi $V_{\text{real}}$ là biến ngẫu nhiên với phân phối $\mathcal{D}$, ta có thể ưu tiên
+tuyến \emph{tin cậy} bằng cách cực tiểu phân vị 90\% thay vì kỳ vọng:
+\begin{equation}
+P^{\ast}_{0.9} = \arg\min_{P\in\mathcal{P}(s,d)} Q_{0.9}\bigl[A(P,t_0)-t_0\bigr], \qquad V_{\text{real}}\sim\mathcal{D}.
+\label{eq:risk}
+\end{equation}
+
+\textbf{Chọn giờ xuất phát.} Với bước chờ $\Delta$ phút, tối đa $K$ lần chờ và trọng số chi phí chờ $w\in(0,1]$:
+\begin{equation}
+k^\ast = \arg\min_{k\in\{0,\dots,K\}} \Bigl[w\cdot k\Delta + T^{\text{oracle}}(t_0+k\Delta)\Bigr].
+\label{eq:departure}
+\end{equation}
+Với $w=1$, đây đúng là ``tổng thời gian chờ và đi''; $w<1$ mô tả trường hợp chờ ở nhà/cơ quan ít tốn kém hơn ngồi trên xe.
+
+\textbf{Nhiều xe.} Khi $N$ xe được dẫn đường cùng lúc, tải dẫn đường $q_e(t)$ (xe/giờ) làm chậm cạnh theo hàm BPR của
+Cục Đường bộ Hoa Kỳ~\cite{bpr1964}:
+\begin{equation}
+\tau^{\text{load}}_e(t) = \tau_e(t)\left[1+\alpha\left(\frac{q_e(t)}{c_e}\right)^{\beta}\right],
+\label{eq:bpr}
+\end{equation}
+với $c_e$ là năng lực thông hành của cạnh; mục tiêu hệ thống là cực tiểu tổng (hay trung bình) thời gian đi của các xe.
+
+\textbf{Đặc tính của bài toán.}
+\begin{dl}[\cite{dreyfus1969,kaufman1993}]\label{dl:poly}
+Nếu mạng thoả FIFO \eqref{eq:fifo} và $\tau_e(t)>0$, bài toán \eqref{eq:tdsp} giải được trong thời gian đa thức bằng giải
+thuật gắn nhãn kiểu Dijkstra theo thời điểm đến (chứng minh ở Phần~\ref{sec:method:correct}).
+\end{dl}
+
+\begin{nx}
+Khi mất tính FIFO và không cho phép chờ tại nút, đường tối ưu có thể không là đường đơn và tính chất cấu trúc con tối
+ưu bị phá vỡ~\cite{orda1990}. Vì vậy trong mô phỏng chúng tôi \emph{ép} tính FIFO (Phần~\ref{sec:method:speed}).
+\end{nx}
+
+\begin{nx}
+Bài toán trực tuyến \eqref{eq:pomdp} là một POMDP với không gian trạng thái liên tục và rất lớn (trường vận tốc trên
+$m$ cạnh); không có lời giải dạng đóng. Các phương pháp trong đề tài là heuristic có cơ sở (tái lập kế hoạch) hoặc học
+từ dữ liệu (RL).
+\end{nx}
+
+\begin{nx}
+Mục tiêu phân vị \eqref{eq:risk} \emph{không cộng tính} theo cạnh: phân vị của tổng khác tổng các phân vị, nên bài toán
+mất tính chất cấu trúc con tối ưu và không giải trực tiếp được bằng Dijkstra. Đề tài dùng tập tuyến ứng viên
+(Yen~\cite{yen1971}) rồi chọn theo phân vị ước lượng.
+\end{nx}
+
+\begin{nx}
+Bài toán nhiều xe là một bài toán phân bổ giao thông: nếu mỗi xe tự chọn tuyến nhanh nhất cho mình, hệ thống hội tụ về
+cân bằng người dùng (nguyên lý Wardrop~\cite{wardrop1952}), nói chung khác với tối ưu toàn hệ thống.
+\end{nx}
+
+\subsection{Khó khăn và thách thức}\label{sec:problem:challenges}
+
+\textbf{Độ phức tạp.} Mạng đường Hà Đông sau làm sạch có $n=\NNodes$ nút và $m=\NEdges$ cạnh. Tìm kiếm phụ thuộc thời
+gian một lần có độ phức tạp $O((n+m)\log n)$ --- rất nhanh; nhưng các bài toán xung quanh nhân chi phí đó lên nhiều lần:
+tái lập kế hoạch chạy lại tìm kiếm tại mỗi giao lộ (trung bình hàng chục lần mỗi chuyến), định tuyến theo rủi ro đánh
+giá nhiều ứng viên trên nhiều kịch bản, mô phỏng nhiều xe chạy hàng trăm tìm kiếm có tương tác, còn RL cần hàng trăm
+nghìn đến hàng triệu bước tương tác để học.
+
+\textbf{Các khía cạnh khiến bài toán khó.}
+\begin{enumerate}[label=(\arabic*)]
+    \item \emph{Không có dữ liệu vận tốc thực} cho Hà Đông: phải xây dựng mô hình mô phỏng có cấu trúc và minh bạch giả
+    định; mọi kết luận định lượng chỉ có giá trị trong mô phỏng.
+    \item \emph{Bảo đảm FIFO}: khi nội suy vận tốc theo phút, một đoạn đường dài có vận tốc tăng nhanh có thể làm
+    $d\tau/dt<-1$; khi sự cố kết thúc, vận tốc nhảy vọt cũng phá vỡ FIFO.
+    \item \emph{Bất định và quan sát cục bộ}: dự báo sai có hệ thống (sự cố) chỉ được phát hiện khi xe đã đến gần.
+    \item \emph{Khó khăn riêng của RL}: phần thưởng thưa (chỉ biết đã đến đích ở cuối chuyến), tầm nhìn dài (một chuyến
+    gồm hàng chục cạnh), \DeadEndPct\% số nút là ngõ cụt, tập hành động thay đổi theo nút (cần mặt nạ hành động), và chính
+    sách phải tổng quát hoá sang cặp điểm đi--đến, giờ xuất phát và vị trí sự cố chưa từng thấy.
+    \item \emph{Đánh giá công bằng}: các phương pháp phải chạy trên cùng tập kiểm tra, cùng môi trường thực tái lập theo
+    seed, tách tập huấn luyện/kiểm định/kiểm tra theo cặp điểm đi--đến để tránh rò rỉ, và so sánh bằng kiểm định thống kê
+    ghép cặp.
+\end{enumerate}

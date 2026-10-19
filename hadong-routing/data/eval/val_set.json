@@ -1,0 +1,6457 @@
+{
+  "mode": "full",
+  "seed": 42,
+  "n": 200,
+  "queries": [
+    {
+      "id": "val_0000",
+      "split": "val",
+      "origin": 719,
+      "dest": 3190,
+      "depart_min": 1024.512,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 1400957169,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4144.1,
+      "distance_bin": 1,
+      "ref_hops": 59,
+      "ref_time_base_min": 20.8491
+    },
+    {
+      "id": "val_0001",
+      "split": "val",
+      "origin": 1248,
+      "dest": 1370,
+      "depart_min": 176.383,
+      "hour": 2,
+      "sigma": 0.15,
+      "noise_seed": 694041805,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1900.8,
+      "distance_bin": 0,
+      "ref_hops": 28,
+      "ref_time_base_min": 5.9599
+    },
+    {
+      "id": "val_0002",
+      "split": "val",
+      "origin": 1680,
+      "dest": 1424,
+      "depart_min": 132.964,
+      "hour": 2,
+      "sigma": 0.05,
+      "noise_seed": 3962181114,
+      "incidents": [
+        {
+          "edge": 1751,
+          "start_min": 128.44833900279338,
+          "duration_min": 81.74638522790787,
+          "severity": 0.1378113779855703
+        },
+        {
+          "edge": 970,
+          "start_min": 138.55825553432697,
+          "duration_min": 35.44588955804648,
+          "severity": 0.24365291582860601
+        },
+        {
+          "edge": 5293,
+          "start_min": 134.54893083954275,
+          "duration_min": 91.06254736815283,
+          "severity": 0.3018816368318586
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4258,
+          "start_min": 128.44833900279338,
+          "duration_min": 81.74638522790787,
+          "severity": 0.1378113779855703
+        },
+        {
+          "edge": 747,
+          "start_min": 138.55825553432697,
+          "duration_min": 35.44588955804648,
+          "severity": 0.24365291582860601
+        },
+        {
+          "edge": 151,
+          "start_min": 134.54893083954275,
+          "duration_min": 91.06254736815283,
+          "severity": 0.3018816368318586
+        }
+      ],
+      "od_dist_m": 5753.1,
+      "distance_bin": 2,
+      "ref_hops": 66,
+      "ref_time_base_min": 13.5942
+    },
+    {
+      "id": "val_0003",
+      "split": "val",
+      "origin": 3449,
+      "dest": 1390,
+      "depart_min": 577.631,
+      "hour": 9,
+      "sigma": 0.15,
+      "noise_seed": 3406272447,
+      "incidents": [
+        {
+          "edge": 3864,
+          "start_min": 560.4013460122824,
+          "duration_min": 112.28590290281707,
+          "severity": 0.13431505110964614
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1604,
+          "start_min": 560.4013460122824,
+          "duration_min": 112.28590290281707,
+          "severity": 0.13431505110964614
+        }
+      ],
+      "od_dist_m": 3371.2,
+      "distance_bin": 1,
+      "ref_hops": 36,
+      "ref_time_base_min": 13.3788
+    },
+    {
+      "id": "val_0004",
+      "split": "val",
+      "origin": 1429,
+      "dest": 2447,
+      "depart_min": 937.544,
+      "hour": 15,
+      "sigma": 0.05,
+      "noise_seed": 862764304,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3315.3,
+      "distance_bin": 1,
+      "ref_hops": 49,
+      "ref_time_base_min": 10.6507
+    },
+    {
+      "id": "val_0005",
+      "split": "val",
+      "origin": 1723,
+      "dest": 1780,
+      "depart_min": 1060.735,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 3995387601,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3561.3,
+      "distance_bin": 1,
+      "ref_hops": 59,
+      "ref_time_base_min": 22.9532
+    },
+    {
+      "id": "val_0006",
+      "split": "val",
+      "origin": 320,
+      "dest": 2686,
+      "depart_min": 721.492,
+      "hour": 12,
+      "sigma": 0.15,
+      "noise_seed": 3443196767,
+      "incidents": [
+        {
+          "edge": 6832,
+          "start_min": 721.9435030239457,
+          "duration_min": 106.14016400726514,
+          "severity": 0.1174634243147635
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 951,
+          "start_min": 721.9435030239457,
+          "duration_min": 106.14016400726514,
+          "severity": 0.1174634243147635
+        }
+      ],
+      "od_dist_m": 7942.2,
+      "distance_bin": 2,
+      "ref_hops": 61,
+      "ref_time_base_min": 28.9051
+    },
+    {
+      "id": "val_0007",
+      "split": "val",
+      "origin": 2843,
+      "dest": 1820,
+      "depart_min": 1199.526,
+      "hour": 19,
+      "sigma": 0.05,
+      "noise_seed": 3361269724,
+      "incidents": [
+        {
+          "edge": 3912,
+          "start_min": 1191.272964669288,
+          "duration_min": 48.47813411704068,
+          "severity": 0.3737955753619582
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6641,
+          "start_min": 1191.272964669288,
+          "duration_min": 48.47813411704068,
+          "severity": 0.3737955753619582
+        }
+      ],
+      "od_dist_m": 5978.4,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 16.6238
+    },
+    {
+      "id": "val_0008",
+      "split": "val",
+      "origin": 1024,
+      "dest": 2669,
+      "depart_min": 315.859,
+      "hour": 5,
+      "sigma": 0.15,
+      "noise_seed": 1290109702,
+      "incidents": [
+        {
+          "edge": 5855,
+          "start_min": 303.216590442137,
+          "duration_min": 89.81404405721409,
+          "severity": 0.19150937663957074
+        },
+        {
+          "edge": 8128,
+          "start_min": 303.2943920271367,
+          "duration_min": 63.87687860621245,
+          "severity": 0.3909671447880916
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8765,
+          "start_min": 303.216590442137,
+          "duration_min": 89.81404405721409,
+          "severity": 0.19150937663957074
+        },
+        {
+          "edge": 5331,
+          "start_min": 303.2943920271367,
+          "duration_min": 63.87687860621245,
+          "severity": 0.3909671447880916
+        }
+      ],
+      "od_dist_m": 4545.1,
+      "distance_bin": 2,
+      "ref_hops": 62,
+      "ref_time_base_min": 27.5898
+    },
+    {
+      "id": "val_0009",
+      "split": "val",
+      "origin": 1803,
+      "dest": 2730,
+      "depart_min": 485.858,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 608192991,
+      "incidents": [
+        {
+          "edge": 2585,
+          "start_min": 466.3100358439167,
+          "duration_min": 32.17953346526637,
+          "severity": 0.32017164356597494
+        },
+        {
+          "edge": 2581,
+          "start_min": 495.7985309744916,
+          "duration_min": 99.17482527644366,
+          "severity": 0.2756778418085787
+        },
+        {
+          "edge": 6790,
+          "start_min": 482.05732675095345,
+          "duration_min": 65.0169804793054,
+          "severity": 0.14242362763731234
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1800,
+          "start_min": 466.3100358439167,
+          "duration_min": 32.17953346526637,
+          "severity": 0.32017164356597494
+        },
+        {
+          "edge": 259,
+          "start_min": 495.7985309744916,
+          "duration_min": 99.17482527644366,
+          "severity": 0.2756778418085787
+        },
+        {
+          "edge": 1577,
+          "start_min": 482.05732675095345,
+          "duration_min": 65.0169804793054,
+          "severity": 0.14242362763731234
+        }
+      ],
+      "od_dist_m": 3426.7,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 20.5627
+    },
+    {
+      "id": "val_0010",
+      "split": "val",
+      "origin": 1735,
+      "dest": 1369,
+      "depart_min": 501.377,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 3370971522,
+      "incidents": [
+        {
+          "edge": 4742,
+          "start_min": 496.0624381157503,
+          "duration_min": 72.25711758413738,
+          "severity": 0.31729294152606113
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4498,
+          "start_min": 496.0624381157503,
+          "duration_min": 72.25711758413738,
+          "severity": 0.31729294152606113
+        }
+      ],
+      "od_dist_m": 6209.8,
+      "distance_bin": 2,
+      "ref_hops": 59,
+      "ref_time_base_min": 26.9402
+    },
+    {
+      "id": "val_0011",
+      "split": "val",
+      "origin": 2858,
+      "dest": 2068,
+      "depart_min": 427.348,
+      "hour": 7,
+      "sigma": 0.15,
+      "noise_seed": 842828112,
+      "incidents": [
+        {
+          "edge": 8851,
+          "start_min": 412.50342634855923,
+          "duration_min": 106.1204677106004,
+          "severity": 0.18308682975675647
+        },
+        {
+          "edge": 1300,
+          "start_min": 422.59200343490863,
+          "duration_min": 116.37895813869591,
+          "severity": 0.2532828451717344
+        },
+        {
+          "edge": 4161,
+          "start_min": 434.52620508951344,
+          "duration_min": 35.031396220225965,
+          "severity": 0.39190132383262444
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 7901,
+          "start_min": 412.50342634855923,
+          "duration_min": 106.1204677106004,
+          "severity": 0.18308682975675647
+        },
+        {
+          "edge": 5997,
+          "start_min": 422.59200343490863,
+          "duration_min": 116.37895813869591,
+          "severity": 0.2532828451717344
+        },
+        {
+          "edge": 7675,
+          "start_min": 434.52620508951344,
+          "duration_min": 35.031396220225965,
+          "severity": 0.39190132383262444
+        }
+      ],
+      "od_dist_m": 6501.6,
+      "distance_bin": 2,
+      "ref_hops": 81,
+      "ref_time_base_min": 32.0217
+    },
+    {
+      "id": "val_0012",
+      "split": "val",
+      "origin": 2314,
+      "dest": 2793,
+      "depart_min": 443.762,
+      "hour": 7,
+      "sigma": 0.15,
+      "noise_seed": 314071694,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 11846.4,
+      "distance_bin": 2,
+      "ref_hops": 100,
+      "ref_time_base_min": 41.4222
+    },
+    {
+      "id": "val_0013",
+      "split": "val",
+      "origin": 1530,
+      "dest": 816,
+      "depart_min": 481.894,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 3639330646,
+      "incidents": [
+        {
+          "edge": 4238,
+          "start_min": 478.11083517259925,
+          "duration_min": 78.77488094206373,
+          "severity": 0.3629257308198979
+        },
+        {
+          "edge": 3995,
+          "start_min": 468.388005494281,
+          "duration_min": 65.8782558679413,
+          "severity": 0.23149644899179472
+        },
+        {
+          "edge": 6207,
+          "start_min": 471.9423372755965,
+          "duration_min": 86.5703238915871,
+          "severity": 0.38933279223022366
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4573,
+          "start_min": 478.11083517259925,
+          "duration_min": 78.77488094206373,
+          "severity": 0.3629257308198979
+        },
+        {
+          "edge": 5338,
+          "start_min": 468.388005494281,
+          "duration_min": 65.8782558679413,
+          "severity": 0.23149644899179472
+        },
+        {
+          "edge": 8161,
+          "start_min": 471.9423372755965,
+          "duration_min": 86.5703238915871,
+          "severity": 0.38933279223022366
+        }
+      ],
+      "od_dist_m": 4855.7,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 23.9718
+    },
+    {
+      "id": "val_0014",
+      "split": "val",
+      "origin": 491,
+      "dest": 3207,
+      "depart_min": 648.559,
+      "hour": 10,
+      "sigma": 0.05,
+      "noise_seed": 4012188336,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4390.9,
+      "distance_bin": 1,
+      "ref_hops": 57,
+      "ref_time_base_min": 10.4841
+    },
+    {
+      "id": "val_0015",
+      "split": "val",
+      "origin": 1402,
+      "dest": 616,
+      "depart_min": 709.353,
+      "hour": 11,
+      "sigma": 0.3,
+      "noise_seed": 715062416,
+      "incidents": [
+        {
+          "edge": 3838,
+          "start_min": 715.2228899922163,
+          "duration_min": 47.99229273846235,
+          "severity": 0.26373730801706263
+        },
+        {
+          "edge": 8195,
+          "start_min": 717.8108043319505,
+          "duration_min": 119.86900875753527,
+          "severity": 0.306510446883309
+        },
+        {
+          "edge": 947,
+          "start_min": 709.6345004642498,
+          "duration_min": 99.02997799153727,
+          "severity": 0.22217241428414947
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3656,
+          "start_min": 715.2228899922163,
+          "duration_min": 47.99229273846235,
+          "severity": 0.26373730801706263
+        },
+        {
+          "edge": 6645,
+          "start_min": 717.8108043319505,
+          "duration_min": 119.86900875753527,
+          "severity": 0.306510446883309
+        },
+        {
+          "edge": 1791,
+          "start_min": 709.6345004642498,
+          "duration_min": 99.02997799153727,
+          "severity": 0.22217241428414947
+        }
+      ],
+      "od_dist_m": 2100.3,
+      "distance_bin": 0,
+      "ref_hops": 30,
+      "ref_time_base_min": 8.8065
+    },
+    {
+      "id": "val_0016",
+      "split": "val",
+      "origin": 2629,
+      "dest": 2675,
+      "depart_min": 610.434,
+      "hour": 10,
+      "sigma": 0.15,
+      "noise_seed": 3973304483,
+      "incidents": [
+        {
+          "edge": 7844,
+          "start_min": 613.6704945944477,
+          "duration_min": 44.08532226259072,
+          "severity": 0.21417106964911853
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4842,
+          "start_min": 613.6704945944477,
+          "duration_min": 44.08532226259072,
+          "severity": 0.21417106964911853
+        }
+      ],
+      "od_dist_m": 7199.6,
+      "distance_bin": 2,
+      "ref_hops": 73,
+      "ref_time_base_min": 32.1594
+    },
+    {
+      "id": "val_0017",
+      "split": "val",
+      "origin": 2034,
+      "dest": 682,
+      "depart_min": 1231.519,
+      "hour": 20,
+      "sigma": 0.05,
+      "noise_seed": 2123448860,
+      "incidents": [
+        {
+          "edge": 4067,
+          "start_min": 1233.3706135156854,
+          "duration_min": 76.18082451936547,
+          "severity": 0.13191603010816202
+        },
+        {
+          "edge": 5943,
+          "start_min": 1211.9108329598012,
+          "duration_min": 82.4139084607736,
+          "severity": 0.2913713280289036
+        },
+        {
+          "edge": 3908,
+          "start_min": 1229.087940315365,
+          "duration_min": 38.13643554632949,
+          "severity": 0.2753373214830317
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 165,
+          "start_min": 1233.3706135156854,
+          "duration_min": 76.18082451936547,
+          "severity": 0.13191603010816202
+        },
+        {
+          "edge": 7035,
+          "start_min": 1211.9108329598012,
+          "duration_min": 82.4139084607736,
+          "severity": 0.2913713280289036
+        },
+        {
+          "edge": 7869,
+          "start_min": 1229.087940315365,
+          "duration_min": 38.13643554632949,
+          "severity": 0.2753373214830317
+        }
+      ],
+      "od_dist_m": 5816.5,
+      "distance_bin": 2,
+      "ref_hops": 68,
+      "ref_time_base_min": 14.3131
+    },
+    {
+      "id": "val_0018",
+      "split": "val",
+      "origin": 841,
+      "dest": 2968,
+      "depart_min": 707.926,
+      "hour": 11,
+      "sigma": 0.15,
+      "noise_seed": 708861144,
+      "incidents": [
+        {
+          "edge": 3647,
+          "start_min": 716.070751318163,
+          "duration_min": 51.805953328797656,
+          "severity": 0.10208884505775946
+        },
+        {
+          "edge": 1607,
+          "start_min": 715.4559111269405,
+          "duration_min": 103.36477141957768,
+          "severity": 0.20944824000371912
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2111,
+          "start_min": 716.070751318163,
+          "duration_min": 51.805953328797656,
+          "severity": 0.10208884505775946
+        },
+        {
+          "edge": 3530,
+          "start_min": 715.4559111269405,
+          "duration_min": 103.36477141957768,
+          "severity": 0.20944824000371912
+        }
+      ],
+      "od_dist_m": 3527.7,
+      "distance_bin": 1,
+      "ref_hops": 36,
+      "ref_time_base_min": 12.0503
+    },
+    {
+      "id": "val_0019",
+      "split": "val",
+      "origin": 461,
+      "dest": 2878,
+      "depart_min": 488.322,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 538174884,
+      "incidents": [
+        {
+          "edge": 301,
+          "start_min": 480.18152610020206,
+          "duration_min": 117.30856164399323,
+          "severity": 0.22741570838290565
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5189,
+          "start_min": 480.18152610020206,
+          "duration_min": 117.30856164399323,
+          "severity": 0.22741570838290565
+        }
+      ],
+      "od_dist_m": 1443.6,
+      "distance_bin": 0,
+      "ref_hops": 26,
+      "ref_time_base_min": 8.6933
+    },
+    {
+      "id": "val_0020",
+      "split": "val",
+      "origin": 968,
+      "dest": 3063,
+      "depart_min": 1401.501,
+      "hour": 23,
+      "sigma": 0.3,
+      "noise_seed": 1057579355,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2254.6,
+      "distance_bin": 0,
+      "ref_hops": 36,
+      "ref_time_base_min": 8.3688
+    },
+    {
+      "id": "val_0021",
+      "split": "val",
+      "origin": 1376,
+      "dest": 178,
+      "depart_min": 1073.888,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 767935121,
+      "incidents": [
+        {
+          "edge": 3968,
+          "start_min": 1068.108278915578,
+          "duration_min": 98.92399648867217,
+          "severity": 0.28095034231667015
+        },
+        {
+          "edge": 3443,
+          "start_min": 1073.7446798699925,
+          "duration_min": 64.42992506862856,
+          "severity": 0.28497327981449316
+        },
+        {
+          "edge": 3919,
+          "start_min": 1074.892659482433,
+          "duration_min": 55.42275538864436,
+          "severity": 0.1750808227211328
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3896,
+          "start_min": 1068.108278915578,
+          "duration_min": 98.92399648867217,
+          "severity": 0.28095034231667015
+        },
+        {
+          "edge": 6584,
+          "start_min": 1073.7446798699925,
+          "duration_min": 64.42992506862856,
+          "severity": 0.28497327981449316
+        },
+        {
+          "edge": 3767,
+          "start_min": 1074.892659482433,
+          "duration_min": 55.42275538864436,
+          "severity": 0.1750808227211328
+        }
+      ],
+      "od_dist_m": 3132.1,
+      "distance_bin": 1,
+      "ref_hops": 43,
+      "ref_time_base_min": 14.4987
+    },
+    {
+      "id": "val_0022",
+      "split": "val",
+      "origin": 2943,
+      "dest": 3146,
+      "depart_min": 243.264,
+      "hour": 4,
+      "sigma": 0.3,
+      "noise_seed": 2115766227,
+      "incidents": [
+        {
+          "edge": 4348,
+          "start_min": 224.15344123706188,
+          "duration_min": 82.14656886499826,
+          "severity": 0.2847163051311957
+        },
+        {
+          "edge": 8273,
+          "start_min": 231.71708168546394,
+          "duration_min": 64.27185681102037,
+          "severity": 0.21832672367544223
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1347,
+          "start_min": 224.15344123706188,
+          "duration_min": 82.14656886499826,
+          "severity": 0.2847163051311957
+        },
+        {
+          "edge": 6746,
+          "start_min": 231.71708168546394,
+          "duration_min": 64.27185681102037,
+          "severity": 0.21832672367544223
+        }
+      ],
+      "od_dist_m": 2395.5,
+      "distance_bin": 0,
+      "ref_hops": 34,
+      "ref_time_base_min": 4.1456
+    },
+    {
+      "id": "val_0023",
+      "split": "val",
+      "origin": 592,
+      "dest": 255,
+      "depart_min": 880.105,
+      "hour": 14,
+      "sigma": 0.05,
+      "noise_seed": 445765258,
+      "incidents": [
+        {
+          "edge": 4417,
+          "start_min": 866.7461005537809,
+          "duration_min": 82.53268718600819,
+          "severity": 0.2278782251950322
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1485,
+          "start_min": 866.7461005537809,
+          "duration_min": 82.53268718600819,
+          "severity": 0.2278782251950322
+        }
+      ],
+      "od_dist_m": 2223.8,
+      "distance_bin": 0,
+      "ref_hops": 40,
+      "ref_time_base_min": 7.2443
+    },
+    {
+      "id": "val_0024",
+      "split": "val",
+      "origin": 1184,
+      "dest": 1744,
+      "depart_min": 1167.815,
+      "hour": 19,
+      "sigma": 0.15,
+      "noise_seed": 1965115273,
+      "incidents": [
+        {
+          "edge": 7429,
+          "start_min": 1149.6431513750817,
+          "duration_min": 112.11438020975747,
+          "severity": 0.32021801970252356
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8712,
+          "start_min": 1149.6431513750817,
+          "duration_min": 112.11438020975747,
+          "severity": 0.32021801970252356
+        }
+      ],
+      "od_dist_m": 4989.3,
+      "distance_bin": 2,
+      "ref_hops": 62,
+      "ref_time_base_min": 15.9477
+    },
+    {
+      "id": "val_0025",
+      "split": "val",
+      "origin": 1075,
+      "dest": 978,
+      "depart_min": 924.5,
+      "hour": 15,
+      "sigma": 0.3,
+      "noise_seed": 1367958141,
+      "incidents": [
+        {
+          "edge": 3095,
+          "start_min": 930.328279157786,
+          "duration_min": 104.34346313232335,
+          "severity": 0.28395796297796355
+        },
+        {
+          "edge": 2823,
+          "start_min": 917.6072749864769,
+          "duration_min": 86.95508367192025,
+          "severity": 0.3973573943710378
+        },
+        {
+          "edge": 7095,
+          "start_min": 908.89205107385,
+          "duration_min": 101.79440690874448,
+          "severity": 0.18578874087124767
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2814,
+          "start_min": 930.328279157786,
+          "duration_min": 104.34346313232335,
+          "severity": 0.28395796297796355
+        },
+        {
+          "edge": 7101,
+          "start_min": 917.6072749864769,
+          "duration_min": 86.95508367192025,
+          "severity": 0.3973573943710378
+        },
+        {
+          "edge": 3048,
+          "start_min": 908.89205107385,
+          "duration_min": 101.79440690874448,
+          "severity": 0.18578874087124767
+        }
+      ],
+      "od_dist_m": 2574.3,
+      "distance_bin": 1,
+      "ref_hops": 24,
+      "ref_time_base_min": 10.0211
+    },
+    {
+      "id": "val_0026",
+      "split": "val",
+      "origin": 42,
+      "dest": 317,
+      "depart_min": 1155.952,
+      "hour": 19,
+      "sigma": 0.05,
+      "noise_seed": 2572872382,
+      "incidents": [
+        {
+          "edge": 848,
+          "start_min": 1150.9115635355251,
+          "duration_min": 107.77694738044433,
+          "severity": 0.1100991144374067
+        },
+        {
+          "edge": 8698,
+          "start_min": 1161.75688255191,
+          "duration_min": 46.15997178222135,
+          "severity": 0.14195447348676737
+        },
+        {
+          "edge": 4096,
+          "start_min": 1142.4622361755924,
+          "duration_min": 107.72791579370814,
+          "severity": 0.15907119381114537
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1353,
+          "start_min": 1150.9115635355251,
+          "duration_min": 107.77694738044433,
+          "severity": 0.1100991144374067
+        },
+        {
+          "edge": 6597,
+          "start_min": 1161.75688255191,
+          "duration_min": 46.15997178222135,
+          "severity": 0.14195447348676737
+        },
+        {
+          "edge": 6853,
+          "start_min": 1142.4622361755924,
+          "duration_min": 107.72791579370814,
+          "severity": 0.15907119381114537
+        }
+      ],
+      "od_dist_m": 2850.7,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 11.9654
+    },
+    {
+      "id": "val_0027",
+      "split": "val",
+      "origin": 2017,
+      "dest": 1689,
+      "depart_min": 1189.649,
+      "hour": 19,
+      "sigma": 0.3,
+      "noise_seed": 3733113513,
+      "incidents": [
+        {
+          "edge": 5901,
+          "start_min": 1187.067397470868,
+          "duration_min": 52.46837067962748,
+          "severity": 0.31853554572285936
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8159,
+          "start_min": 1187.067397470868,
+          "duration_min": 52.46837067962748,
+          "severity": 0.31853554572285936
+        }
+      ],
+      "od_dist_m": 3082.3,
+      "distance_bin": 1,
+      "ref_hops": 46,
+      "ref_time_base_min": 8.8951
+    },
+    {
+      "id": "val_0028",
+      "split": "val",
+      "origin": 2339,
+      "dest": 2406,
+      "depart_min": 842.723,
+      "hour": 14,
+      "sigma": 0.05,
+      "noise_seed": 3524605385,
+      "incidents": [
+        {
+          "edge": 2757,
+          "start_min": 842.6883514872661,
+          "duration_min": 99.83759505376948,
+          "severity": 0.1143822854282221
+        },
+        {
+          "edge": 1333,
+          "start_min": 828.1844401315363,
+          "duration_min": 111.8184829888345,
+          "severity": 0.20951569321379895
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 519,
+          "start_min": 842.6883514872661,
+          "duration_min": 99.83759505376948,
+          "severity": 0.1143822854282221
+        },
+        {
+          "edge": 2218,
+          "start_min": 828.1844401315363,
+          "duration_min": 111.8184829888345,
+          "severity": 0.20951569321379895
+        }
+      ],
+      "od_dist_m": 4322.9,
+      "distance_bin": 1,
+      "ref_hops": 35,
+      "ref_time_base_min": 14.1448
+    },
+    {
+      "id": "val_0029",
+      "split": "val",
+      "origin": 2544,
+      "dest": 1560,
+      "depart_min": 1194.835,
+      "hour": 19,
+      "sigma": 0.3,
+      "noise_seed": 4050592251,
+      "incidents": [
+        {
+          "edge": 6460,
+          "start_min": 1194.154467207312,
+          "duration_min": 86.74491430179063,
+          "severity": 0.22924478066450577
+        },
+        {
+          "edge": 7261,
+          "start_min": 1180.8873025527923,
+          "duration_min": 62.39466682806607,
+          "severity": 0.22571881770901642
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4419,
+          "start_min": 1194.154467207312,
+          "duration_min": 86.74491430179063,
+          "severity": 0.22924478066450577
+        },
+        {
+          "edge": 6638,
+          "start_min": 1180.8873025527923,
+          "duration_min": 62.39466682806607,
+          "severity": 0.22571881770901642
+        }
+      ],
+      "od_dist_m": 5781.0,
+      "distance_bin": 2,
+      "ref_hops": 44,
+      "ref_time_base_min": 18.607
+    },
+    {
+      "id": "val_0030",
+      "split": "val",
+      "origin": 2915,
+      "dest": 3393,
+      "depart_min": 515.309,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 4084374785,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4402.7,
+      "distance_bin": 1,
+      "ref_hops": 43,
+      "ref_time_base_min": 19.8672
+    },
+    {
+      "id": "val_0031",
+      "split": "val",
+      "origin": 836,
+      "dest": 2748,
+      "depart_min": 554.079,
+      "hour": 9,
+      "sigma": 0.15,
+      "noise_seed": 4149155591,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3269.1,
+      "distance_bin": 1,
+      "ref_hops": 40,
+      "ref_time_base_min": 16.0494
+    },
+    {
+      "id": "val_0032",
+      "split": "val",
+      "origin": 2240,
+      "dest": 3216,
+      "depart_min": 1027.556,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 2302736240,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3231.0,
+      "distance_bin": 1,
+      "ref_hops": 50,
+      "ref_time_base_min": 17.3787
+    },
+    {
+      "id": "val_0033",
+      "split": "val",
+      "origin": 327,
+      "dest": 132,
+      "depart_min": 1071.486,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 3900642690,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3325.9,
+      "distance_bin": 1,
+      "ref_hops": 38,
+      "ref_time_base_min": 13.2308
+    },
+    {
+      "id": "val_0034",
+      "split": "val",
+      "origin": 882,
+      "dest": 428,
+      "depart_min": 549.761,
+      "hour": 9,
+      "sigma": 0.3,
+      "noise_seed": 4280782382,
+      "incidents": [
+        {
+          "edge": 826,
+          "start_min": 549.8819989540397,
+          "duration_min": 70.04491258813515,
+          "severity": 0.3998379160904355
+        },
+        {
+          "edge": 5929,
+          "start_min": 547.9558731847482,
+          "duration_min": 39.019192974936075,
+          "severity": 0.15097459785797024
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 830,
+          "start_min": 549.8819989540397,
+          "duration_min": 70.04491258813515,
+          "severity": 0.3998379160904355
+        },
+        {
+          "edge": 1052,
+          "start_min": 547.9558731847482,
+          "duration_min": 39.019192974936075,
+          "severity": 0.15097459785797024
+        }
+      ],
+      "od_dist_m": 4005.1,
+      "distance_bin": 1,
+      "ref_hops": 47,
+      "ref_time_base_min": 15.0307
+    },
+    {
+      "id": "val_0035",
+      "split": "val",
+      "origin": 2006,
+      "dest": 3202,
+      "depart_min": 442.419,
+      "hour": 7,
+      "sigma": 0.05,
+      "noise_seed": 1809613905,
+      "incidents": [
+        {
+          "edge": 3429,
+          "start_min": 427.43303358415574,
+          "duration_min": 73.13470528985559,
+          "severity": 0.17045510626524218
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 787,
+          "start_min": 427.43303358415574,
+          "duration_min": 73.13470528985559,
+          "severity": 0.17045510626524218
+        }
+      ],
+      "od_dist_m": 4654.6,
+      "distance_bin": 2,
+      "ref_hops": 74,
+      "ref_time_base_min": 21.5687
+    },
+    {
+      "id": "val_0036",
+      "split": "val",
+      "origin": 1842,
+      "dest": 929,
+      "depart_min": 1167.974,
+      "hour": 19,
+      "sigma": 0.15,
+      "noise_seed": 2968099465,
+      "incidents": [
+        {
+          "edge": 2691,
+          "start_min": 1152.6150481713394,
+          "duration_min": 66.92265225009501,
+          "severity": 0.20873377469867832
+        },
+        {
+          "edge": 5198,
+          "start_min": 1154.079530862095,
+          "duration_min": 92.1674975171855,
+          "severity": 0.38106707494431
+        },
+        {
+          "edge": 830,
+          "start_min": 1152.9215441089132,
+          "duration_min": 78.6488982445389,
+          "severity": 0.3751570135097556
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5019,
+          "start_min": 1152.6150481713394,
+          "duration_min": 66.92265225009501,
+          "severity": 0.20873377469867832
+        },
+        {
+          "edge": 6664,
+          "start_min": 1154.079530862095,
+          "duration_min": 92.1674975171855,
+          "severity": 0.38106707494431
+        },
+        {
+          "edge": 8492,
+          "start_min": 1152.9215441089132,
+          "duration_min": 78.6488982445389,
+          "severity": 0.3751570135097556
+        }
+      ],
+      "od_dist_m": 2119.8,
+      "distance_bin": 0,
+      "ref_hops": 15,
+      "ref_time_base_min": 8.1409
+    },
+    {
+      "id": "val_0037",
+      "split": "val",
+      "origin": 1459,
+      "dest": 3004,
+      "depart_min": 439.945,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 1964640343,
+      "incidents": [
+        {
+          "edge": 2192,
+          "start_min": 432.83336757965657,
+          "duration_min": 102.6904425982444,
+          "severity": 0.22354467397598163
+        },
+        {
+          "edge": 3881,
+          "start_min": 421.2549187398998,
+          "duration_min": 32.346980523013656,
+          "severity": 0.11475072775227713
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4087,
+          "start_min": 432.83336757965657,
+          "duration_min": 102.6904425982444,
+          "severity": 0.22354467397598163
+        },
+        {
+          "edge": 5328,
+          "start_min": 421.2549187398998,
+          "duration_min": 32.346980523013656,
+          "severity": 0.11475072775227713
+        }
+      ],
+      "od_dist_m": 8403.0,
+      "distance_bin": 2,
+      "ref_hops": 59,
+      "ref_time_base_min": 35.0979
+    },
+    {
+      "id": "val_0038",
+      "split": "val",
+      "origin": 230,
+      "dest": 1809,
+      "depart_min": 1079.791,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 4078886095,
+      "incidents": [
+        {
+          "edge": 714,
+          "start_min": 1082.4568943029929,
+          "duration_min": 114.46996505378677,
+          "severity": 0.10600648582321893
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8278,
+          "start_min": 1082.4568943029929,
+          "duration_min": 114.46996505378677,
+          "severity": 0.10600648582321893
+        }
+      ],
+      "od_dist_m": 2508.0,
+      "distance_bin": 1,
+      "ref_hops": 36,
+      "ref_time_base_min": 23.5711
+    },
+    {
+      "id": "val_0039",
+      "split": "val",
+      "origin": 357,
+      "dest": 2452,
+      "depart_min": 1120.171,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 3676785316,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4465.0,
+      "distance_bin": 1,
+      "ref_hops": 69,
+      "ref_time_base_min": 22.3742
+    },
+    {
+      "id": "val_0040",
+      "split": "val",
+      "origin": 2675,
+      "dest": 2985,
+      "depart_min": 961.536,
+      "hour": 16,
+      "sigma": 0.3,
+      "noise_seed": 4190211986,
+      "incidents": [
+        {
+          "edge": 6171,
+          "start_min": 964.1181945233863,
+          "duration_min": 32.39015440124542,
+          "severity": 0.14710836216939752
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 7952,
+          "start_min": 964.1181945233863,
+          "duration_min": 32.39015440124542,
+          "severity": 0.14710836216939752
+        }
+      ],
+      "od_dist_m": 9715.8,
+      "distance_bin": 2,
+      "ref_hops": 85,
+      "ref_time_base_min": 36.327
+    },
+    {
+      "id": "val_0041",
+      "split": "val",
+      "origin": 1293,
+      "dest": 2047,
+      "depart_min": 1072.273,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 1958213794,
+      "incidents": [
+        {
+          "edge": 1507,
+          "start_min": 1070.7972345001115,
+          "duration_min": 92.38381918571037,
+          "severity": 0.36940205588293906
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4708,
+          "start_min": 1070.7972345001115,
+          "duration_min": 92.38381918571037,
+          "severity": 0.36940205588293906
+        }
+      ],
+      "od_dist_m": 3934.1,
+      "distance_bin": 1,
+      "ref_hops": 66,
+      "ref_time_base_min": 18.8868
+    },
+    {
+      "id": "val_0042",
+      "split": "val",
+      "origin": 2251,
+      "dest": 2346,
+      "depart_min": 807.271,
+      "hour": 13,
+      "sigma": 0.15,
+      "noise_seed": 468782276,
+      "incidents": [
+        {
+          "edge": 1864,
+          "start_min": 803.383395834716,
+          "duration_min": 88.53482511108214,
+          "severity": 0.13183753079309912
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 364,
+          "start_min": 803.383395834716,
+          "duration_min": 88.53482511108214,
+          "severity": 0.13183753079309912
+        }
+      ],
+      "od_dist_m": 7900.6,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 21.457
+    },
+    {
+      "id": "val_0043",
+      "split": "val",
+      "origin": 1618,
+      "dest": 3249,
+      "depart_min": 600.424,
+      "hour": 10,
+      "sigma": 0.3,
+      "noise_seed": 1127431962,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2632.7,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 10.1051
+    },
+    {
+      "id": "val_0044",
+      "split": "val",
+      "origin": 1076,
+      "dest": 1587,
+      "depart_min": 1250.244,
+      "hour": 20,
+      "sigma": 0.15,
+      "noise_seed": 913128243,
+      "incidents": [
+        {
+          "edge": 1477,
+          "start_min": 1250.3685313402902,
+          "duration_min": 64.04211966945584,
+          "severity": 0.13160557061178013
+        },
+        {
+          "edge": 1451,
+          "start_min": 1255.273945151889,
+          "duration_min": 65.3535536826316,
+          "severity": 0.3163446199723026
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8377,
+          "start_min": 1250.3685313402902,
+          "duration_min": 64.04211966945584,
+          "severity": 0.13160557061178013
+        },
+        {
+          "edge": 5656,
+          "start_min": 1255.273945151889,
+          "duration_min": 65.3535536826316,
+          "severity": 0.3163446199723026
+        }
+      ],
+      "od_dist_m": 5505.7,
+      "distance_bin": 2,
+      "ref_hops": 76,
+      "ref_time_base_min": 14.772
+    },
+    {
+      "id": "val_0045",
+      "split": "val",
+      "origin": 200,
+      "dest": 1817,
+      "depart_min": 729.434,
+      "hour": 12,
+      "sigma": 0.3,
+      "noise_seed": 490378838,
+      "incidents": [
+        {
+          "edge": 7685,
+          "start_min": 722.4150451922726,
+          "duration_min": 85.68121946743402,
+          "severity": 0.22773079085917117
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5978,
+          "start_min": 722.4150451922726,
+          "duration_min": 85.68121946743402,
+          "severity": 0.22773079085917117
+        }
+      ],
+      "od_dist_m": 3169.2,
+      "distance_bin": 1,
+      "ref_hops": 51,
+      "ref_time_base_min": 10.2503
+    },
+    {
+      "id": "val_0046",
+      "split": "val",
+      "origin": 1814,
+      "dest": 803,
+      "depart_min": 471.414,
+      "hour": 7,
+      "sigma": 0.05,
+      "noise_seed": 3835802285,
+      "incidents": [
+        {
+          "edge": 5734,
+          "start_min": 454.18112699195814,
+          "duration_min": 64.22726138063646,
+          "severity": 0.3518724014201291
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 761,
+          "start_min": 454.18112699195814,
+          "duration_min": 64.22726138063646,
+          "severity": 0.3518724014201291
+        }
+      ],
+      "od_dist_m": 1556.1,
+      "distance_bin": 0,
+      "ref_hops": 29,
+      "ref_time_base_min": 13.3008
+    },
+    {
+      "id": "val_0047",
+      "split": "val",
+      "origin": 199,
+      "dest": 251,
+      "depart_min": 23.273,
+      "hour": 0,
+      "sigma": 0.15,
+      "noise_seed": 4036676163,
+      "incidents": [
+        {
+          "edge": 3982,
+          "start_min": 21.67560388214325,
+          "duration_min": 110.68309501812845,
+          "severity": 0.11169951236763204
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1537,
+          "start_min": 21.67560388214325,
+          "duration_min": 110.68309501812845,
+          "severity": 0.11169951236763204
+        }
+      ],
+      "od_dist_m": 2464.3,
+      "distance_bin": 0,
+      "ref_hops": 38,
+      "ref_time_base_min": 5.5037
+    },
+    {
+      "id": "val_0048",
+      "split": "val",
+      "origin": 113,
+      "dest": 1929,
+      "depart_min": 1032.476,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 2763717310,
+      "incidents": [
+        {
+          "edge": 5357,
+          "start_min": 1018.2003321995502,
+          "duration_min": 106.95031808141984,
+          "severity": 0.3573322789325861
+        },
+        {
+          "edge": 7477,
+          "start_min": 1040.7520681261572,
+          "duration_min": 116.1304915810867,
+          "severity": 0.2423140194310794
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5735,
+          "start_min": 1018.2003321995502,
+          "duration_min": 106.95031808141984,
+          "severity": 0.3573322789325861
+        },
+        {
+          "edge": 8893,
+          "start_min": 1040.7520681261572,
+          "duration_min": 116.1304915810867,
+          "severity": 0.2423140194310794
+        }
+      ],
+      "od_dist_m": 9223.8,
+      "distance_bin": 2,
+      "ref_hops": 94,
+      "ref_time_base_min": 34.8886
+    },
+    {
+      "id": "val_0049",
+      "split": "val",
+      "origin": 746,
+      "dest": 575,
+      "depart_min": 526.208,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 1521571952,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1823.2,
+      "distance_bin": 0,
+      "ref_hops": 16,
+      "ref_time_base_min": 5.1276
+    },
+    {
+      "id": "val_0050",
+      "split": "val",
+      "origin": 664,
+      "dest": 226,
+      "depart_min": 274.842,
+      "hour": 4,
+      "sigma": 0.05,
+      "noise_seed": 4011529648,
+      "incidents": [
+        {
+          "edge": 666,
+          "start_min": 260.5885480154622,
+          "duration_min": 44.784659072077176,
+          "severity": 0.32716602869841527
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 260,
+          "start_min": 260.5885480154622,
+          "duration_min": 44.784659072077176,
+          "severity": 0.32716602869841527
+        }
+      ],
+      "od_dist_m": 3462.7,
+      "distance_bin": 1,
+      "ref_hops": 53,
+      "ref_time_base_min": 9.4847
+    },
+    {
+      "id": "val_0051",
+      "split": "val",
+      "origin": 1540,
+      "dest": 1662,
+      "depart_min": 497.475,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 1916502687,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6277.0,
+      "distance_bin": 2,
+      "ref_hops": 74,
+      "ref_time_base_min": 25.8764
+    },
+    {
+      "id": "val_0052",
+      "split": "val",
+      "origin": 2972,
+      "dest": 2348,
+      "depart_min": 913.416,
+      "hour": 15,
+      "sigma": 0.05,
+      "noise_seed": 3129187820,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3186.4,
+      "distance_bin": 1,
+      "ref_hops": 21,
+      "ref_time_base_min": 13.2733
+    },
+    {
+      "id": "val_0053",
+      "split": "val",
+      "origin": 90,
+      "dest": 1832,
+      "depart_min": 1034.588,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 3833592379,
+      "incidents": [
+        {
+          "edge": 4092,
+          "start_min": 1039.5931734261746,
+          "duration_min": 116.44243832418886,
+          "severity": 0.2673385990177831
+        },
+        {
+          "edge": 1749,
+          "start_min": 1014.951457227976,
+          "duration_min": 41.04436522895194,
+          "severity": 0.3371039517765469
+        },
+        {
+          "edge": 4178,
+          "start_min": 1037.10031334672,
+          "duration_min": 56.70536034659389,
+          "severity": 0.3407971275147923
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3760,
+          "start_min": 1039.5931734261746,
+          "duration_min": 116.44243832418886,
+          "severity": 0.2673385990177831
+        },
+        {
+          "edge": 5899,
+          "start_min": 1014.951457227976,
+          "duration_min": 41.04436522895194,
+          "severity": 0.3371039517765469
+        },
+        {
+          "edge": 1309,
+          "start_min": 1037.10031334672,
+          "duration_min": 56.70536034659389,
+          "severity": 0.3407971275147923
+        }
+      ],
+      "od_dist_m": 6399.8,
+      "distance_bin": 2,
+      "ref_hops": 69,
+      "ref_time_base_min": 23.6902
+    },
+    {
+      "id": "val_0054",
+      "split": "val",
+      "origin": 2245,
+      "dest": 2485,
+      "depart_min": 246.069,
+      "hour": 4,
+      "sigma": 0.3,
+      "noise_seed": 4044791956,
+      "incidents": [
+        {
+          "edge": 8180,
+          "start_min": 228.00453817906225,
+          "duration_min": 101.31029448028143,
+          "severity": 0.1731565383115115
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3961,
+          "start_min": 228.00453817906225,
+          "duration_min": 101.31029448028143,
+          "severity": 0.1731565383115115
+        }
+      ],
+      "od_dist_m": 2572.1,
+      "distance_bin": 1,
+      "ref_hops": 44,
+      "ref_time_base_min": 7.5569
+    },
+    {
+      "id": "val_0055",
+      "split": "val",
+      "origin": 2933,
+      "dest": 297,
+      "depart_min": 1056.819,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 2735616274,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6522.9,
+      "distance_bin": 2,
+      "ref_hops": 51,
+      "ref_time_base_min": 30.7835
+    },
+    {
+      "id": "val_0056",
+      "split": "val",
+      "origin": 3186,
+      "dest": 39,
+      "depart_min": 746.595,
+      "hour": 12,
+      "sigma": 0.3,
+      "noise_seed": 3677120022,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4754.5,
+      "distance_bin": 2,
+      "ref_hops": 61,
+      "ref_time_base_min": 15.9392
+    },
+    {
+      "id": "val_0057",
+      "split": "val",
+      "origin": 2563,
+      "dest": 3019,
+      "depart_min": 488.148,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 1125118867,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6273.3,
+      "distance_bin": 2,
+      "ref_hops": 75,
+      "ref_time_base_min": 44.8331
+    },
+    {
+      "id": "val_0058",
+      "split": "val",
+      "origin": 1549,
+      "dest": 749,
+      "depart_min": 461.131,
+      "hour": 7,
+      "sigma": 0.15,
+      "noise_seed": 1933180014,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2722.3,
+      "distance_bin": 1,
+      "ref_hops": 44,
+      "ref_time_base_min": 16.2355
+    },
+    {
+      "id": "val_0059",
+      "split": "val",
+      "origin": 1220,
+      "dest": 1586,
+      "depart_min": 931.598,
+      "hour": 15,
+      "sigma": 0.15,
+      "noise_seed": 653248455,
+      "incidents": [
+        {
+          "edge": 595,
+          "start_min": 918.3288277085626,
+          "duration_min": 52.65327452859776,
+          "severity": 0.3757373365931437
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8146,
+          "start_min": 918.3288277085626,
+          "duration_min": 52.65327452859776,
+          "severity": 0.3757373365931437
+        }
+      ],
+      "od_dist_m": 1108.0,
+      "distance_bin": 0,
+      "ref_hops": 21,
+      "ref_time_base_min": 3.4765
+    },
+    {
+      "id": "val_0060",
+      "split": "val",
+      "origin": 2032,
+      "dest": 3226,
+      "depart_min": 400.016,
+      "hour": 6,
+      "sigma": 0.3,
+      "noise_seed": 4151340483,
+      "incidents": [
+        {
+          "edge": 6511,
+          "start_min": 383.3069722603823,
+          "duration_min": 89.76758936819537,
+          "severity": 0.2812813863240201
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2570,
+          "start_min": 383.3069722603823,
+          "duration_min": 89.76758936819537,
+          "severity": 0.2812813863240201
+        }
+      ],
+      "od_dist_m": 9343.3,
+      "distance_bin": 2,
+      "ref_hops": 68,
+      "ref_time_base_min": 24.6577
+    },
+    {
+      "id": "val_0061",
+      "split": "val",
+      "origin": 1313,
+      "dest": 3186,
+      "depart_min": 1322.913,
+      "hour": 22,
+      "sigma": 0.15,
+      "noise_seed": 1876182567,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3725.5,
+      "distance_bin": 1,
+      "ref_hops": 50,
+      "ref_time_base_min": 15.8699
+    },
+    {
+      "id": "val_0062",
+      "split": "val",
+      "origin": 1657,
+      "dest": 2154,
+      "depart_min": 630.049,
+      "hour": 10,
+      "sigma": 0.3,
+      "noise_seed": 793424366,
+      "incidents": [
+        {
+          "edge": 4943,
+          "start_min": 626.9777117622089,
+          "duration_min": 60.94283307887056,
+          "severity": 0.29172946014480683
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2743,
+          "start_min": 626.9777117622089,
+          "duration_min": 60.94283307887056,
+          "severity": 0.29172946014480683
+        }
+      ],
+      "od_dist_m": 4737.3,
+      "distance_bin": 2,
+      "ref_hops": 39,
+      "ref_time_base_min": 10.7348
+    },
+    {
+      "id": "val_0063",
+      "split": "val",
+      "origin": 2951,
+      "dest": 2366,
+      "depart_min": 1098.546,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 1284921946,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6745.2,
+      "distance_bin": 2,
+      "ref_hops": 61,
+      "ref_time_base_min": 55.2337
+    },
+    {
+      "id": "val_0064",
+      "split": "val",
+      "origin": 574,
+      "dest": 737,
+      "depart_min": 1258.774,
+      "hour": 20,
+      "sigma": 0.15,
+      "noise_seed": 3548527548,
+      "incidents": [
+        {
+          "edge": 5894,
+          "start_min": 1264.8820579177984,
+          "duration_min": 58.13140273297598,
+          "severity": 0.32788316311408183
+        },
+        {
+          "edge": 8163,
+          "start_min": 1239.2078448429695,
+          "duration_min": 75.75118278712691,
+          "severity": 0.31235025561297225
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1617,
+          "start_min": 1264.8820579177984,
+          "duration_min": 58.13140273297598,
+          "severity": 0.32788316311408183
+        },
+        {
+          "edge": 1304,
+          "start_min": 1239.2078448429695,
+          "duration_min": 75.75118278712691,
+          "severity": 0.31235025561297225
+        }
+      ],
+      "od_dist_m": 5606.1,
+      "distance_bin": 2,
+      "ref_hops": 65,
+      "ref_time_base_min": 12.3768
+    },
+    {
+      "id": "val_0065",
+      "split": "val",
+      "origin": 3106,
+      "dest": 1852,
+      "depart_min": 1029.905,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 3827696795,
+      "incidents": [
+        {
+          "edge": 4060,
+          "start_min": 1037.4422052826837,
+          "duration_min": 70.56565167543849,
+          "severity": 0.3380051036424062
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1549,
+          "start_min": 1037.4422052826837,
+          "duration_min": 70.56565167543849,
+          "severity": 0.3380051036424062
+        }
+      ],
+      "od_dist_m": 3874.3,
+      "distance_bin": 1,
+      "ref_hops": 35,
+      "ref_time_base_min": 21.942
+    },
+    {
+      "id": "val_0066",
+      "split": "val",
+      "origin": 321,
+      "dest": 3276,
+      "depart_min": 513.991,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 1598708005,
+      "incidents": [
+        {
+          "edge": 923,
+          "start_min": 509.0806997081891,
+          "duration_min": 30.041001734557646,
+          "severity": 0.13759372653062404
+        },
+        {
+          "edge": 3800,
+          "start_min": 495.5937221131744,
+          "duration_min": 84.2446219701039,
+          "severity": 0.13865379272817524
+        },
+        {
+          "edge": 8409,
+          "start_min": 509.7767529309057,
+          "duration_min": 69.85215700984335,
+          "severity": 0.31375566660652066
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1723,
+          "start_min": 509.0806997081891,
+          "duration_min": 30.041001734557646,
+          "severity": 0.13759372653062404
+        },
+        {
+          "edge": 7638,
+          "start_min": 495.5937221131744,
+          "duration_min": 84.2446219701039,
+          "severity": 0.13865379272817524
+        },
+        {
+          "edge": 3813,
+          "start_min": 509.7767529309057,
+          "duration_min": 69.85215700984335,
+          "severity": 0.31375566660652066
+        }
+      ],
+      "od_dist_m": 2776.2,
+      "distance_bin": 1,
+      "ref_hops": 41,
+      "ref_time_base_min": 14.0817
+    },
+    {
+      "id": "val_0067",
+      "split": "val",
+      "origin": 708,
+      "dest": 2495,
+      "depart_min": 803.642,
+      "hour": 13,
+      "sigma": 0.05,
+      "noise_seed": 1426387249,
+      "incidents": [
+        {
+          "edge": 1042,
+          "start_min": 810.71742422225,
+          "duration_min": 35.340349108133154,
+          "severity": 0.17429917693849994
+        },
+        {
+          "edge": 440,
+          "start_min": 788.6286467103298,
+          "duration_min": 90.28672255452257,
+          "severity": 0.1778107534751612
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8292,
+          "start_min": 810.71742422225,
+          "duration_min": 35.340349108133154,
+          "severity": 0.17429917693849994
+        },
+        {
+          "edge": 1345,
+          "start_min": 788.6286467103298,
+          "duration_min": 90.28672255452257,
+          "severity": 0.1778107534751612
+        }
+      ],
+      "od_dist_m": 2998.1,
+      "distance_bin": 1,
+      "ref_hops": 49,
+      "ref_time_base_min": 8.743
+    },
+    {
+      "id": "val_0068",
+      "split": "val",
+      "origin": 3237,
+      "dest": 2534,
+      "depart_min": 1086.438,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 3342362660,
+      "incidents": [
+        {
+          "edge": 6342,
+          "start_min": 1090.5345364702437,
+          "duration_min": 82.77617569091731,
+          "severity": 0.35964934399505843
+        },
+        {
+          "edge": 1759,
+          "start_min": 1090.985628686822,
+          "duration_min": 92.80184262528547,
+          "severity": 0.2068658260354566
+        },
+        {
+          "edge": 3202,
+          "start_min": 1089.6054116679409,
+          "duration_min": 50.184951981782106,
+          "severity": 0.346117837929429
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6544,
+          "start_min": 1090.5345364702437,
+          "duration_min": 82.77617569091731,
+          "severity": 0.35964934399505843
+        },
+        {
+          "edge": 2371,
+          "start_min": 1090.985628686822,
+          "duration_min": 92.80184262528547,
+          "severity": 0.2068658260354566
+        },
+        {
+          "edge": 7774,
+          "start_min": 1089.6054116679409,
+          "duration_min": 50.184951981782106,
+          "severity": 0.346117837929429
+        }
+      ],
+      "od_dist_m": 8322.8,
+      "distance_bin": 2,
+      "ref_hops": 66,
+      "ref_time_base_min": 59.5117
+    },
+    {
+      "id": "val_0069",
+      "split": "val",
+      "origin": 2803,
+      "dest": 896,
+      "depart_min": 526.748,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 3516334052,
+      "incidents": [
+        {
+          "edge": 8392,
+          "start_min": 510.79582252509783,
+          "duration_min": 32.74289204638809,
+          "severity": 0.25849195161652483
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 519,
+          "start_min": 510.79582252509783,
+          "duration_min": 32.74289204638809,
+          "severity": 0.25849195161652483
+        }
+      ],
+      "od_dist_m": 5906.6,
+      "distance_bin": 2,
+      "ref_hops": 45,
+      "ref_time_base_min": 38.4076
+    },
+    {
+      "id": "val_0070",
+      "split": "val",
+      "origin": 3079,
+      "dest": 555,
+      "depart_min": 1030.563,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 2635136290,
+      "incidents": [
+        {
+          "edge": 7932,
+          "start_min": 1037.7210300134896,
+          "duration_min": 99.48883172087551,
+          "severity": 0.17149971361474226
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3771,
+          "start_min": 1037.7210300134896,
+          "duration_min": 99.48883172087551,
+          "severity": 0.17149971361474226
+        }
+      ],
+      "od_dist_m": 6958.4,
+      "distance_bin": 2,
+      "ref_hops": 62,
+      "ref_time_base_min": 35.8644
+    },
+    {
+      "id": "val_0071",
+      "split": "val",
+      "origin": 1948,
+      "dest": 84,
+      "depart_min": 519.262,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 1570444002,
+      "incidents": [
+        {
+          "edge": 5368,
+          "start_min": 519.0840974547158,
+          "duration_min": 78.5542184507529,
+          "severity": 0.25214795869210715
+        },
+        {
+          "edge": 7177,
+          "start_min": 501.20265691712547,
+          "duration_min": 99.29448177451026,
+          "severity": 0.20993693581905376
+        },
+        {
+          "edge": 2758,
+          "start_min": 518.2428373381387,
+          "duration_min": 63.788371601901126,
+          "severity": 0.20565738838794886
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2663,
+          "start_min": 519.0840974547158,
+          "duration_min": 78.5542184507529,
+          "severity": 0.25214795869210715
+        },
+        {
+          "edge": 2157,
+          "start_min": 501.20265691712547,
+          "duration_min": 99.29448177451026,
+          "severity": 0.20993693581905376
+        },
+        {
+          "edge": 0,
+          "start_min": 518.2428373381387,
+          "duration_min": 63.788371601901126,
+          "severity": 0.20565738838794886
+        }
+      ],
+      "od_dist_m": 11033.6,
+      "distance_bin": 2,
+      "ref_hops": 82,
+      "ref_time_base_min": 37.5035
+    },
+    {
+      "id": "val_0072",
+      "split": "val",
+      "origin": 2159,
+      "dest": 878,
+      "depart_min": 473.405,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 3888664124,
+      "incidents": [
+        {
+          "edge": 4569,
+          "start_min": 481.11594856131836,
+          "duration_min": 39.486051340562796,
+          "severity": 0.2716230210508832
+        },
+        {
+          "edge": 1511,
+          "start_min": 461.61003075866586,
+          "duration_min": 48.67733655860047,
+          "severity": 0.38974194928440387
+        },
+        {
+          "edge": 2682,
+          "start_min": 455.01642249544307,
+          "duration_min": 101.4251726247081,
+          "severity": 0.33049955620039995
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5670,
+          "start_min": 481.11594856131836,
+          "duration_min": 39.486051340562796,
+          "severity": 0.2716230210508832
+        },
+        {
+          "edge": 669,
+          "start_min": 461.61003075866586,
+          "duration_min": 48.67733655860047,
+          "severity": 0.38974194928440387
+        },
+        {
+          "edge": 8168,
+          "start_min": 455.01642249544307,
+          "duration_min": 101.4251726247081,
+          "severity": 0.33049955620039995
+        }
+      ],
+      "od_dist_m": 1891.4,
+      "distance_bin": 0,
+      "ref_hops": 27,
+      "ref_time_base_min": 7.4558
+    },
+    {
+      "id": "val_0073",
+      "split": "val",
+      "origin": 2141,
+      "dest": 1966,
+      "depart_min": 883.888,
+      "hour": 14,
+      "sigma": 0.15,
+      "noise_seed": 4279236457,
+      "incidents": [
+        {
+          "edge": 4902,
+          "start_min": 875.7872291975896,
+          "duration_min": 77.8734152353878,
+          "severity": 0.2542017821947321
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1510,
+          "start_min": 875.7872291975896,
+          "duration_min": 77.8734152353878,
+          "severity": 0.2542017821947321
+        }
+      ],
+      "od_dist_m": 3196.5,
+      "distance_bin": 1,
+      "ref_hops": 38,
+      "ref_time_base_min": 6.9092
+    },
+    {
+      "id": "val_0074",
+      "split": "val",
+      "origin": 164,
+      "dest": 1350,
+      "depart_min": 1064.4,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 4079503017,
+      "incidents": [
+        {
+          "edge": 8238,
+          "start_min": 1060.3570729899536,
+          "duration_min": 55.31437326071265,
+          "severity": 0.1686509469002187
+        },
+        {
+          "edge": 25,
+          "start_min": 1064.6951450557788,
+          "duration_min": 40.63753189250278,
+          "severity": 0.23621890530893386
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 469,
+          "start_min": 1060.3570729899536,
+          "duration_min": 55.31437326071265,
+          "severity": 0.1686509469002187
+        },
+        {
+          "edge": 43,
+          "start_min": 1064.6951450557788,
+          "duration_min": 40.63753189250278,
+          "severity": 0.23621890530893386
+        }
+      ],
+      "od_dist_m": 2628.4,
+      "distance_bin": 1,
+      "ref_hops": 50,
+      "ref_time_base_min": 21.5352
+    },
+    {
+      "id": "val_0075",
+      "split": "val",
+      "origin": 1505,
+      "dest": 2252,
+      "depart_min": 1056.803,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 2636955025,
+      "incidents": [
+        {
+          "edge": 8581,
+          "start_min": 1064.3092098982208,
+          "duration_min": 97.86667583814635,
+          "severity": 0.298537156031619
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5578,
+          "start_min": 1064.3092098982208,
+          "duration_min": 97.86667583814635,
+          "severity": 0.298537156031619
+        }
+      ],
+      "od_dist_m": 2973.2,
+      "distance_bin": 1,
+      "ref_hops": 52,
+      "ref_time_base_min": 12.5758
+    },
+    {
+      "id": "val_0076",
+      "split": "val",
+      "origin": 2803,
+      "dest": 2873,
+      "depart_min": 516.492,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 3637634721,
+      "incidents": [
+        {
+          "edge": 6486,
+          "start_min": 521.9357972540956,
+          "duration_min": 43.920187199104745,
+          "severity": 0.17176013807626
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 516,
+          "start_min": 521.9357972540956,
+          "duration_min": 43.920187199104745,
+          "severity": 0.17176013807626
+        }
+      ],
+      "od_dist_m": 4032.1,
+      "distance_bin": 1,
+      "ref_hops": 30,
+      "ref_time_base_min": 27.7807
+    },
+    {
+      "id": "val_0077",
+      "split": "val",
+      "origin": 3019,
+      "dest": 764,
+      "depart_min": 1125.742,
+      "hour": 18,
+      "sigma": 0.05,
+      "noise_seed": 623597540,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 8998.4,
+      "distance_bin": 2,
+      "ref_hops": 75,
+      "ref_time_base_min": 32.4504
+    },
+    {
+      "id": "val_0078",
+      "split": "val",
+      "origin": 2029,
+      "dest": 2200,
+      "depart_min": 774.298,
+      "hour": 12,
+      "sigma": 0.05,
+      "noise_seed": 3899275214,
+      "incidents": [
+        {
+          "edge": 8653,
+          "start_min": 780.3293084931922,
+          "duration_min": 52.74803262310026,
+          "severity": 0.1999498906627894
+        },
+        {
+          "edge": 2095,
+          "start_min": 779.8155042987305,
+          "duration_min": 43.946803272137544,
+          "severity": 0.14475620834041653
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5841,
+          "start_min": 780.3293084931922,
+          "duration_min": 52.74803262310026,
+          "severity": 0.1999498906627894
+        },
+        {
+          "edge": 6238,
+          "start_min": 779.8155042987305,
+          "duration_min": 43.946803272137544,
+          "severity": 0.14475620834041653
+        }
+      ],
+      "od_dist_m": 2317.6,
+      "distance_bin": 0,
+      "ref_hops": 33,
+      "ref_time_base_min": 7.0091
+    },
+    {
+      "id": "val_0079",
+      "split": "val",
+      "origin": 3254,
+      "dest": 898,
+      "depart_min": 1031.661,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 557605929,
+      "incidents": [
+        {
+          "edge": 954,
+          "start_min": 1023.1405022526588,
+          "duration_min": 91.91933180048568,
+          "severity": 0.3340167808120945
+        },
+        {
+          "edge": 3792,
+          "start_min": 1018.0113287470385,
+          "duration_min": 97.00498073960425,
+          "severity": 0.11318415203280119
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 815,
+          "start_min": 1023.1405022526588,
+          "duration_min": 91.91933180048568,
+          "severity": 0.3340167808120945
+        },
+        {
+          "edge": 1686,
+          "start_min": 1018.0113287470385,
+          "duration_min": 97.00498073960425,
+          "severity": 0.11318415203280119
+        }
+      ],
+      "od_dist_m": 3802.1,
+      "distance_bin": 1,
+      "ref_hops": 45,
+      "ref_time_base_min": 17.3002
+    },
+    {
+      "id": "val_0080",
+      "split": "val",
+      "origin": 1299,
+      "dest": 309,
+      "depart_min": 1020.899,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 1099028631,
+      "incidents": [
+        {
+          "edge": 4096,
+          "start_min": 1018.486560541445,
+          "duration_min": 70.35669268572781,
+          "severity": 0.3160742357390983
+        },
+        {
+          "edge": 4092,
+          "start_min": 1001.1156560342869,
+          "duration_min": 52.11565892576418,
+          "severity": 0.23851176998924487
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3913,
+          "start_min": 1018.486560541445,
+          "duration_min": 70.35669268572781,
+          "severity": 0.3160742357390983
+        },
+        {
+          "edge": 3210,
+          "start_min": 1001.1156560342869,
+          "duration_min": 52.11565892576418,
+          "severity": 0.23851176998924487
+        }
+      ],
+      "od_dist_m": 1728.1,
+      "distance_bin": 0,
+      "ref_hops": 36,
+      "ref_time_base_min": 8.1195
+    },
+    {
+      "id": "val_0081",
+      "split": "val",
+      "origin": 2218,
+      "dest": 1944,
+      "depart_min": 662.485,
+      "hour": 11,
+      "sigma": 0.05,
+      "noise_seed": 3674279312,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3362.6,
+      "distance_bin": 1,
+      "ref_hops": 44,
+      "ref_time_base_min": 11.1912
+    },
+    {
+      "id": "val_0082",
+      "split": "val",
+      "origin": 1202,
+      "dest": 1432,
+      "depart_min": 308.785,
+      "hour": 5,
+      "sigma": 0.3,
+      "noise_seed": 17338738,
+      "incidents": [
+        {
+          "edge": 3349,
+          "start_min": 303.64968555979334,
+          "duration_min": 53.079019500558076,
+          "severity": 0.2537280983433311
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2114,
+          "start_min": 303.64968555979334,
+          "duration_min": 53.079019500558076,
+          "severity": 0.2537280983433311
+        }
+      ],
+      "od_dist_m": 1082.4,
+      "distance_bin": 0,
+      "ref_hops": 27,
+      "ref_time_base_min": 4.2369
+    },
+    {
+      "id": "val_0083",
+      "split": "val",
+      "origin": 3141,
+      "dest": 2069,
+      "depart_min": 983.493,
+      "hour": 16,
+      "sigma": 0.3,
+      "noise_seed": 1990277414,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2827.2,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 10.762
+    },
+    {
+      "id": "val_0084",
+      "split": "val",
+      "origin": 3289,
+      "dest": 832,
+      "depart_min": 1027.832,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 4163752394,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5023.4,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 34.9311
+    },
+    {
+      "id": "val_0085",
+      "split": "val",
+      "origin": 22,
+      "dest": 3341,
+      "depart_min": 866.517,
+      "hour": 14,
+      "sigma": 0.15,
+      "noise_seed": 2555147247,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6157.1,
+      "distance_bin": 2,
+      "ref_hops": 60,
+      "ref_time_base_min": 12.8564
+    },
+    {
+      "id": "val_0086",
+      "split": "val",
+      "origin": 3268,
+      "dest": 652,
+      "depart_min": 617.021,
+      "hour": 10,
+      "sigma": 0.05,
+      "noise_seed": 3946696628,
+      "incidents": [
+        {
+          "edge": 4159,
+          "start_min": 605.3095018823674,
+          "duration_min": 116.91707678215857,
+          "severity": 0.16733201060715325
+        },
+        {
+          "edge": 2254,
+          "start_min": 611.8593561824913,
+          "duration_min": 93.79142124301498,
+          "severity": 0.19971827382845414
+        },
+        {
+          "edge": 6006,
+          "start_min": 598.1238479022833,
+          "duration_min": 98.47073199621585,
+          "severity": 0.10744602660606438
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6638,
+          "start_min": 605.3095018823674,
+          "duration_min": 116.91707678215857,
+          "severity": 0.16733201060715325
+        },
+        {
+          "edge": 548,
+          "start_min": 611.8593561824913,
+          "duration_min": 93.79142124301498,
+          "severity": 0.19971827382845414
+        },
+        {
+          "edge": 8181,
+          "start_min": 598.1238479022833,
+          "duration_min": 98.47073199621585,
+          "severity": 0.10744602660606438
+        }
+      ],
+      "od_dist_m": 5173.7,
+      "distance_bin": 2,
+      "ref_hops": 62,
+      "ref_time_base_min": 13.3724
+    },
+    {
+      "id": "val_0087",
+      "split": "val",
+      "origin": 2268,
+      "dest": 2497,
+      "depart_min": 1164.77,
+      "hour": 19,
+      "sigma": 0.3,
+      "noise_seed": 2229254411,
+      "incidents": [
+        {
+          "edge": 1419,
+          "start_min": 1164.1957831332206,
+          "duration_min": 77.03344455019949,
+          "severity": 0.18094524637488613
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5914,
+          "start_min": 1164.1957831332206,
+          "duration_min": 77.03344455019949,
+          "severity": 0.18094524637488613
+        }
+      ],
+      "od_dist_m": 3964.1,
+      "distance_bin": 1,
+      "ref_hops": 46,
+      "ref_time_base_min": 14.5176
+    },
+    {
+      "id": "val_0088",
+      "split": "val",
+      "origin": 3069,
+      "dest": 3150,
+      "depart_min": 1030.268,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 2472459853,
+      "incidents": [
+        {
+          "edge": 8893,
+          "start_min": 1033.0121884023215,
+          "duration_min": 101.51538397117021,
+          "severity": 0.14547393586618643
+        },
+        {
+          "edge": 6968,
+          "start_min": 1022.6598615702092,
+          "duration_min": 115.64532701023755,
+          "severity": 0.24526709686999806
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4159,
+          "start_min": 1033.0121884023215,
+          "duration_min": 101.51538397117021,
+          "severity": 0.14547393586618643
+        },
+        {
+          "edge": 6812,
+          "start_min": 1022.6598615702092,
+          "duration_min": 115.64532701023755,
+          "severity": 0.24526709686999806
+        }
+      ],
+      "od_dist_m": 6462.8,
+      "distance_bin": 2,
+      "ref_hops": 76,
+      "ref_time_base_min": 26.3037
+    },
+    {
+      "id": "val_0089",
+      "split": "val",
+      "origin": 2327,
+      "dest": 2363,
+      "depart_min": 1043.167,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 90809539,
+      "incidents": [
+        {
+          "edge": 6476,
+          "start_min": 1045.2525742264352,
+          "duration_min": 98.92275985995188,
+          "severity": 0.27855405756086393
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6468,
+          "start_min": 1045.2525742264352,
+          "duration_min": 98.92275985995188,
+          "severity": 0.27855405756086393
+        }
+      ],
+      "od_dist_m": 1999.9,
+      "distance_bin": 0,
+      "ref_hops": 12,
+      "ref_time_base_min": 13.2664
+    },
+    {
+      "id": "val_0090",
+      "split": "val",
+      "origin": 1445,
+      "dest": 16,
+      "depart_min": 565.068,
+      "hour": 9,
+      "sigma": 0.15,
+      "noise_seed": 1496158096,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2446.9,
+      "distance_bin": 0,
+      "ref_hops": 33,
+      "ref_time_base_min": 9.5053
+    },
+    {
+      "id": "val_0091",
+      "split": "val",
+      "origin": 285,
+      "dest": 723,
+      "depart_min": 521.662,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 1036244975,
+      "incidents": [
+        {
+          "edge": 2066,
+          "start_min": 502.3840181902392,
+          "duration_min": 50.54416193098068,
+          "severity": 0.3887600202154682
+        },
+        {
+          "edge": 714,
+          "start_min": 506.9510637297889,
+          "duration_min": 90.45697323435257,
+          "severity": 0.3499679846539112
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1389,
+          "start_min": 502.3840181902392,
+          "duration_min": 50.54416193098068,
+          "severity": 0.3887600202154682
+        },
+        {
+          "edge": 6164,
+          "start_min": 506.9510637297889,
+          "duration_min": 90.45697323435257,
+          "severity": 0.3499679846539112
+        }
+      ],
+      "od_dist_m": 3541.9,
+      "distance_bin": 1,
+      "ref_hops": 55,
+      "ref_time_base_min": 16.0561
+    },
+    {
+      "id": "val_0092",
+      "split": "val",
+      "origin": 1722,
+      "dest": 737,
+      "depart_min": 400.978,
+      "hour": 6,
+      "sigma": 0.15,
+      "noise_seed": 1582994657,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3713.9,
+      "distance_bin": 1,
+      "ref_hops": 37,
+      "ref_time_base_min": 9.9458
+    },
+    {
+      "id": "val_0093",
+      "split": "val",
+      "origin": 2122,
+      "dest": 2284,
+      "depart_min": 454.786,
+      "hour": 7,
+      "sigma": 0.15,
+      "noise_seed": 2832123351,
+      "incidents": [
+        {
+          "edge": 3928,
+          "start_min": 460.4087148403063,
+          "duration_min": 60.89813568715791,
+          "severity": 0.20853187698446132
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8292,
+          "start_min": 460.4087148403063,
+          "duration_min": 60.89813568715791,
+          "severity": 0.20853187698446132
+        }
+      ],
+      "od_dist_m": 5876.4,
+      "distance_bin": 2,
+      "ref_hops": 67,
+      "ref_time_base_min": 24.2168
+    },
+    {
+      "id": "val_0094",
+      "split": "val",
+      "origin": 1470,
+      "dest": 964,
+      "depart_min": 1136.499,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 1040381893,
+      "incidents": [
+        {
+          "edge": 418,
+          "start_min": 1122.5573732256535,
+          "duration_min": 72.14250780802783,
+          "severity": 0.34416654829711946
+        },
+        {
+          "edge": 4048,
+          "start_min": 1117.1868527730599,
+          "duration_min": 61.53686653950053,
+          "severity": 0.24037092170875834
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3889,
+          "start_min": 1122.5573732256535,
+          "duration_min": 72.14250780802783,
+          "severity": 0.34416654829711946
+        },
+        {
+          "edge": 684,
+          "start_min": 1117.1868527730599,
+          "duration_min": 61.53686653950053,
+          "severity": 0.24037092170875834
+        }
+      ],
+      "od_dist_m": 3385.0,
+      "distance_bin": 1,
+      "ref_hops": 47,
+      "ref_time_base_min": 16.4456
+    },
+    {
+      "id": "val_0095",
+      "split": "val",
+      "origin": 2083,
+      "dest": 1731,
+      "depart_min": 491.673,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 3815135902,
+      "incidents": [
+        {
+          "edge": 4773,
+          "start_min": 485.43802141409475,
+          "duration_min": 57.36785245395538,
+          "severity": 0.18640922100248442
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4958,
+          "start_min": 485.43802141409475,
+          "duration_min": 57.36785245395538,
+          "severity": 0.18640922100248442
+        }
+      ],
+      "od_dist_m": 5834.2,
+      "distance_bin": 2,
+      "ref_hops": 51,
+      "ref_time_base_min": 22.9155
+    },
+    {
+      "id": "val_0096",
+      "split": "val",
+      "origin": 869,
+      "dest": 2109,
+      "depart_min": 1095.656,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 2720794357,
+      "incidents": [
+        {
+          "edge": 459,
+          "start_min": 1102.355400187941,
+          "duration_min": 74.99017291971938,
+          "severity": 0.33501763808134355
+        },
+        {
+          "edge": 4983,
+          "start_min": 1080.878668565073,
+          "duration_min": 56.402006592720156,
+          "severity": 0.16862554983596914
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5491,
+          "start_min": 1102.355400187941,
+          "duration_min": 74.99017291971938,
+          "severity": 0.33501763808134355
+        },
+        {
+          "edge": 5106,
+          "start_min": 1080.878668565073,
+          "duration_min": 56.402006592720156,
+          "severity": 0.16862554983596914
+        }
+      ],
+      "od_dist_m": 5025.9,
+      "distance_bin": 2,
+      "ref_hops": 55,
+      "ref_time_base_min": 19.6992
+    },
+    {
+      "id": "val_0097",
+      "split": "val",
+      "origin": 3373,
+      "dest": 290,
+      "depart_min": 1031.197,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 1830966138,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3997.9,
+      "distance_bin": 1,
+      "ref_hops": 51,
+      "ref_time_base_min": 17.3352
+    },
+    {
+      "id": "val_0098",
+      "split": "val",
+      "origin": 682,
+      "dest": 938,
+      "depart_min": 1279.141,
+      "hour": 21,
+      "sigma": 0.3,
+      "noise_seed": 110050153,
+      "incidents": [
+        {
+          "edge": 4387,
+          "start_min": 1277.7413763698617,
+          "duration_min": 115.41211476538025,
+          "severity": 0.23878586885280137
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4511,
+          "start_min": 1277.7413763698617,
+          "duration_min": 115.41211476538025,
+          "severity": 0.23878586885280137
+        }
+      ],
+      "od_dist_m": 4614.0,
+      "distance_bin": 2,
+      "ref_hops": 43,
+      "ref_time_base_min": 9.7087
+    },
+    {
+      "id": "val_0099",
+      "split": "val",
+      "origin": 281,
+      "dest": 743,
+      "depart_min": 581.614,
+      "hour": 9,
+      "sigma": 0.05,
+      "noise_seed": 3221664259,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4509.3,
+      "distance_bin": 2,
+      "ref_hops": 64,
+      "ref_time_base_min": 13.4381
+    },
+    {
+      "id": "val_0100",
+      "split": "val",
+      "origin": 1153,
+      "dest": 1802,
+      "depart_min": 1092.42,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 1782758231,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3364.4,
+      "distance_bin": 1,
+      "ref_hops": 32,
+      "ref_time_base_min": 18.6695
+    },
+    {
+      "id": "val_0101",
+      "split": "val",
+      "origin": 2335,
+      "dest": 2526,
+      "depart_min": 574.867,
+      "hour": 9,
+      "sigma": 0.05,
+      "noise_seed": 2963480351,
+      "incidents": [
+        {
+          "edge": 4134,
+          "start_min": 581.2898205328427,
+          "duration_min": 118.57050681377304,
+          "severity": 0.11291071383922531
+        },
+        {
+          "edge": 4055,
+          "start_min": 564.8555128293309,
+          "duration_min": 119.52190031920715,
+          "severity": 0.32332505935297007
+        },
+        {
+          "edge": 163,
+          "start_min": 567.5734037932367,
+          "duration_min": 30.037067605434423,
+          "severity": 0.2979403377856313
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4110,
+          "start_min": 581.2898205328427,
+          "duration_min": 118.57050681377304,
+          "severity": 0.11291071383922531
+        },
+        {
+          "edge": 7979,
+          "start_min": 564.8555128293309,
+          "duration_min": 119.52190031920715,
+          "severity": 0.32332505935297007
+        },
+        {
+          "edge": 6763,
+          "start_min": 567.5734037932367,
+          "duration_min": 30.037067605434423,
+          "severity": 0.2979403377856313
+        }
+      ],
+      "od_dist_m": 4737.7,
+      "distance_bin": 2,
+      "ref_hops": 52,
+      "ref_time_base_min": 17.123
+    },
+    {
+      "id": "val_0102",
+      "split": "val",
+      "origin": 1073,
+      "dest": 1943,
+      "depart_min": 383.939,
+      "hour": 6,
+      "sigma": 0.15,
+      "noise_seed": 1779732282,
+      "incidents": [
+        {
+          "edge": 5003,
+          "start_min": 369.5314963949777,
+          "duration_min": 72.94046696590442,
+          "severity": 0.27480996511600847
+        },
+        {
+          "edge": 8659,
+          "start_min": 370.9535408614262,
+          "duration_min": 61.927206820613975,
+          "severity": 0.2738191196622385
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 769,
+          "start_min": 369.5314963949777,
+          "duration_min": 72.94046696590442,
+          "severity": 0.27480996511600847
+        },
+        {
+          "edge": 4764,
+          "start_min": 370.9535408614262,
+          "duration_min": 61.927206820613975,
+          "severity": 0.2738191196622385
+        }
+      ],
+      "od_dist_m": 3820.5,
+      "distance_bin": 1,
+      "ref_hops": 44,
+      "ref_time_base_min": 11.5026
+    },
+    {
+      "id": "val_0103",
+      "split": "val",
+      "origin": 1133,
+      "dest": 2356,
+      "depart_min": 965.611,
+      "hour": 16,
+      "sigma": 0.15,
+      "noise_seed": 246684904,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6856.0,
+      "distance_bin": 2,
+      "ref_hops": 71,
+      "ref_time_base_min": 29.4552
+    },
+    {
+      "id": "val_0104",
+      "split": "val",
+      "origin": 130,
+      "dest": 1992,
+      "depart_min": 551.662,
+      "hour": 9,
+      "sigma": 0.15,
+      "noise_seed": 3134010579,
+      "incidents": [
+        {
+          "edge": 474,
+          "start_min": 541.5669662423174,
+          "duration_min": 97.65874101180981,
+          "severity": 0.31791546519534974
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1254,
+          "start_min": 541.5669662423174,
+          "duration_min": 97.65874101180981,
+          "severity": 0.31791546519534974
+        }
+      ],
+      "od_dist_m": 6424.4,
+      "distance_bin": 2,
+      "ref_hops": 71,
+      "ref_time_base_min": 17.9814
+    },
+    {
+      "id": "val_0105",
+      "split": "val",
+      "origin": 3126,
+      "dest": 94,
+      "depart_min": 1367.643,
+      "hour": 22,
+      "sigma": 0.15,
+      "noise_seed": 3033625638,
+      "incidents": [
+        {
+          "edge": 5269,
+          "start_min": 1371.6139550764758,
+          "duration_min": 102.84553307385562,
+          "severity": 0.16640155371182325
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3752,
+          "start_min": 1371.6139550764758,
+          "duration_min": 102.84553307385562,
+          "severity": 0.16640155371182325
+        }
+      ],
+      "od_dist_m": 9700.4,
+      "distance_bin": 2,
+      "ref_hops": 74,
+      "ref_time_base_min": 20.0292
+    },
+    {
+      "id": "val_0106",
+      "split": "val",
+      "origin": 2737,
+      "dest": 808,
+      "depart_min": 1080.385,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 732537109,
+      "incidents": [
+        {
+          "edge": 6664,
+          "start_min": 1075.2135192149565,
+          "duration_min": 46.25918392211409,
+          "severity": 0.3007839218865158
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 519,
+          "start_min": 1075.2135192149565,
+          "duration_min": 46.25918392211409,
+          "severity": 0.3007839218865158
+        }
+      ],
+      "od_dist_m": 11268.1,
+      "distance_bin": 2,
+      "ref_hops": 92,
+      "ref_time_base_min": 44.8042
+    },
+    {
+      "id": "val_0107",
+      "split": "val",
+      "origin": 175,
+      "dest": 254,
+      "depart_min": 947.892,
+      "hour": 15,
+      "sigma": 0.05,
+      "noise_seed": 2037051445,
+      "incidents": [
+        {
+          "edge": 24,
+          "start_min": 938.9227379877158,
+          "duration_min": 69.71103631170313,
+          "severity": 0.12505095420321313
+        },
+        {
+          "edge": 601,
+          "start_min": 930.0977332459915,
+          "duration_min": 47.3321070651412,
+          "severity": 0.11471469098660597
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 562,
+          "start_min": 938.9227379877158,
+          "duration_min": 69.71103631170313,
+          "severity": 0.12505095420321313
+        },
+        {
+          "edge": 1271,
+          "start_min": 930.0977332459915,
+          "duration_min": 47.3321070651412,
+          "severity": 0.11471469098660597
+        }
+      ],
+      "od_dist_m": 3430.2,
+      "distance_bin": 1,
+      "ref_hops": 50,
+      "ref_time_base_min": 10.8686
+    },
+    {
+      "id": "val_0108",
+      "split": "val",
+      "origin": 3437,
+      "dest": 2971,
+      "depart_min": 139.627,
+      "hour": 2,
+      "sigma": 0.3,
+      "noise_seed": 2745614590,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1760.2,
+      "distance_bin": 0,
+      "ref_hops": 13,
+      "ref_time_base_min": 4.813
+    },
+    {
+      "id": "val_0109",
+      "split": "val",
+      "origin": 1210,
+      "dest": 2550,
+      "depart_min": 592.162,
+      "hour": 9,
+      "sigma": 0.15,
+      "noise_seed": 665678005,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 8311.2,
+      "distance_bin": 2,
+      "ref_hops": 69,
+      "ref_time_base_min": 22.2139
+    },
+    {
+      "id": "val_0110",
+      "split": "val",
+      "origin": 1900,
+      "dest": 170,
+      "depart_min": 924.048,
+      "hour": 15,
+      "sigma": 0.15,
+      "noise_seed": 4198999156,
+      "incidents": [
+        {
+          "edge": 2473,
+          "start_min": 920.0146271943123,
+          "duration_min": 35.72698911424827,
+          "severity": 0.3464072371659225
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4156,
+          "start_min": 920.0146271943123,
+          "duration_min": 35.72698911424827,
+          "severity": 0.3464072371659225
+        }
+      ],
+      "od_dist_m": 3800.1,
+      "distance_bin": 1,
+      "ref_hops": 54,
+      "ref_time_base_min": 9.6706
+    },
+    {
+      "id": "val_0111",
+      "split": "val",
+      "origin": 2257,
+      "dest": 1313,
+      "depart_min": 1014.975,
+      "hour": 16,
+      "sigma": 0.3,
+      "noise_seed": 2009159418,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5528.1,
+      "distance_bin": 2,
+      "ref_hops": 65,
+      "ref_time_base_min": 23.5251
+    },
+    {
+      "id": "val_0112",
+      "split": "val",
+      "origin": 3412,
+      "dest": 2428,
+      "depart_min": 1152.946,
+      "hour": 19,
+      "sigma": 0.3,
+      "noise_seed": 1100107083,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4249.1,
+      "distance_bin": 1,
+      "ref_hops": 56,
+      "ref_time_base_min": 21.26
+    },
+    {
+      "id": "val_0113",
+      "split": "val",
+      "origin": 523,
+      "dest": 144,
+      "depart_min": 457.797,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 2845715583,
+      "incidents": [
+        {
+          "edge": 1537,
+          "start_min": 444.5987852272602,
+          "duration_min": 39.68517490888119,
+          "severity": 0.14525545932723724
+        },
+        {
+          "edge": 5775,
+          "start_min": 447.99323824364467,
+          "duration_min": 108.57884796097458,
+          "severity": 0.23770720193758255
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 139,
+          "start_min": 444.5987852272602,
+          "duration_min": 39.68517490888119,
+          "severity": 0.14525545932723724
+        },
+        {
+          "edge": 581,
+          "start_min": 447.99323824364467,
+          "duration_min": 108.57884796097458,
+          "severity": 0.23770720193758255
+        }
+      ],
+      "od_dist_m": 1762.4,
+      "distance_bin": 0,
+      "ref_hops": 26,
+      "ref_time_base_min": 10.6023
+    },
+    {
+      "id": "val_0114",
+      "split": "val",
+      "origin": 3229,
+      "dest": 1686,
+      "depart_min": 547.529,
+      "hour": 9,
+      "sigma": 0.3,
+      "noise_seed": 1243763594,
+      "incidents": [
+        {
+          "edge": 6971,
+          "start_min": 555.6717302319801,
+          "duration_min": 92.77973043964982,
+          "severity": 0.3773800738610573
+        },
+        {
+          "edge": 2952,
+          "start_min": 544.948198416258,
+          "duration_min": 66.47421988932736,
+          "severity": 0.31870169150307226
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5330,
+          "start_min": 555.6717302319801,
+          "duration_min": 92.77973043964982,
+          "severity": 0.3773800738610573
+        },
+        {
+          "edge": 6530,
+          "start_min": 544.948198416258,
+          "duration_min": 66.47421988932736,
+          "severity": 0.31870169150307226
+        }
+      ],
+      "od_dist_m": 8128.4,
+      "distance_bin": 2,
+      "ref_hops": 70,
+      "ref_time_base_min": 38.6454
+    },
+    {
+      "id": "val_0115",
+      "split": "val",
+      "origin": 765,
+      "dest": 557,
+      "depart_min": 347.99,
+      "hour": 5,
+      "sigma": 0.15,
+      "noise_seed": 1417058855,
+      "incidents": [
+        {
+          "edge": 1490,
+          "start_min": 338.94689213343275,
+          "duration_min": 49.19916367690857,
+          "severity": 0.12738132594922602
+        },
+        {
+          "edge": 7979,
+          "start_min": 338.08407534015544,
+          "duration_min": 87.71763852351103,
+          "severity": 0.38434918982675736
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5944,
+          "start_min": 338.94689213343275,
+          "duration_min": 49.19916367690857,
+          "severity": 0.12738132594922602
+        },
+        {
+          "edge": 275,
+          "start_min": 338.08407534015544,
+          "duration_min": 87.71763852351103,
+          "severity": 0.38434918982675736
+        }
+      ],
+      "od_dist_m": 6252.6,
+      "distance_bin": 2,
+      "ref_hops": 66,
+      "ref_time_base_min": 14.814
+    },
+    {
+      "id": "val_0116",
+      "split": "val",
+      "origin": 449,
+      "dest": 1758,
+      "depart_min": 670.792,
+      "hour": 11,
+      "sigma": 0.05,
+      "noise_seed": 3775662895,
+      "incidents": [
+        {
+          "edge": 791,
+          "start_min": 659.3818082106064,
+          "duration_min": 99.27468967130017,
+          "severity": 0.17871298223636073
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 671,
+          "start_min": 659.3818082106064,
+          "duration_min": 99.27468967130017,
+          "severity": 0.17871298223636073
+        }
+      ],
+      "od_dist_m": 3821.5,
+      "distance_bin": 1,
+      "ref_hops": 54,
+      "ref_time_base_min": 10.1748
+    },
+    {
+      "id": "val_0117",
+      "split": "val",
+      "origin": 366,
+      "dest": 1431,
+      "depart_min": 680.124,
+      "hour": 11,
+      "sigma": 0.15,
+      "noise_seed": 2957304962,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2512.2,
+      "distance_bin": 1,
+      "ref_hops": 49,
+      "ref_time_base_min": 8.9518
+    },
+    {
+      "id": "val_0118",
+      "split": "val",
+      "origin": 1418,
+      "dest": 891,
+      "depart_min": 1112.564,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 2377530493,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2785.6,
+      "distance_bin": 1,
+      "ref_hops": 40,
+      "ref_time_base_min": 17.9155
+    },
+    {
+      "id": "val_0119",
+      "split": "val",
+      "origin": 2811,
+      "dest": 1384,
+      "depart_min": 1112.068,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 4091074642,
+      "incidents": [
+        {
+          "edge": 110,
+          "start_min": 1119.288560601357,
+          "duration_min": 55.250514035879384,
+          "severity": 0.31728195479427224
+        },
+        {
+          "edge": 932,
+          "start_min": 1119.4791880833843,
+          "duration_min": 101.57987258048558,
+          "severity": 0.34333828678970135
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6867,
+          "start_min": 1119.288560601357,
+          "duration_min": 55.250514035879384,
+          "severity": 0.31728195479427224
+        },
+        {
+          "edge": 4879,
+          "start_min": 1119.4791880833843,
+          "duration_min": 101.57987258048558,
+          "severity": 0.34333828678970135
+        }
+      ],
+      "od_dist_m": 3294.2,
+      "distance_bin": 1,
+      "ref_hops": 59,
+      "ref_time_base_min": 17.1242
+    },
+    {
+      "id": "val_0120",
+      "split": "val",
+      "origin": 670,
+      "dest": 3145,
+      "depart_min": 769.796,
+      "hour": 12,
+      "sigma": 0.3,
+      "noise_seed": 849112457,
+      "incidents": [
+        {
+          "edge": 4714,
+          "start_min": 768.5061534261374,
+          "duration_min": 83.28097931272723,
+          "severity": 0.11610953054924743
+        },
+        {
+          "edge": 3811,
+          "start_min": 767.5972485815861,
+          "duration_min": 110.2990484287073,
+          "severity": 0.139550923715514
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6694,
+          "start_min": 768.5061534261374,
+          "duration_min": 83.28097931272723,
+          "severity": 0.11610953054924743
+        },
+        {
+          "edge": 1306,
+          "start_min": 767.5972485815861,
+          "duration_min": 110.2990484287073,
+          "severity": 0.139550923715514
+        }
+      ],
+      "od_dist_m": 2259.1,
+      "distance_bin": 0,
+      "ref_hops": 31,
+      "ref_time_base_min": 7.463
+    },
+    {
+      "id": "val_0121",
+      "split": "val",
+      "origin": 831,
+      "dest": 2302,
+      "depart_min": 831.498,
+      "hour": 13,
+      "sigma": 0.3,
+      "noise_seed": 3449879194,
+      "incidents": [
+        {
+          "edge": 1379,
+          "start_min": 840.1252362017616,
+          "duration_min": 31.943576529854827,
+          "severity": 0.2397100910476861
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4223,
+          "start_min": 840.1252362017616,
+          "duration_min": 31.943576529854827,
+          "severity": 0.2397100910476861
+        }
+      ],
+      "od_dist_m": 6417.8,
+      "distance_bin": 2,
+      "ref_hops": 58,
+      "ref_time_base_min": 15.3187
+    },
+    {
+      "id": "val_0122",
+      "split": "val",
+      "origin": 522,
+      "dest": 2553,
+      "depart_min": 1307.016,
+      "hour": 21,
+      "sigma": 0.3,
+      "noise_seed": 3333693947,
+      "incidents": [
+        {
+          "edge": 2542,
+          "start_min": 1299.0143105463494,
+          "duration_min": 96.74857543179725,
+          "severity": 0.37663413817541236
+        },
+        {
+          "edge": 4876,
+          "start_min": 1301.8753825306978,
+          "duration_min": 82.58679519933457,
+          "severity": 0.3985005514983124
+        },
+        {
+          "edge": 2584,
+          "start_min": 1300.157098268043,
+          "duration_min": 51.68879367164885,
+          "severity": 0.14518976145534956
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1451,
+          "start_min": 1299.0143105463494,
+          "duration_min": 96.74857543179725,
+          "severity": 0.37663413817541236
+        },
+        {
+          "edge": 499,
+          "start_min": 1301.8753825306978,
+          "duration_min": 82.58679519933457,
+          "severity": 0.3985005514983124
+        },
+        {
+          "edge": 790,
+          "start_min": 1300.157098268043,
+          "duration_min": 51.68879367164885,
+          "severity": 0.14518976145534956
+        }
+      ],
+      "od_dist_m": 8539.5,
+      "distance_bin": 2,
+      "ref_hops": 59,
+      "ref_time_base_min": 18.7539
+    },
+    {
+      "id": "val_0123",
+      "split": "val",
+      "origin": 2036,
+      "dest": 1513,
+      "depart_min": 1167.388,
+      "hour": 19,
+      "sigma": 0.05,
+      "noise_seed": 976928886,
+      "incidents": [
+        {
+          "edge": 648,
+          "start_min": 1149.2931283806863,
+          "duration_min": 75.88130009692125,
+          "severity": 0.13984595861146093
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 768,
+          "start_min": 1149.2931283806863,
+          "duration_min": 75.88130009692125,
+          "severity": 0.13984595861146093
+        }
+      ],
+      "od_dist_m": 2470.5,
+      "distance_bin": 0,
+      "ref_hops": 37,
+      "ref_time_base_min": 9.8319
+    },
+    {
+      "id": "val_0124",
+      "split": "val",
+      "origin": 1935,
+      "dest": 906,
+      "depart_min": 366.347,
+      "hour": 6,
+      "sigma": 0.3,
+      "noise_seed": 3918540047,
+      "incidents": [
+        {
+          "edge": 2456,
+          "start_min": 358.03596856375077,
+          "duration_min": 40.23717383849767,
+          "severity": 0.3136915389981084
+        },
+        {
+          "edge": 765,
+          "start_min": 355.3172335387858,
+          "duration_min": 50.712495659355035,
+          "severity": 0.2235037794566669
+        },
+        {
+          "edge": 2589,
+          "start_min": 348.1986606092938,
+          "duration_min": 118.26510755171277,
+          "severity": 0.21392413570402088
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2632,
+          "start_min": 358.03596856375077,
+          "duration_min": 40.23717383849767,
+          "severity": 0.3136915389981084
+        },
+        {
+          "edge": 4488,
+          "start_min": 355.3172335387858,
+          "duration_min": 50.712495659355035,
+          "severity": 0.2235037794566669
+        },
+        {
+          "edge": 835,
+          "start_min": 348.1986606092938,
+          "duration_min": 118.26510755171277,
+          "severity": 0.21392413570402088
+        }
+      ],
+      "od_dist_m": 4802.0,
+      "distance_bin": 2,
+      "ref_hops": 50,
+      "ref_time_base_min": 11.1191
+    },
+    {
+      "id": "val_0125",
+      "split": "val",
+      "origin": 1824,
+      "dest": 886,
+      "depart_min": 971.215,
+      "hour": 16,
+      "sigma": 0.3,
+      "noise_seed": 735980952,
+      "incidents": [
+        {
+          "edge": 8364,
+          "start_min": 980.7709723799205,
+          "duration_min": 105.98879737264636,
+          "severity": 0.23553789379302525
+        },
+        {
+          "edge": 2662,
+          "start_min": 964.4569379067477,
+          "duration_min": 73.12178634725117,
+          "severity": 0.2655239106143265
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2450,
+          "start_min": 980.7709723799205,
+          "duration_min": 105.98879737264636,
+          "severity": 0.23553789379302525
+        },
+        {
+          "edge": 8393,
+          "start_min": 964.4569379067477,
+          "duration_min": 73.12178634725117,
+          "severity": 0.2655239106143265
+        }
+      ],
+      "od_dist_m": 2861.2,
+      "distance_bin": 1,
+      "ref_hops": 29,
+      "ref_time_base_min": 10.8503
+    },
+    {
+      "id": "val_0126",
+      "split": "val",
+      "origin": 3328,
+      "dest": 1780,
+      "depart_min": 868.41,
+      "hour": 14,
+      "sigma": 0.15,
+      "noise_seed": 402095232,
+      "incidents": [
+        {
+          "edge": 2749,
+          "start_min": 865.8808336704374,
+          "duration_min": 37.959481433142784,
+          "severity": 0.11249795900561063
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8492,
+          "start_min": 865.8808336704374,
+          "duration_min": 37.959481433142784,
+          "severity": 0.11249795900561063
+        }
+      ],
+      "od_dist_m": 1137.4,
+      "distance_bin": 0,
+      "ref_hops": 24,
+      "ref_time_base_min": 4.2619
+    },
+    {
+      "id": "val_0127",
+      "split": "val",
+      "origin": 764,
+      "dest": 691,
+      "depart_min": 1088.611,
+      "hour": 18,
+      "sigma": 0.05,
+      "noise_seed": 2196188158,
+      "incidents": [
+        {
+          "edge": 3463,
+          "start_min": 1087.5246489583383,
+          "duration_min": 101.154343413188,
+          "severity": 0.10126055687752593
+        },
+        {
+          "edge": 2064,
+          "start_min": 1097.9106686768976,
+          "duration_min": 99.77586002464031,
+          "severity": 0.2515910801892903
+        },
+        {
+          "edge": 3534,
+          "start_min": 1090.535034064419,
+          "duration_min": 110.6965179487287,
+          "severity": 0.2464239379286278
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6000,
+          "start_min": 1087.5246489583383,
+          "duration_min": 101.154343413188,
+          "severity": 0.10126055687752593
+        },
+        {
+          "edge": 3434,
+          "start_min": 1097.9106686768976,
+          "duration_min": 99.77586002464031,
+          "severity": 0.2515910801892903
+        },
+        {
+          "edge": 273,
+          "start_min": 1090.535034064419,
+          "duration_min": 110.6965179487287,
+          "severity": 0.2464239379286278
+        }
+      ],
+      "od_dist_m": 3829.3,
+      "distance_bin": 1,
+      "ref_hops": 52,
+      "ref_time_base_min": 22.2694
+    },
+    {
+      "id": "val_0128",
+      "split": "val",
+      "origin": 305,
+      "dest": 169,
+      "depart_min": 1102.336,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 2877900710,
+      "incidents": [
+        {
+          "edge": 6059,
+          "start_min": 1097.5179585737949,
+          "duration_min": 109.0092312233228,
+          "severity": 0.3565969335496729
+        },
+        {
+          "edge": 6040,
+          "start_min": 1112.077463573786,
+          "duration_min": 86.42665453289875,
+          "severity": 0.11433572925216834
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6052,
+          "start_min": 1097.5179585737949,
+          "duration_min": 109.0092312233228,
+          "severity": 0.3565969335496729
+        },
+        {
+          "edge": 5866,
+          "start_min": 1112.077463573786,
+          "duration_min": 86.42665453289875,
+          "severity": 0.11433572925216834
+        }
+      ],
+      "od_dist_m": 2907.3,
+      "distance_bin": 1,
+      "ref_hops": 32,
+      "ref_time_base_min": 11.8952
+    },
+    {
+      "id": "val_0129",
+      "split": "val",
+      "origin": 3193,
+      "dest": 1001,
+      "depart_min": 481.519,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 2533164257,
+      "incidents": [
+        {
+          "edge": 2618,
+          "start_min": 472.6702534219192,
+          "duration_min": 100.87459132119963,
+          "severity": 0.2546796216710213
+        },
+        {
+          "edge": 5080,
+          "start_min": 472.0202338150369,
+          "duration_min": 92.64073026597484,
+          "severity": 0.30307692987212553
+        },
+        {
+          "edge": 2770,
+          "start_min": 471.31751110456486,
+          "duration_min": 60.22300884107193,
+          "severity": 0.12402732005183295
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 666,
+          "start_min": 472.6702534219192,
+          "duration_min": 100.87459132119963,
+          "severity": 0.2546796216710213
+        },
+        {
+          "edge": 5003,
+          "start_min": 472.0202338150369,
+          "duration_min": 92.64073026597484,
+          "severity": 0.30307692987212553
+        },
+        {
+          "edge": 8205,
+          "start_min": 471.31751110456486,
+          "duration_min": 60.22300884107193,
+          "severity": 0.12402732005183295
+        }
+      ],
+      "od_dist_m": 3107.5,
+      "distance_bin": 1,
+      "ref_hops": 53,
+      "ref_time_base_min": 23.518
+    },
+    {
+      "id": "val_0130",
+      "split": "val",
+      "origin": 1301,
+      "dest": 2183,
+      "depart_min": 1076.591,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 1496441550,
+      "incidents": [
+        {
+          "edge": 3367,
+          "start_min": 1080.5083925264148,
+          "duration_min": 87.11658996934513,
+          "severity": 0.37949660013384734
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1952,
+          "start_min": 1080.5083925264148,
+          "duration_min": 87.11658996934513,
+          "severity": 0.37949660013384734
+        }
+      ],
+      "od_dist_m": 3466.5,
+      "distance_bin": 1,
+      "ref_hops": 47,
+      "ref_time_base_min": 17.4248
+    },
+    {
+      "id": "val_0131",
+      "split": "val",
+      "origin": 804,
+      "dest": 2508,
+      "depart_min": 353.247,
+      "hour": 5,
+      "sigma": 0.15,
+      "noise_seed": 2334760827,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6233.6,
+      "distance_bin": 2,
+      "ref_hops": 77,
+      "ref_time_base_min": 13.3511
+    },
+    {
+      "id": "val_0132",
+      "split": "val",
+      "origin": 700,
+      "dest": 3049,
+      "depart_min": 490.721,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 1719468150,
+      "incidents": [
+        {
+          "edge": 8077,
+          "start_min": 499.0393010287522,
+          "duration_min": 109.73983398545421,
+          "severity": 0.21669836424113542
+        },
+        {
+          "edge": 7743,
+          "start_min": 486.4242708683311,
+          "duration_min": 109.40031594000546,
+          "severity": 0.32721375978258976
+        },
+        {
+          "edge": 6150,
+          "start_min": 470.98513452097495,
+          "duration_min": 96.92100904385232,
+          "severity": 0.3956271837552504
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6351,
+          "start_min": 499.0393010287522,
+          "duration_min": 109.73983398545421,
+          "severity": 0.21669836424113542
+        },
+        {
+          "edge": 307,
+          "start_min": 486.4242708683311,
+          "duration_min": 109.40031594000546,
+          "severity": 0.32721375978258976
+        },
+        {
+          "edge": 38,
+          "start_min": 470.98513452097495,
+          "duration_min": 96.92100904385232,
+          "severity": 0.3956271837552504
+        }
+      ],
+      "od_dist_m": 1381.0,
+      "distance_bin": 0,
+      "ref_hops": 38,
+      "ref_time_base_min": 15.6463
+    },
+    {
+      "id": "val_0133",
+      "split": "val",
+      "origin": 151,
+      "dest": 2241,
+      "depart_min": 1154.702,
+      "hour": 19,
+      "sigma": 0.15,
+      "noise_seed": 767361034,
+      "incidents": [
+        {
+          "edge": 8506,
+          "start_min": 1150.9420133345648,
+          "duration_min": 56.32673154724978,
+          "severity": 0.23678023651748475
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 395,
+          "start_min": 1150.9420133345648,
+          "duration_min": 56.32673154724978,
+          "severity": 0.23678023651748475
+        }
+      ],
+      "od_dist_m": 1822.8,
+      "distance_bin": 0,
+      "ref_hops": 21,
+      "ref_time_base_min": 8.1852
+    },
+    {
+      "id": "val_0134",
+      "split": "val",
+      "origin": 3067,
+      "dest": 1589,
+      "depart_min": 515.543,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 1742199090,
+      "incidents": [
+        {
+          "edge": 5270,
+          "start_min": 521.0374097672166,
+          "duration_min": 59.96339104097913,
+          "severity": 0.27440298053459594
+        },
+        {
+          "edge": 7583,
+          "start_min": 514.8312976245518,
+          "duration_min": 56.01779597684707,
+          "severity": 0.29395038038305166
+        },
+        {
+          "edge": 1509,
+          "start_min": 520.295679321286,
+          "duration_min": 87.17275610452383,
+          "severity": 0.39056948145037285
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8148,
+          "start_min": 521.0374097672166,
+          "duration_min": 59.96339104097913,
+          "severity": 0.27440298053459594
+        },
+        {
+          "edge": 1451,
+          "start_min": 514.8312976245518,
+          "duration_min": 56.01779597684707,
+          "severity": 0.29395038038305166
+        },
+        {
+          "edge": 3058,
+          "start_min": 520.295679321286,
+          "duration_min": 87.17275610452383,
+          "severity": 0.39056948145037285
+        }
+      ],
+      "od_dist_m": 6508.4,
+      "distance_bin": 2,
+      "ref_hops": 75,
+      "ref_time_base_min": 27.3784
+    },
+    {
+      "id": "val_0135",
+      "split": "val",
+      "origin": 549,
+      "dest": 1773,
+      "depart_min": 521.268,
+      "hour": 8,
+      "sigma": 0.15,
+      "noise_seed": 4122939881,
+      "incidents": [
+        {
+          "edge": 7993,
+          "start_min": 505.25759059355454,
+          "duration_min": 40.56235447347924,
+          "severity": 0.19797980277742672
+        },
+        {
+          "edge": 6839,
+          "start_min": 506.87215738241565,
+          "duration_min": 93.0516676381786,
+          "severity": 0.3534516471989929
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5861,
+          "start_min": 505.25759059355454,
+          "duration_min": 40.56235447347924,
+          "severity": 0.19797980277742672
+        },
+        {
+          "edge": 8181,
+          "start_min": 506.87215738241565,
+          "duration_min": 93.0516676381786,
+          "severity": 0.3534516471989929
+        }
+      ],
+      "od_dist_m": 1977.9,
+      "distance_bin": 0,
+      "ref_hops": 22,
+      "ref_time_base_min": 5.9783
+    },
+    {
+      "id": "val_0136",
+      "split": "val",
+      "origin": 3410,
+      "dest": 3320,
+      "depart_min": 1143.094,
+      "hour": 19,
+      "sigma": 0.05,
+      "noise_seed": 1322375542,
+      "incidents": [
+        {
+          "edge": 656,
+          "start_min": 1124.955173959421,
+          "duration_min": 73.80159341681991,
+          "severity": 0.13662811073783174
+        },
+        {
+          "edge": 8420,
+          "start_min": 1148.5993580946435,
+          "duration_min": 76.82894180658998,
+          "severity": 0.16086667741216631
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5428,
+          "start_min": 1124.955173959421,
+          "duration_min": 73.80159341681991,
+          "severity": 0.13662811073783174
+        },
+        {
+          "edge": 8268,
+          "start_min": 1148.5993580946435,
+          "duration_min": 76.82894180658998,
+          "severity": 0.16086667741216631
+        }
+      ],
+      "od_dist_m": 8166.7,
+      "distance_bin": 2,
+      "ref_hops": 53,
+      "ref_time_base_min": 33.7277
+    },
+    {
+      "id": "val_0137",
+      "split": "val",
+      "origin": 548,
+      "dest": 1967,
+      "depart_min": 355.055,
+      "hour": 5,
+      "sigma": 0.05,
+      "noise_seed": 2018593741,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3630.4,
+      "distance_bin": 1,
+      "ref_hops": 39,
+      "ref_time_base_min": 6.4193
+    },
+    {
+      "id": "val_0138",
+      "split": "val",
+      "origin": 1828,
+      "dest": 129,
+      "depart_min": 470.184,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 422935806,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3959.5,
+      "distance_bin": 1,
+      "ref_hops": 57,
+      "ref_time_base_min": 25.1814
+    },
+    {
+      "id": "val_0139",
+      "split": "val",
+      "origin": 2803,
+      "dest": 981,
+      "depart_min": 724.609,
+      "hour": 12,
+      "sigma": 0.3,
+      "noise_seed": 523951161,
+      "incidents": [
+        {
+          "edge": 5856,
+          "start_min": 732.4885801841864,
+          "duration_min": 92.15627325492427,
+          "severity": 0.18697926541013443
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 516,
+          "start_min": 732.4885801841864,
+          "duration_min": 92.15627325492427,
+          "severity": 0.18697926541013443
+        }
+      ],
+      "od_dist_m": 5817.4,
+      "distance_bin": 2,
+      "ref_hops": 53,
+      "ref_time_base_min": 20.8649
+    },
+    {
+      "id": "val_0140",
+      "split": "val",
+      "origin": 2039,
+      "dest": 108,
+      "depart_min": 1049.266,
+      "hour": 17,
+      "sigma": 0.15,
+      "noise_seed": 3486449651,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2461.0,
+      "distance_bin": 0,
+      "ref_hops": 31,
+      "ref_time_base_min": 14.3431
+    },
+    {
+      "id": "val_0141",
+      "split": "val",
+      "origin": 20,
+      "dest": 1992,
+      "depart_min": 1088.399,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 4002614651,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6236.8,
+      "distance_bin": 2,
+      "ref_hops": 67,
+      "ref_time_base_min": 41.3692
+    },
+    {
+      "id": "val_0142",
+      "split": "val",
+      "origin": 3153,
+      "dest": 1347,
+      "depart_min": 1182.731,
+      "hour": 19,
+      "sigma": 0.15,
+      "noise_seed": 2909507733,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 7564.3,
+      "distance_bin": 2,
+      "ref_hops": 64,
+      "ref_time_base_min": 20.0662
+    },
+    {
+      "id": "val_0143",
+      "split": "val",
+      "origin": 2119,
+      "dest": 1204,
+      "depart_min": 1122.467,
+      "hour": 18,
+      "sigma": 0.05,
+      "noise_seed": 3498366378,
+      "incidents": [
+        {
+          "edge": 5868,
+          "start_min": 1129.997973021973,
+          "duration_min": 69.30867507303927,
+          "severity": 0.33329374222806596
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3390,
+          "start_min": 1129.997973021973,
+          "duration_min": 69.30867507303927,
+          "severity": 0.33329374222806596
+        }
+      ],
+      "od_dist_m": 1177.9,
+      "distance_bin": 0,
+      "ref_hops": 22,
+      "ref_time_base_min": 8.2787
+    },
+    {
+      "id": "val_0144",
+      "split": "val",
+      "origin": 3380,
+      "dest": 1573,
+      "depart_min": 1221.294,
+      "hour": 20,
+      "sigma": 0.05,
+      "noise_seed": 2572346903,
+      "incidents": [
+        {
+          "edge": 6696,
+          "start_min": 1204.563669211446,
+          "duration_min": 67.89382470788476,
+          "severity": 0.14127356761308238
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1552,
+          "start_min": 1204.563669211446,
+          "duration_min": 67.89382470788476,
+          "severity": 0.14127356761308238
+        }
+      ],
+      "od_dist_m": 3106.6,
+      "distance_bin": 1,
+      "ref_hops": 39,
+      "ref_time_base_min": 7.7662
+    },
+    {
+      "id": "val_0145",
+      "split": "val",
+      "origin": 2906,
+      "dest": 585,
+      "depart_min": 629.885,
+      "hour": 10,
+      "sigma": 0.3,
+      "noise_seed": 3181437755,
+      "incidents": [
+        {
+          "edge": 2725,
+          "start_min": 631.365523211336,
+          "duration_min": 93.3246813511554,
+          "severity": 0.10826533133838716
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2221,
+          "start_min": 631.365523211336,
+          "duration_min": 93.3246813511554,
+          "severity": 0.10826533133838716
+        }
+      ],
+      "od_dist_m": 5998.7,
+      "distance_bin": 2,
+      "ref_hops": 41,
+      "ref_time_base_min": 13.9596
+    },
+    {
+      "id": "val_0146",
+      "split": "val",
+      "origin": 1842,
+      "dest": 1424,
+      "depart_min": 664.21,
+      "hour": 11,
+      "sigma": 0.15,
+      "noise_seed": 3925733677,
+      "incidents": [
+        {
+          "edge": 636,
+          "start_min": 654.9387457872972,
+          "duration_min": 106.00631678484856,
+          "severity": 0.2501696561968169
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1353,
+          "start_min": 654.9387457872972,
+          "duration_min": 106.00631678484856,
+          "severity": 0.2501696561968169
+        }
+      ],
+      "od_dist_m": 3602.8,
+      "distance_bin": 1,
+      "ref_hops": 56,
+      "ref_time_base_min": 11.954
+    },
+    {
+      "id": "val_0147",
+      "split": "val",
+      "origin": 1934,
+      "dest": 2094,
+      "depart_min": 607.316,
+      "hour": 10,
+      "sigma": 0.15,
+      "noise_seed": 2595946865,
+      "incidents": [
+        {
+          "edge": 127,
+          "start_min": 597.1131309388219,
+          "duration_min": 69.1217654501202,
+          "severity": 0.14901440842335104
+        },
+        {
+          "edge": 2025,
+          "start_min": 605.9518638770018,
+          "duration_min": 72.38900571287522,
+          "severity": 0.23320975774939035
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5963,
+          "start_min": 597.1131309388219,
+          "duration_min": 69.1217654501202,
+          "severity": 0.14901440842335104
+        },
+        {
+          "edge": 8668,
+          "start_min": 605.9518638770018,
+          "duration_min": 72.38900571287522,
+          "severity": 0.23320975774939035
+        }
+      ],
+      "od_dist_m": 3665.4,
+      "distance_bin": 1,
+      "ref_hops": 58,
+      "ref_time_base_min": 12.7473
+    },
+    {
+      "id": "val_0148",
+      "split": "val",
+      "origin": 3148,
+      "dest": 2906,
+      "depart_min": 1335.368,
+      "hour": 22,
+      "sigma": 0.15,
+      "noise_seed": 832068871,
+      "incidents": [
+        {
+          "edge": 4321,
+          "start_min": 1321.2216680169622,
+          "duration_min": 70.82007940834083,
+          "severity": 0.23335061819044653
+        },
+        {
+          "edge": 2733,
+          "start_min": 1321.830548741065,
+          "duration_min": 86.81064214591899,
+          "severity": 0.14406498859292916
+        },
+        {
+          "edge": 2557,
+          "start_min": 1324.505355236189,
+          "duration_min": 81.13710133234605,
+          "severity": 0.27847947034659903
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4460,
+          "start_min": 1321.2216680169622,
+          "duration_min": 70.82007940834083,
+          "severity": 0.23335061819044653
+        },
+        {
+          "edge": 7136,
+          "start_min": 1321.830548741065,
+          "duration_min": 86.81064214591899,
+          "severity": 0.14406498859292916
+        },
+        {
+          "edge": 4510,
+          "start_min": 1324.505355236189,
+          "duration_min": 81.13710133234605,
+          "severity": 0.27847947034659903
+        }
+      ],
+      "od_dist_m": 5944.5,
+      "distance_bin": 2,
+      "ref_hops": 45,
+      "ref_time_base_min": 12.2477
+    },
+    {
+      "id": "val_0149",
+      "split": "val",
+      "origin": 2362,
+      "dest": 2925,
+      "depart_min": 426.502,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 163066919,
+      "incidents": [
+        {
+          "edge": 6497,
+          "start_min": 423.5486949031245,
+          "duration_min": 82.63380752033066,
+          "severity": 0.18060398670343697
+        },
+        {
+          "edge": 7570,
+          "start_min": 424.25864152535644,
+          "duration_min": 51.43697223639664,
+          "severity": 0.18782150346331475
+        },
+        {
+          "edge": 7263,
+          "start_min": 421.87079827734715,
+          "duration_min": 80.96434581430705,
+          "severity": 0.23802069877875634
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 7897,
+          "start_min": 423.5486949031245,
+          "duration_min": 82.63380752033066,
+          "severity": 0.18060398670343697
+        },
+        {
+          "edge": 2210,
+          "start_min": 424.25864152535644,
+          "duration_min": 51.43697223639664,
+          "severity": 0.18782150346331475
+        },
+        {
+          "edge": 6504,
+          "start_min": 421.87079827734715,
+          "duration_min": 80.96434581430705,
+          "severity": 0.23802069877875634
+        }
+      ],
+      "od_dist_m": 2693.4,
+      "distance_bin": 1,
+      "ref_hops": 22,
+      "ref_time_base_min": 16.4948
+    },
+    {
+      "id": "val_0150",
+      "split": "val",
+      "origin": 1169,
+      "dest": 445,
+      "depart_min": 932.427,
+      "hour": 15,
+      "sigma": 0.15,
+      "noise_seed": 2019189019,
+      "incidents": [
+        {
+          "edge": 3398,
+          "start_min": 918.6586780748994,
+          "duration_min": 82.98561917382492,
+          "severity": 0.34574081434368065
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3497,
+          "start_min": 918.6586780748994,
+          "duration_min": 82.98561917382492,
+          "severity": 0.34574081434368065
+        }
+      ],
+      "od_dist_m": 3122.1,
+      "distance_bin": 1,
+      "ref_hops": 37,
+      "ref_time_base_min": 9.0212
+    },
+    {
+      "id": "val_0151",
+      "split": "val",
+      "origin": 3471,
+      "dest": 1194,
+      "depart_min": 1316.426,
+      "hour": 21,
+      "sigma": 0.3,
+      "noise_seed": 2452430296,
+      "incidents": [
+        {
+          "edge": 3387,
+          "start_min": 1317.1506513428822,
+          "duration_min": 97.4937443739319,
+          "severity": 0.16690136098630298
+        },
+        {
+          "edge": 7867,
+          "start_min": 1325.9458292411791,
+          "duration_min": 82.6590938150199,
+          "severity": 0.3473090688698625
+        },
+        {
+          "edge": 6858,
+          "start_min": 1303.585510021267,
+          "duration_min": 106.88781320070592,
+          "severity": 0.21209955183899426
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8183,
+          "start_min": 1317.1506513428822,
+          "duration_min": 97.4937443739319,
+          "severity": 0.16690136098630298
+        },
+        {
+          "edge": 5995,
+          "start_min": 1325.9458292411791,
+          "duration_min": 82.6590938150199,
+          "severity": 0.3473090688698625
+        },
+        {
+          "edge": 8571,
+          "start_min": 1303.585510021267,
+          "duration_min": 106.88781320070592,
+          "severity": 0.21209955183899426
+        }
+      ],
+      "od_dist_m": 3618.5,
+      "distance_bin": 1,
+      "ref_hops": 45,
+      "ref_time_base_min": 6.4435
+    },
+    {
+      "id": "val_0152",
+      "split": "val",
+      "origin": 2451,
+      "dest": 2281,
+      "depart_min": 1084.947,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 661508916,
+      "incidents": [
+        {
+          "edge": 3107,
+          "start_min": 1074.1111091816967,
+          "duration_min": 82.79596832598746,
+          "severity": 0.233177937142811
+        },
+        {
+          "edge": 1619,
+          "start_min": 1087.4534197341895,
+          "duration_min": 60.93990803280909,
+          "severity": 0.24987627700280832
+        },
+        {
+          "edge": 1623,
+          "start_min": 1074.4357844029207,
+          "duration_min": 50.2034346342123,
+          "severity": 0.2042097090240327
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8583,
+          "start_min": 1074.1111091816967,
+          "duration_min": 82.79596832598746,
+          "severity": 0.233177937142811
+        },
+        {
+          "edge": 6422,
+          "start_min": 1087.4534197341895,
+          "duration_min": 60.93990803280909,
+          "severity": 0.24987627700280832
+        },
+        {
+          "edge": 241,
+          "start_min": 1074.4357844029207,
+          "duration_min": 50.2034346342123,
+          "severity": 0.2042097090240327
+        }
+      ],
+      "od_dist_m": 4183.1,
+      "distance_bin": 1,
+      "ref_hops": 33,
+      "ref_time_base_min": 23.3759
+    },
+    {
+      "id": "val_0153",
+      "split": "val",
+      "origin": 3111,
+      "dest": 880,
+      "depart_min": 1029.841,
+      "hour": 17,
+      "sigma": 0.05,
+      "noise_seed": 2993073918,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1090.6,
+      "distance_bin": 0,
+      "ref_hops": 20,
+      "ref_time_base_min": 5.3769
+    },
+    {
+      "id": "val_0154",
+      "split": "val",
+      "origin": 2143,
+      "dest": 3373,
+      "depart_min": 320.986,
+      "hour": 5,
+      "sigma": 0.05,
+      "noise_seed": 1156276168,
+      "incidents": [
+        {
+          "edge": 6974,
+          "start_min": 318.59697711652,
+          "duration_min": 88.26062348231606,
+          "severity": 0.17956382277301755
+        },
+        {
+          "edge": 711,
+          "start_min": 311.1781226607408,
+          "duration_min": 84.58198493992629,
+          "severity": 0.32890108220888403
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5650,
+          "start_min": 318.59697711652,
+          "duration_min": 88.26062348231606,
+          "severity": 0.17956382277301755
+        },
+        {
+          "edge": 8368,
+          "start_min": 311.1781226607408,
+          "duration_min": 84.58198493992629,
+          "severity": 0.32890108220888403
+        }
+      ],
+      "od_dist_m": 3680.3,
+      "distance_bin": 1,
+      "ref_hops": 31,
+      "ref_time_base_min": 7.7866
+    },
+    {
+      "id": "val_0155",
+      "split": "val",
+      "origin": 296,
+      "dest": 1336,
+      "depart_min": 592.825,
+      "hour": 9,
+      "sigma": 0.05,
+      "noise_seed": 1757241270,
+      "incidents": [
+        {
+          "edge": 3883,
+          "start_min": 573.9445151992284,
+          "duration_min": 94.08720073498114,
+          "severity": 0.13852514299448995
+        },
+        {
+          "edge": 4235,
+          "start_min": 583.8384999537673,
+          "duration_min": 89.06457011061397,
+          "severity": 0.19485810867641107
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 808,
+          "start_min": 573.9445151992284,
+          "duration_min": 94.08720073498114,
+          "severity": 0.13852514299448995
+        },
+        {
+          "edge": 1790,
+          "start_min": 583.8384999537673,
+          "duration_min": 89.06457011061397,
+          "severity": 0.19485810867641107
+        }
+      ],
+      "od_dist_m": 3691.9,
+      "distance_bin": 1,
+      "ref_hops": 34,
+      "ref_time_base_min": 8.8826
+    },
+    {
+      "id": "val_0156",
+      "split": "val",
+      "origin": 3039,
+      "dest": 879,
+      "depart_min": 583.848,
+      "hour": 9,
+      "sigma": 0.05,
+      "noise_seed": 1518708847,
+      "incidents": [
+        {
+          "edge": 2775,
+          "start_min": 587.0808378425686,
+          "duration_min": 72.7100868583837,
+          "severity": 0.3390625392071206
+        },
+        {
+          "edge": 8551,
+          "start_min": 573.4806703831164,
+          "duration_min": 94.03432430131286,
+          "severity": 0.12222177755931204
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 769,
+          "start_min": 587.0808378425686,
+          "duration_min": 72.7100868583837,
+          "severity": 0.3390625392071206
+        },
+        {
+          "edge": 3017,
+          "start_min": 573.4806703831164,
+          "duration_min": 94.03432430131286,
+          "severity": 0.12222177755931204
+        }
+      ],
+      "od_dist_m": 2641.5,
+      "distance_bin": 1,
+      "ref_hops": 26,
+      "ref_time_base_min": 9.9916
+    },
+    {
+      "id": "val_0157",
+      "split": "val",
+      "origin": 2277,
+      "dest": 881,
+      "depart_min": 997.785,
+      "hour": 16,
+      "sigma": 0.15,
+      "noise_seed": 751934222,
+      "incidents": [
+        {
+          "edge": 673,
+          "start_min": 983.3895117985841,
+          "duration_min": 115.02604746361736,
+          "severity": 0.32118480331199806
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2139,
+          "start_min": 983.3895117985841,
+          "duration_min": 115.02604746361736,
+          "severity": 0.32118480331199806
+        }
+      ],
+      "od_dist_m": 3209.3,
+      "distance_bin": 1,
+      "ref_hops": 25,
+      "ref_time_base_min": 12.4652
+    },
+    {
+      "id": "val_0158",
+      "split": "val",
+      "origin": 540,
+      "dest": 1118,
+      "depart_min": 1125.523,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 538912450,
+      "incidents": [
+        {
+          "edge": 1349,
+          "start_min": 1129.1645885977878,
+          "duration_min": 112.64746679313757,
+          "severity": 0.24278457454695976
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3159,
+          "start_min": 1129.1645885977878,
+          "duration_min": 112.64746679313757,
+          "severity": 0.24278457454695976
+        }
+      ],
+      "od_dist_m": 5031.5,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 25.5111
+    },
+    {
+      "id": "val_0159",
+      "split": "val",
+      "origin": 1821,
+      "dest": 2296,
+      "depart_min": 1282.41,
+      "hour": 21,
+      "sigma": 0.3,
+      "noise_seed": 458500193,
+      "incidents": [
+        {
+          "edge": 6272,
+          "start_min": 1266.8713895067053,
+          "duration_min": 54.57717691423075,
+          "severity": 0.20276689265283626
+        },
+        {
+          "edge": 6162,
+          "start_min": 1289.1236938687402,
+          "duration_min": 86.24175889371656,
+          "severity": 0.11778122924208827
+        },
+        {
+          "edge": 5566,
+          "start_min": 1277.0738013672058,
+          "duration_min": 96.01975963088515,
+          "severity": 0.23487159078507286
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6185,
+          "start_min": 1266.8713895067053,
+          "duration_min": 54.57717691423075,
+          "severity": 0.20276689265283626
+        },
+        {
+          "edge": 6950,
+          "start_min": 1289.1236938687402,
+          "duration_min": 86.24175889371656,
+          "severity": 0.11778122924208827
+        },
+        {
+          "edge": 2070,
+          "start_min": 1277.0738013672058,
+          "duration_min": 96.01975963088515,
+          "severity": 0.23487159078507286
+        }
+      ],
+      "od_dist_m": 2598.7,
+      "distance_bin": 1,
+      "ref_hops": 34,
+      "ref_time_base_min": 7.4547
+    },
+    {
+      "id": "val_0160",
+      "split": "val",
+      "origin": 624,
+      "dest": 2394,
+      "depart_min": 1139.111,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 1318032045,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 7273.2,
+      "distance_bin": 2,
+      "ref_hops": 63,
+      "ref_time_base_min": 36.5132
+    },
+    {
+      "id": "val_0161",
+      "split": "val",
+      "origin": 104,
+      "dest": 2073,
+      "depart_min": 1166.606,
+      "hour": 19,
+      "sigma": 0.3,
+      "noise_seed": 4236670657,
+      "incidents": [
+        {
+          "edge": 731,
+          "start_min": 1174.8011782991541,
+          "duration_min": 55.32369278136055,
+          "severity": 0.3847955574783789
+        },
+        {
+          "edge": 768,
+          "start_min": 1161.2628195853156,
+          "duration_min": 85.4294243067299,
+          "severity": 0.18916183708597917
+        },
+        {
+          "edge": 283,
+          "start_min": 1157.9394808464758,
+          "duration_min": 57.6671247304216,
+          "severity": 0.18868471252916547
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8552,
+          "start_min": 1174.8011782991541,
+          "duration_min": 55.32369278136055,
+          "severity": 0.3847955574783789
+        },
+        {
+          "edge": 753,
+          "start_min": 1161.2628195853156,
+          "duration_min": 85.4294243067299,
+          "severity": 0.18916183708597917
+        },
+        {
+          "edge": 837,
+          "start_min": 1157.9394808464758,
+          "duration_min": 57.6671247304216,
+          "severity": 0.18868471252916547
+        }
+      ],
+      "od_dist_m": 4762.1,
+      "distance_bin": 2,
+      "ref_hops": 44,
+      "ref_time_base_min": 12.5206
+    },
+    {
+      "id": "val_0162",
+      "split": "val",
+      "origin": 1611,
+      "dest": 3322,
+      "depart_min": 1376.104,
+      "hour": 22,
+      "sigma": 0.05,
+      "noise_seed": 361319932,
+      "incidents": [
+        {
+          "edge": 6450,
+          "start_min": 1381.9947400396002,
+          "duration_min": 88.73376581216802,
+          "severity": 0.3941915455639087
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2715,
+          "start_min": 1381.9947400396002,
+          "duration_min": 88.73376581216802,
+          "severity": 0.3941915455639087
+        }
+      ],
+      "od_dist_m": 7660.6,
+      "distance_bin": 2,
+      "ref_hops": 46,
+      "ref_time_base_min": 11.8911
+    },
+    {
+      "id": "val_0163",
+      "split": "val",
+      "origin": 2496,
+      "dest": 2853,
+      "depart_min": 500.645,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 1226844387,
+      "incidents": [
+        {
+          "edge": 1688,
+          "start_min": 491.19726267998624,
+          "duration_min": 113.88724678067538,
+          "severity": 0.23860303124752777
+        },
+        {
+          "edge": 3497,
+          "start_min": 489.957007107002,
+          "duration_min": 31.70564931773189,
+          "severity": 0.16060373717327991
+        },
+        {
+          "edge": 3918,
+          "start_min": 501.9685371936439,
+          "duration_min": 83.8098741224803,
+          "severity": 0.3451874917296774
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 7746,
+          "start_min": 491.19726267998624,
+          "duration_min": 113.88724678067538,
+          "severity": 0.23860303124752777
+        },
+        {
+          "edge": 4394,
+          "start_min": 489.957007107002,
+          "duration_min": 31.70564931773189,
+          "severity": 0.16060373717327991
+        },
+        {
+          "edge": 8303,
+          "start_min": 501.9685371936439,
+          "duration_min": 83.8098741224803,
+          "severity": 0.3451874917296774
+        }
+      ],
+      "od_dist_m": 5107.4,
+      "distance_bin": 2,
+      "ref_hops": 51,
+      "ref_time_base_min": 19.5905
+    },
+    {
+      "id": "val_0164",
+      "split": "val",
+      "origin": 1085,
+      "dest": 1588,
+      "depart_min": 1084.399,
+      "hour": 18,
+      "sigma": 0.05,
+      "noise_seed": 693211023,
+      "incidents": [
+        {
+          "edge": 4574,
+          "start_min": 1084.1368431434862,
+          "duration_min": 72.6920928550537,
+          "severity": 0.35684271944864954
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1336,
+          "start_min": 1084.1368431434862,
+          "duration_min": 72.6920928550537,
+          "severity": 0.35684271944864954
+        }
+      ],
+      "od_dist_m": 5300.0,
+      "distance_bin": 2,
+      "ref_hops": 51,
+      "ref_time_base_min": 21.8445
+    },
+    {
+      "id": "val_0165",
+      "split": "val",
+      "origin": 1442,
+      "dest": 2310,
+      "depart_min": 111.01,
+      "hour": 1,
+      "sigma": 0.15,
+      "noise_seed": 2124652067,
+      "incidents": [
+        {
+          "edge": 8197,
+          "start_min": 116.632845179177,
+          "duration_min": 43.84270770327372,
+          "severity": 0.11764586123519688
+        },
+        {
+          "edge": 3504,
+          "start_min": 94.41898073757847,
+          "duration_min": 86.82422450496159,
+          "severity": 0.1263026804781156
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 273,
+          "start_min": 116.632845179177,
+          "duration_min": 43.84270770327372,
+          "severity": 0.11764586123519688
+        },
+        {
+          "edge": 1959,
+          "start_min": 94.41898073757847,
+          "duration_min": 86.82422450496159,
+          "severity": 0.1263026804781156
+        }
+      ],
+      "od_dist_m": 3036.5,
+      "distance_bin": 1,
+      "ref_hops": 43,
+      "ref_time_base_min": 5.7561
+    },
+    {
+      "id": "val_0166",
+      "split": "val",
+      "origin": 2343,
+      "dest": 502,
+      "depart_min": 1222.688,
+      "hour": 20,
+      "sigma": 0.15,
+      "noise_seed": 957489433,
+      "incidents": [
+        {
+          "edge": 1027,
+          "start_min": 1203.4934446322113,
+          "duration_min": 57.26632854254892,
+          "severity": 0.39220550607801785
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8747,
+          "start_min": 1203.4934446322113,
+          "duration_min": 57.26632854254892,
+          "severity": 0.39220550607801785
+        }
+      ],
+      "od_dist_m": 9808.8,
+      "distance_bin": 2,
+      "ref_hops": 74,
+      "ref_time_base_min": 20.1661
+    },
+    {
+      "id": "val_0167",
+      "split": "val",
+      "origin": 2953,
+      "dest": 447,
+      "depart_min": 496.301,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 1133319956,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 7560.2,
+      "distance_bin": 2,
+      "ref_hops": 92,
+      "ref_time_base_min": 42.583
+    },
+    {
+      "id": "val_0168",
+      "split": "val",
+      "origin": 543,
+      "dest": 3197,
+      "depart_min": 413.188,
+      "hour": 6,
+      "sigma": 0.15,
+      "noise_seed": 3539805714,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 4741.8,
+      "distance_bin": 2,
+      "ref_hops": 43,
+      "ref_time_base_min": 12.403
+    },
+    {
+      "id": "val_0169",
+      "split": "val",
+      "origin": 581,
+      "dest": 1472,
+      "depart_min": 744.987,
+      "hour": 12,
+      "sigma": 0.05,
+      "noise_seed": 695664776,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1709.4,
+      "distance_bin": 0,
+      "ref_hops": 25,
+      "ref_time_base_min": 5.551
+    },
+    {
+      "id": "val_0170",
+      "split": "val",
+      "origin": 2433,
+      "dest": 1656,
+      "depart_min": 431.983,
+      "hour": 7,
+      "sigma": 0.05,
+      "noise_seed": 1743067492,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 7573.4,
+      "distance_bin": 2,
+      "ref_hops": 86,
+      "ref_time_base_min": 26.3006
+    },
+    {
+      "id": "val_0171",
+      "split": "val",
+      "origin": 2854,
+      "dest": 1071,
+      "depart_min": 969.426,
+      "hour": 16,
+      "sigma": 0.3,
+      "noise_seed": 2245403041,
+      "incidents": [
+        {
+          "edge": 5187,
+          "start_min": 958.6967437004254,
+          "duration_min": 45.36526372005227,
+          "severity": 0.34486254031067687
+        },
+        {
+          "edge": 8752,
+          "start_min": 950.6598302979776,
+          "duration_min": 48.61457288199939,
+          "severity": 0.13959959689169782
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8461,
+          "start_min": 958.6967437004254,
+          "duration_min": 45.36526372005227,
+          "severity": 0.34486254031067687
+        },
+        {
+          "edge": 2379,
+          "start_min": 950.6598302979776,
+          "duration_min": 48.61457288199939,
+          "severity": 0.13959959689169782
+        }
+      ],
+      "od_dist_m": 6879.3,
+      "distance_bin": 2,
+      "ref_hops": 67,
+      "ref_time_base_min": 28.436
+    },
+    {
+      "id": "val_0172",
+      "split": "val",
+      "origin": 880,
+      "dest": 2908,
+      "depart_min": 878.562,
+      "hour": 14,
+      "sigma": 0.15,
+      "noise_seed": 3776078392,
+      "incidents": [
+        {
+          "edge": 5251,
+          "start_min": 879.2906557334826,
+          "duration_min": 41.44001391322449,
+          "severity": 0.38593315074720036
+        },
+        {
+          "edge": 2806,
+          "start_min": 874.1321851837937,
+          "duration_min": 72.46186256280136,
+          "severity": 0.17774509207993552
+        },
+        {
+          "edge": 7631,
+          "start_min": 878.8044270856426,
+          "duration_min": 70.06877149257977,
+          "severity": 0.17182237927581254
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5207,
+          "start_min": 879.2906557334826,
+          "duration_min": 41.44001391322449,
+          "severity": 0.38593315074720036
+        },
+        {
+          "edge": 2506,
+          "start_min": 874.1321851837937,
+          "duration_min": 72.46186256280136,
+          "severity": 0.17774509207993552
+        },
+        {
+          "edge": 2464,
+          "start_min": 878.8044270856426,
+          "duration_min": 70.06877149257977,
+          "severity": 0.17182237927581254
+        }
+      ],
+      "od_dist_m": 3487.1,
+      "distance_bin": 1,
+      "ref_hops": 44,
+      "ref_time_base_min": 13.2534
+    },
+    {
+      "id": "val_0173",
+      "split": "val",
+      "origin": 1748,
+      "dest": 217,
+      "depart_min": 1211.417,
+      "hour": 20,
+      "sigma": 0.3,
+      "noise_seed": 403679911,
+      "incidents": [
+        {
+          "edge": 1125,
+          "start_min": 1207.4233758794496,
+          "duration_min": 67.03233668824052,
+          "severity": 0.21912592504383444
+        },
+        {
+          "edge": 1447,
+          "start_min": 1203.4909742474401,
+          "duration_min": 108.64112944146969,
+          "severity": 0.3770482208849072
+        },
+        {
+          "edge": 5924,
+          "start_min": 1219.2394434263642,
+          "duration_min": 87.26093512758972,
+          "severity": 0.1827298370545098
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5561,
+          "start_min": 1207.4233758794496,
+          "duration_min": 67.03233668824052,
+          "severity": 0.21912592504383444
+        },
+        {
+          "edge": 5578,
+          "start_min": 1203.4909742474401,
+          "duration_min": 108.64112944146969,
+          "severity": 0.3770482208849072
+        },
+        {
+          "edge": 5834,
+          "start_min": 1219.2394434263642,
+          "duration_min": 87.26093512758972,
+          "severity": 0.1827298370545098
+        }
+      ],
+      "od_dist_m": 5058.9,
+      "distance_bin": 2,
+      "ref_hops": 50,
+      "ref_time_base_min": 13.4199
+    },
+    {
+      "id": "val_0174",
+      "split": "val",
+      "origin": 2924,
+      "dest": 652,
+      "depart_min": 461.87,
+      "hour": 7,
+      "sigma": 0.15,
+      "noise_seed": 950628757,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 6841.7,
+      "distance_bin": 2,
+      "ref_hops": 42,
+      "ref_time_base_min": 39.4219
+    },
+    {
+      "id": "val_0175",
+      "split": "val",
+      "origin": 2045,
+      "dest": 3359,
+      "depart_min": 777.679,
+      "hour": 12,
+      "sigma": 0.05,
+      "noise_seed": 4214993395,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 8198.4,
+      "distance_bin": 2,
+      "ref_hops": 64,
+      "ref_time_base_min": 19.6808
+    },
+    {
+      "id": "val_0176",
+      "split": "val",
+      "origin": 2721,
+      "dest": 2903,
+      "depart_min": 1190.46,
+      "hour": 19,
+      "sigma": 0.05,
+      "noise_seed": 2678603611,
+      "incidents": [
+        {
+          "edge": 3401,
+          "start_min": 1196.150674238072,
+          "duration_min": 97.18106447642587,
+          "severity": 0.24979098499985544
+        },
+        {
+          "edge": 145,
+          "start_min": 1180.5398788355524,
+          "duration_min": 100.2566376621026,
+          "severity": 0.18853806075489765
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 5775,
+          "start_min": 1196.150674238072,
+          "duration_min": 97.18106447642587,
+          "severity": 0.24979098499985544
+        },
+        {
+          "edge": 7331,
+          "start_min": 1180.5398788355524,
+          "duration_min": 100.2566376621026,
+          "severity": 0.18853806075489765
+        }
+      ],
+      "od_dist_m": 5072.9,
+      "distance_bin": 2,
+      "ref_hops": 63,
+      "ref_time_base_min": 16.1552
+    },
+    {
+      "id": "val_0177",
+      "split": "val",
+      "origin": 1321,
+      "dest": 2981,
+      "depart_min": 60.092,
+      "hour": 1,
+      "sigma": 0.3,
+      "noise_seed": 702209023,
+      "incidents": [
+        {
+          "edge": 1809,
+          "start_min": 59.42343845029581,
+          "duration_min": 77.86071715500117,
+          "severity": 0.31018605966465085
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1304,
+          "start_min": 59.42343845029581,
+          "duration_min": 77.86071715500117,
+          "severity": 0.31018605966465085
+        }
+      ],
+      "od_dist_m": 6018.4,
+      "distance_bin": 2,
+      "ref_hops": 53,
+      "ref_time_base_min": 14.553
+    },
+    {
+      "id": "val_0178",
+      "split": "val",
+      "origin": 2266,
+      "dest": 1249,
+      "depart_min": 1156.143,
+      "hour": 19,
+      "sigma": 0.15,
+      "noise_seed": 3723901533,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3424.2,
+      "distance_bin": 1,
+      "ref_hops": 52,
+      "ref_time_base_min": 12.0098
+    },
+    {
+      "id": "val_0179",
+      "split": "val",
+      "origin": 3029,
+      "dest": 2650,
+      "depart_min": 1060.19,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 2748659141,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1743.9,
+      "distance_bin": 0,
+      "ref_hops": 21,
+      "ref_time_base_min": 10.2274
+    },
+    {
+      "id": "val_0180",
+      "split": "val",
+      "origin": 3180,
+      "dest": 2275,
+      "depart_min": 416.506,
+      "hour": 6,
+      "sigma": 0.05,
+      "noise_seed": 1939835326,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2750.7,
+      "distance_bin": 1,
+      "ref_hops": 37,
+      "ref_time_base_min": 12.7144
+    },
+    {
+      "id": "val_0181",
+      "split": "val",
+      "origin": 2539,
+      "dest": 537,
+      "depart_min": 906.871,
+      "hour": 15,
+      "sigma": 0.3,
+      "noise_seed": 1655246178,
+      "incidents": [
+        {
+          "edge": 6546,
+          "start_min": 890.4169561492372,
+          "duration_min": 100.77188996547825,
+          "severity": 0.35099378660646763
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8629,
+          "start_min": 890.4169561492372,
+          "duration_min": 100.77188996547825,
+          "severity": 0.35099378660646763
+        }
+      ],
+      "od_dist_m": 8518.3,
+      "distance_bin": 2,
+      "ref_hops": 66,
+      "ref_time_base_min": 16.6395
+    },
+    {
+      "id": "val_0182",
+      "split": "val",
+      "origin": 23,
+      "dest": 3098,
+      "depart_min": 625.075,
+      "hour": 10,
+      "sigma": 0.3,
+      "noise_seed": 1276799698,
+      "incidents": [
+        {
+          "edge": 5870,
+          "start_min": 628.8794201095133,
+          "duration_min": 112.23959778520334,
+          "severity": 0.11445580682641832
+        },
+        {
+          "edge": 4582,
+          "start_min": 611.9102848817446,
+          "duration_min": 80.50075242997961,
+          "severity": 0.1694099359035438
+        },
+        {
+          "edge": 5842,
+          "start_min": 616.6211420909231,
+          "duration_min": 48.62129646700694,
+          "severity": 0.3772663351708627
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 35,
+          "start_min": 628.8794201095133,
+          "duration_min": 112.23959778520334,
+          "severity": 0.11445580682641832
+        },
+        {
+          "edge": 6592,
+          "start_min": 611.9102848817446,
+          "duration_min": 80.50075242997961,
+          "severity": 0.1694099359035438
+        },
+        {
+          "edge": 8333,
+          "start_min": 616.6211420909231,
+          "duration_min": 48.62129646700694,
+          "severity": 0.3772663351708627
+        }
+      ],
+      "od_dist_m": 4277.1,
+      "distance_bin": 1,
+      "ref_hops": 51,
+      "ref_time_base_min": 9.9487
+    },
+    {
+      "id": "val_0183",
+      "split": "val",
+      "origin": 596,
+      "dest": 2396,
+      "depart_min": 609.141,
+      "hour": 10,
+      "sigma": 0.15,
+      "noise_seed": 627065138,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2299.5,
+      "distance_bin": 0,
+      "ref_hops": 26,
+      "ref_time_base_min": 8.3569
+    },
+    {
+      "id": "val_0184",
+      "split": "val",
+      "origin": 2674,
+      "dest": 3261,
+      "depart_min": 1014.057,
+      "hour": 16,
+      "sigma": 0.05,
+      "noise_seed": 4245926809,
+      "incidents": [
+        {
+          "edge": 1217,
+          "start_min": 1006.6983298526852,
+          "duration_min": 38.97412014316971,
+          "severity": 0.36092176554179933
+        },
+        {
+          "edge": 7735,
+          "start_min": 1010.8821492412545,
+          "duration_min": 90.09595051671624,
+          "severity": 0.3852887975375934
+        },
+        {
+          "edge": 7286,
+          "start_min": 1002.385041060416,
+          "duration_min": 117.33599229925186,
+          "severity": 0.27527551705134284
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 516,
+          "start_min": 1006.6983298526852,
+          "duration_min": 38.97412014316971,
+          "severity": 0.36092176554179933
+        },
+        {
+          "edge": 6943,
+          "start_min": 1010.8821492412545,
+          "duration_min": 90.09595051671624,
+          "severity": 0.3852887975375934
+        },
+        {
+          "edge": 7233,
+          "start_min": 1002.385041060416,
+          "duration_min": 117.33599229925186,
+          "severity": 0.27527551705134284
+        }
+      ],
+      "od_dist_m": 5667.4,
+      "distance_bin": 2,
+      "ref_hops": 39,
+      "ref_time_base_min": 34.003
+    },
+    {
+      "id": "val_0185",
+      "split": "val",
+      "origin": 358,
+      "dest": 1666,
+      "depart_min": 406.798,
+      "hour": 6,
+      "sigma": 0.05,
+      "noise_seed": 3266346755,
+      "incidents": [
+        {
+          "edge": 7139,
+          "start_min": 413.9126789349581,
+          "duration_min": 100.18876352560626,
+          "severity": 0.23693437875402248
+        },
+        {
+          "edge": 7091,
+          "start_min": 387.84922596840977,
+          "duration_min": 64.60520041846463,
+          "severity": 0.37857472065742226
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 703,
+          "start_min": 413.9126789349581,
+          "duration_min": 100.18876352560626,
+          "severity": 0.23693437875402248
+        },
+        {
+          "edge": 2959,
+          "start_min": 387.84922596840977,
+          "duration_min": 64.60520041846463,
+          "severity": 0.37857472065742226
+        }
+      ],
+      "od_dist_m": 5851.3,
+      "distance_bin": 2,
+      "ref_hops": 54,
+      "ref_time_base_min": 15.4489
+    },
+    {
+      "id": "val_0186",
+      "split": "val",
+      "origin": 1306,
+      "dest": 94,
+      "depart_min": 528.042,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 3409504252,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3136.5,
+      "distance_bin": 1,
+      "ref_hops": 38,
+      "ref_time_base_min": 14.2484
+    },
+    {
+      "id": "val_0187",
+      "split": "val",
+      "origin": 904,
+      "dest": 1016,
+      "depart_min": 826.23,
+      "hour": 13,
+      "sigma": 0.3,
+      "noise_seed": 2679013988,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2316.5,
+      "distance_bin": 0,
+      "ref_hops": 14,
+      "ref_time_base_min": 7.9753
+    },
+    {
+      "id": "val_0188",
+      "split": "val",
+      "origin": 3464,
+      "dest": 140,
+      "depart_min": 624.494,
+      "hour": 10,
+      "sigma": 0.05,
+      "noise_seed": 2621912460,
+      "incidents": [
+        {
+          "edge": 2246,
+          "start_min": 608.9202935671256,
+          "duration_min": 115.65631904852638,
+          "severity": 0.27217523858890563
+        },
+        {
+          "edge": 3614,
+          "start_min": 616.9030642335911,
+          "duration_min": 40.694163317772194,
+          "severity": 0.31348242289776707
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6748,
+          "start_min": 608.9202935671256,
+          "duration_min": 115.65631904852638,
+          "severity": 0.27217523858890563
+        },
+        {
+          "edge": 1952,
+          "start_min": 616.9030642335911,
+          "duration_min": 40.694163317772194,
+          "severity": 0.31348242289776707
+        }
+      ],
+      "od_dist_m": 3725.3,
+      "distance_bin": 1,
+      "ref_hops": 43,
+      "ref_time_base_min": 10.2627
+    },
+    {
+      "id": "val_0189",
+      "split": "val",
+      "origin": 2673,
+      "dest": 2072,
+      "depart_min": 570.802,
+      "hour": 9,
+      "sigma": 0.15,
+      "noise_seed": 2010371803,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 9117.5,
+      "distance_bin": 2,
+      "ref_hops": 85,
+      "ref_time_base_min": 36.8991
+    },
+    {
+      "id": "val_0190",
+      "split": "val",
+      "origin": 687,
+      "dest": 2846,
+      "depart_min": 522.69,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 1748219526,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3316.1,
+      "distance_bin": 1,
+      "ref_hops": 40,
+      "ref_time_base_min": 12.4595
+    },
+    {
+      "id": "val_0191",
+      "split": "val",
+      "origin": 1426,
+      "dest": 2178,
+      "depart_min": 432.027,
+      "hour": 7,
+      "sigma": 0.05,
+      "noise_seed": 955452669,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 2286.0,
+      "distance_bin": 0,
+      "ref_hops": 34,
+      "ref_time_base_min": 11.8532
+    },
+    {
+      "id": "val_0192",
+      "split": "val",
+      "origin": 2489,
+      "dest": 2737,
+      "depart_min": 878.189,
+      "hour": 14,
+      "sigma": 0.05,
+      "noise_seed": 407765980,
+      "incidents": [
+        {
+          "edge": 8808,
+          "start_min": 862.8104366903758,
+          "duration_min": 96.23435468704803,
+          "severity": 0.24697653793447358
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 7884,
+          "start_min": 862.8104366903758,
+          "duration_min": 96.23435468704803,
+          "severity": 0.24697653793447358
+        }
+      ],
+      "od_dist_m": 7954.6,
+      "distance_bin": 2,
+      "ref_hops": 66,
+      "ref_time_base_min": 23.2874
+    },
+    {
+      "id": "val_0193",
+      "split": "val",
+      "origin": 1714,
+      "dest": 2678,
+      "depart_min": 1081.165,
+      "hour": 18,
+      "sigma": 0.05,
+      "noise_seed": 2708333799,
+      "incidents": [
+        {
+          "edge": 7095,
+          "start_min": 1075.9943725860908,
+          "duration_min": 83.5167114643583,
+          "severity": 0.29068984778494067
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 3072,
+          "start_min": 1075.9943725860908,
+          "duration_min": 83.5167114643583,
+          "severity": 0.29068984778494067
+        }
+      ],
+      "od_dist_m": 7206.8,
+      "distance_bin": 2,
+      "ref_hops": 100,
+      "ref_time_base_min": 73.9044
+    },
+    {
+      "id": "val_0194",
+      "split": "val",
+      "origin": 1884,
+      "dest": 1385,
+      "depart_min": 545.904,
+      "hour": 9,
+      "sigma": 0.3,
+      "noise_seed": 3017110488,
+      "incidents": [
+        {
+          "edge": 3359,
+          "start_min": 537.4295035152675,
+          "duration_min": 90.56981071527098,
+          "severity": 0.3107526253849324
+        },
+        {
+          "edge": 5869,
+          "start_min": 539.8472921478827,
+          "duration_min": 51.91968091128451,
+          "severity": 0.280260995229037
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2265,
+          "start_min": 537.4295035152675,
+          "duration_min": 90.56981071527098,
+          "severity": 0.3107526253849324
+        },
+        {
+          "edge": 1198,
+          "start_min": 539.8472921478827,
+          "duration_min": 51.91968091128451,
+          "severity": 0.280260995229037
+        }
+      ],
+      "od_dist_m": 5028.8,
+      "distance_bin": 2,
+      "ref_hops": 72,
+      "ref_time_base_min": 18.2428
+    },
+    {
+      "id": "val_0195",
+      "split": "val",
+      "origin": 62,
+      "dest": 858,
+      "depart_min": 1246.715,
+      "hour": 20,
+      "sigma": 0.15,
+      "noise_seed": 4280724935,
+      "incidents": [
+        {
+          "edge": 4079,
+          "start_min": 1230.8951616357385,
+          "duration_min": 33.67729233263308,
+          "severity": 0.3702838060145365
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 2392,
+          "start_min": 1230.8951616357385,
+          "duration_min": 33.67729233263308,
+          "severity": 0.3702838060145365
+        }
+      ],
+      "od_dist_m": 4246.7,
+      "distance_bin": 1,
+      "ref_hops": 52,
+      "ref_time_base_min": 9.683
+    },
+    {
+      "id": "val_0196",
+      "split": "val",
+      "origin": 859,
+      "dest": 2196,
+      "depart_min": 1044.875,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 1725766539,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5058.7,
+      "distance_bin": 2,
+      "ref_hops": 50,
+      "ref_time_base_min": 18.5155
+    },
+    {
+      "id": "val_0197",
+      "split": "val",
+      "origin": 421,
+      "dest": 2767,
+      "depart_min": 658.599,
+      "hour": 10,
+      "sigma": 0.3,
+      "noise_seed": 3270386836,
+      "incidents": [
+        {
+          "edge": 3879,
+          "start_min": 657.2448200444194,
+          "duration_min": 84.20206082467757,
+          "severity": 0.12108842884946361
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1349,
+          "start_min": 657.2448200444194,
+          "duration_min": 84.20206082467757,
+          "severity": 0.12108842884946361
+        }
+      ],
+      "od_dist_m": 3185.2,
+      "distance_bin": 1,
+      "ref_hops": 52,
+      "ref_time_base_min": 8.5059
+    },
+    {
+      "id": "val_0198",
+      "split": "val",
+      "origin": 2512,
+      "dest": 645,
+      "depart_min": 524.876,
+      "hour": 8,
+      "sigma": 0.05,
+      "noise_seed": 1607473306,
+      "incidents": [
+        {
+          "edge": 1713,
+          "start_min": 525.0782440481792,
+          "duration_min": 41.63408832672407,
+          "severity": 0.31511447944750226
+        },
+        {
+          "edge": 3998,
+          "start_min": 510.7135712973901,
+          "duration_min": 99.74222117249525,
+          "severity": 0.37585606070050837
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1556,
+          "start_min": 525.0782440481792,
+          "duration_min": 41.63408832672407,
+          "severity": 0.31511447944750226
+        },
+        {
+          "edge": 4326,
+          "start_min": 510.7135712973901,
+          "duration_min": 99.74222117249525,
+          "severity": 0.37585606070050837
+        }
+      ],
+      "od_dist_m": 2546.4,
+      "distance_bin": 1,
+      "ref_hops": 34,
+      "ref_time_base_min": 10.7058
+    },
+    {
+      "id": "val_0199",
+      "split": "val",
+      "origin": 1681,
+      "dest": 972,
+      "depart_min": 1132.609,
+      "hour": 18,
+      "sigma": 0.3,
+      "noise_seed": 3610415660,
+      "incidents": [
+        {
+          "edge": 3097,
+          "start_min": 1137.4445741017767,
+          "duration_min": 104.50270085279163,
+          "severity": 0.34211631560981215
+        },
+        {
+          "edge": 2779,
+          "start_min": 1121.1104130361532,
+          "duration_min": 56.49566640674909,
+          "severity": 0.18710617349770164
+        },
+        {
+          "edge": 7101,
+          "start_min": 1124.8077175170413,
+          "duration_min": 96.33602226488806,
+          "severity": 0.367073790473461
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 1285,
+          "start_min": 1137.4445741017767,
+          "duration_min": 104.50270085279163,
+          "severity": 0.34211631560981215
+        },
+        {
+          "edge": 6656,
+          "start_min": 1121.1104130361532,
+          "duration_min": 56.49566640674909,
+          "severity": 0.18710617349770164
+        },
+        {
+          "edge": 6964,
+          "start_min": 1124.8077175170413,
+          "duration_min": 96.33602226488806,
+          "severity": 0.367073790473461
+        }
+      ],
+      "od_dist_m": 3121.8,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 16.2551
+    }
+  ]
+}

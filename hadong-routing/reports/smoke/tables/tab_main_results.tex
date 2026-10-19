@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Kết quả trên tập test (10 truy vấn) trong V\_real. Thời gian và regret tính trên các chuyến tới đích; regret so với oracle.}
+\label{tab:tab_main_results}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) & Chạy (ms) \\
+\midrule
+Dijkstra (ngắn nhất) & 100.00 & 16.20 & 12.92 & 23.81 & 7.94 & 5.22 & 17.77 & 4.33 & 2.08 \\
+A* (thời gian tự do) & 100.00 & 16.24 & 12.92 & 25.54 & 5.91 & 0.78 & 19.07 & 4.44 & 0.84 \\
+Plan-once TD-A* & 100.00 & 16.36 & 12.26 & 24.72 & 6.57 & 0.00 & 16.09 & 4.70 & 2.51 \\
+Replan TD-A* & 100.00 & 15.52 & 12.20 & 22.78 & 1.29 & 0.00 & 3.00 & 4.64 & 48.47 \\
+Tham lam cục bộ (thủ công) & 30.00 & 16.30 & 10.74 & 26.57 & 63.06 & 43.55 & 120.14 & 4.71 & 27.97 \\
+RL (MaskablePPO, cục bộ) & 0.00 & -- & -- & -- & -- & -- & -- & -- & 61.80 \\
+RL + cost-to-go (ablation) & 0.00 & -- & -- & -- & -- & -- & -- & -- & 78.02 \\
+Oracle TD-A* (V\_real) & 100.00 & 15.32 & 11.65 & 22.35 & 0.00 & 0.00 & 0.00 & 4.68 & 2.58 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

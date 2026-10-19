@@ -1,0 +1,96 @@
+% !TEX root = main.tex
+\section{Nghiên cứu liên quan}\label{sec:related}
+
+\subsection{Các phương pháp truyền thống}\label{sec:related:classic}
+
+\textbf{Đường đi ngắn nhất với trọng số tĩnh.} Thuật toán Dijkstra~\cite{dijkstra1959} giải bài toán đường đi ngắn nhất
+một nguồn trên đồ thị có trọng số không âm bằng chiến lược tham lam: luôn ``chốt'' nút có nhãn khoảng cách nhỏ nhất
+trong hàng đợi ưu tiên. Với hàng đợi nhị phân, độ phức tạp là $O((n+m)\log n)$. Thuật toán A*~\cite{hart1968} bổ sung một
+hàm heuristic $h(v)$ ước lượng khoảng cách còn lại tới đích; nếu $h$ \emph{chấp nhận được} (không vượt quá khoảng cách
+thật) thì A* vẫn tối ưu, và nếu $h$ \emph{nhất quán} thì mỗi nút được mở rộng tối đa một lần. Heuristic càng sát khoảng
+cách thật, số nút phải mở rộng càng ít.
+
+\textbf{Tăng tốc bằng tiền xử lý.} Trên mạng đường cỡ quốc gia, người ta tiền xử lý đồ thị để truy vấn nhanh hơn nhiều
+bậc. ALT~\cite{goldberg2005alt} chọn một số \emph{điểm mốc} (landmark), tính sẵn khoảng cách tới/từ các điểm mốc và dùng
+bất đẳng thức tam giác để xây heuristic chặt cho A*. Contraction Hierarchies~\cite{geisberger2008ch} ``co'' lần lượt các
+nút ít quan trọng và thêm cạnh tắt, cho phép tìm kiếm hai chiều chỉ đi ``lên'' trong thứ bậc. Tổng quan đầy đủ về các
+kỹ thuật này có trong~\cite{bast2016}. Thuật toán của Yen~\cite{yen1971} liệt kê $k$ đường đi không lặp ngắn nhất, thường
+dùng để đưa ra tuyến thay thế.
+
+\textbf{Đường đi ngắn nhất phụ thuộc thời gian.} Cooke và Halsey~\cite{cooke1966} là những người đầu tiên đặt bài toán
+đường đi với thời gian di chuyển phụ thuộc thời điểm khởi hành, giải bằng quy hoạch động trên thời gian rời rạc.
+Dreyfus~\cite{dreyfus1969} nhận xét rằng có thể mở rộng trực tiếp Dijkstra bằng cách gắn nhãn \emph{thời điểm đến} thay
+cho khoảng cách. Kaufman và Smith~\cite{kaufman1993} chứng minh cách làm này cho kết quả đúng khi mạng thoả tính FIFO,
+trong khi Orda và Rom~\cite{orda1990} phân tích trường hợp tổng quát, chỉ ra vai trò của việc cho phép hay cấm chờ tại
+nút. Ichoua, Gendreau và Potvin~\cite{ichoua2003} đề xuất mô hình vận tốc thay đổi theo khoảng thời gian, trong đó thời
+gian qua cạnh được tính bằng cách tích phân vận tốc, nhờ đó FIFO được bảo đảm theo cấu trúc. Delling và
+Wagner~\cite{delling2009} tổng quan các kỹ thuật định tuyến phụ thuộc thời gian, bao gồm TD-A* và các biến thể có tiền xử lý.
+
+\textbf{Tái lập kế hoạch trong môi trường thay đổi.} Trong robot học, D*~\cite{stentz1994} và D* Lite~\cite{koenig2002}
+giải bài toán tìm đường khi chi phí cạnh chỉ được phát hiện dần trong quá trình di chuyển. Thay vì tìm lại từ đầu, D*
+Lite duy trì lời giải tìm kiếm ngược từ đích và chỉ cập nhật phần bị ảnh hưởng khi một số chi phí cạnh thay đổi, nhờ đó
+tiết kiệm đáng kể khi thay đổi mang tính cục bộ.
+
+\textbf{Heuristic tham lam.} Một chiến lược đơn giản không cần mô hình toàn cục là luôn chọn cạnh ra hướng về đích
+nhất (theo góc hoặc theo khoảng cách chim bay giảm nhiều nhất). Chiến lược này nhanh nhưng dễ đi vào ngõ cụt; chúng tôi
+dùng nó làm mốc so sánh dưới cho các chính sách RL có cùng thông tin quan sát.
+
+\subsection{Các hướng tiếp cận hiện đại}\label{sec:related:modern}
+
+\textbf{Học tăng cường cho định tuyến.} Boyan và Littman~\cite{boyan1994} đề xuất Q-routing --- một trong những ứng dụng
+sớm nhất của RL cho định tuyến gói tin trong mạng có tải thay đổi. Q-learning dạng bảng~\cite{watkins1992} học hàm giá
+trị hành động bằng cập nhật thời gian--sai phân. Khi không gian trạng thái lớn, RL sâu dùng mạng nơ-ron xấp xỉ hàm giá
+trị (DQN~\cite{mnih2015}) hoặc trực tiếp tối ưu chính sách (PPO~\cite{schulman2017}); các cài đặt chuẩn có trong thư viện
+Stable-Baselines3~\cite{raffin2021}. Khi tập hành động hợp lệ thay đổi theo trạng thái (như số cạnh ra khác nhau ở mỗi
+giao lộ), \emph{mặt nạ hành động} giúp gradient chính sách không lãng phí vào hành động không hợp lệ~\cite{huang2022}.
+Định hình thưởng theo thế năng~\cite{ng1999} giúp giảm độ thưa của phần thưởng mà không làm thay đổi chính sách tối ưu;
+học theo chương trình (curriculum learning)~\cite{bengio2009} bắt đầu từ nhiệm vụ dễ rồi tăng dần độ khó. Với quan sát
+một phần, mạng hồi quy LSTM~\cite{hochreiter1997lstm} cho phép chính sách có bộ nhớ. Học bắt chước (behavior cloning) học
+chính sách từ quỹ đạo của chuyên gia; DAgger~\cite{ross2011dagger} khắc phục hiện tượng lệch phân phối bằng cách thu
+thập nhãn trên chính các trạng thái mà chính sách học được ghé thăm. Nền tảng chung của RL có trong~\cite{sutton2018}.
+
+\textbf{Dự báo giao thông trên đồ thị.} Mạng tích chập đồ thị (GCN)~\cite{kipf2017gcn} tổng quát hoá phép tích chập lên
+dữ liệu có cấu trúc đồ thị bằng cách trộn đặc trưng của mỗi nút với các nút kề. DCRNN~\cite{li2018dcrnn} mô hình hoá giao
+thông như một quá trình khuếch tán trên đồ thị và kết hợp với mạng hồi quy; STGCN~\cite{yu2018stgcn} dùng các khối tích
+chập không gian--thời gian. Các mô hình này dự báo vận tốc trên mạng cảm biến; trong khung của đề tài, một mô hình như
+vậy có thể thay thế dự báo tĩnh $V_{\text{base}}$ làm đầu vào cho TD-A*.
+
+\textbf{Định tuyến tính đến rủi ro và phân bổ giao thông.} Khi thời gian đi là ngẫu nhiên, người lái thường quan tâm đến
+độ tin cậy (ví dụ thời gian đi ở phân vị 90\%) hơn là giá trị trung bình. Khi nhiều người cùng chọn tuyến, lý thuyết phân
+bổ giao thông phân biệt cân bằng người dùng và tối ưu hệ thống theo nguyên lý Wardrop~\cite{wardrop1952}, với hàm trễ phổ
+biến là hàm BPR~\cite{bpr1964}.
+
+\textbf{Công cụ.} OSMnx~\cite{boeing2017} cho phép tải, làm sạch và phân tích mạng đường từ OpenStreetMap; Numba~\cite{lam2015numba}
+biên dịch JIT mã Python số sang mã máy qua LLVM, giúp các vòng lặp tìm kiếm chạy nhanh gần bằng C.
+
+\subsection{Phân tích điểm mạnh / hạn chế}\label{sec:related:compare}
+
+Bảng~\ref{tab:compare} tóm tắt so sánh định tính giữa các họ phương pháp, dựa trên tài liệu và bản chất thuật toán.
+
+\begin{table}[H]
+\centering\small
+\renewcommand{\arraystretch}{1.25}
+\caption{So sánh định tính các họ phương pháp tìm đường.}
+\label{tab:compare}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.3cm}XX}
+\toprule
+\textbf{Họ phương pháp} & \textbf{Điểm mạnh} & \textbf{Hạn chế} \\
+\midrule
+Dijkstra / A* tĩnh & Đơn giản, tối ưu với trọng số cố định, rất nhanh & Bỏ qua biến thiên vận tốc theo giờ \\
+TD-Dijkstra / TD-A* & Tối ưu khi mạng thoả FIFO, thời gian đa thức & Cần mô hình vận tốc tương lai; nhạy với dự báo sai \\
+ALT, Contraction Hierarchies & Truy vấn rất nhanh trên mạng lớn & Cần tiền xử lý; bản phụ thuộc thời gian phức tạp \\
+Replan, D* Lite & Thích nghi với quan sát mới trong khi đi & Chi phí tìm kiếm lặp; D* Lite cần chi phí tĩnh giữa các lần cập nhật \\
+Dự báo GNN & Lan truyền thông tin từ cảm biến sang cạnh chưa quan sát & Cần dữ liệu huấn luyện; chỉ có ích khi nhiễu có tương quan \\
+Định tuyến theo rủi ro & Giảm đuôi phân phối thời gian đi & Mục tiêu không cộng tính; tốn nhiều mẫu \\
+RL chọn từng cạnh & Không cần mô hình chuyển trạng thái tường minh & Khám phá khó, khái quát kém, không bảo đảm tới đích \\
+RL kết hợp tìm kiếm & Giữ bảo đảm tới đích và chất lượng của tìm kiếm & Không gian hành động hẹp nên lợi ích có thể nhỏ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Khoảng trống nghiên cứu.} Nhiều công trình đánh giá RL cho định tuyến trên lưới tổng hợp, hoặc không so sánh với
+TD-A* kết hợp tái lập kế hoạch trong cùng một môi trường; các kết quả vì vậy khó so sánh và dễ đánh giá quá cao vai trò
+của RL. Đề tài hướng tới lấp khoảng trống đó ở quy mô một quận của Việt Nam: (i) dùng mạng đường thật từ OpenStreetMap;
+(ii) so sánh mọi phương pháp trên \emph{cùng} tập kiểm tra, \emph{cùng} môi trường thực tái lập theo seed, \emph{cùng}
+chỉ số và kiểm định thống kê ghép cặp; (iii) phân tích có hệ thống các cải tiến RL phổ biến và trình bày trung thực cả
+những kết quả âm.

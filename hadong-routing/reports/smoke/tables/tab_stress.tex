@@ -1,0 +1,26 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Tập STRESS (sự cố ưu tiên đặt trên tuyến dự kiến, xác suất 0.7): cùng 10 truy vấn, cùng thời điểm/mức độ sự cố.}
+\label{tab:tab_stress}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) \\
+\midrule
+Dijkstra (ngắn nhất) & 100.00 & 14.09 & 11.78 & 19.95 & 12.01 & 10.54 & 25.53 & 4.33 \\
+A* (thời gian tự do) & 100.00 & 13.99 & 10.82 & 20.18 & 8.40 & 2.81 & 18.18 & 4.44 \\
+Plan-once TD-A* & 100.00 & 13.62 & 10.82 & 20.20 & 4.07 & 2.69 & 7.82 & 4.58 \\
+Plan-once + GCN & 100.00 & 13.62 & 10.82 & 20.20 & 4.07 & 2.69 & 7.82 & 4.58 \\
+Định tuyến P90 & 100.00 & 13.74 & 11.11 & 20.19 & 5.51 & 5.71 & 15.19 & 4.59 \\
+Replan TD-A* & 100.00 & 13.25 & 10.13 & 20.19 & 0.80 & 0.00 & 2.50 & 4.70 \\
+Replan lười & 100.00 & 13.25 & 10.13 & 20.19 & 0.80 & 0.00 & 2.50 & 4.70 \\
+Replan D* Lite & 100.00 & 13.26 & 10.13 & 20.19 & 0.85 & 0.00 & 2.89 & 4.66 \\
+Replan + GCN & 100.00 & 13.26 & 10.13 & 20.19 & 0.85 & 0.00 & 2.89 & 4.69 \\
+RL lai (β + TD-A*) & 90.00 & 12.56 & 9.90 & 18.10 & 0.38 & 0.00 & 1.45 & 4.53 \\
+RL cây-GNN + BC & 0.00 & -- & -- & -- & -- & -- & -- & -- \\
+Oracle TD-A* & 100.00 & 12.99 & 10.13 & 19.95 & 0.00 & 0.00 & 0.00 & 4.45 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

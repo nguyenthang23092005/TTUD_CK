@@ -1,0 +1,107 @@
+% !TEX root = main.tex
+\section{Giới thiệu}\label{sec:intro}
+
+\subsection{Bối cảnh và động lực nghiên cứu}\label{sec:intro:context}
+
+\textbf{Lĩnh vực ứng dụng.} Bài toán tìm đường (route planning) là một trong những bài toán kinh điển nhất của khoa học
+máy tính và đồng thời là thành phần lõi của các hệ thống giao thông thông minh (Intelligent Transportation Systems):
+ứng dụng bản đồ và dẫn đường trên điện thoại, nền tảng gọi xe công nghệ, điều phối xe giao hàng chặng cuối, quản lý
+đội xe buýt hay xe cứu thương. Ở dạng đơn giản nhất, mạng đường được mô hình hoá thành một đồ thị có hướng có trọng
+số và câu hỏi đặt ra là tìm đường đi có tổng trọng số nhỏ nhất giữa hai đỉnh; thuật toán Dijkstra~\cite{dijkstra1959}
+và A*~\cite{hart1968} giải trọn vẹn câu hỏi đó trong thời gian đa thức.
+
+Trong thực tế đô thị, giả thiết ``trọng số cố định'' lại hiếm khi đúng. Thời gian để đi qua một đoạn đường phụ thuộc
+mạnh vào \emph{thời điểm} đi vào đoạn đó: cùng một trục đường có thể thông thoáng lúc ba giờ sáng nhưng ùn tắc kéo dài
+lúc tám giờ sáng. Hệ quả là tuyến đường ngắn nhất theo chiều dài không nhất thiết là tuyến nhanh nhất, và tuyến nhanh
+nhất lúc này không nhất thiết là tuyến nhanh nhất một giờ sau. Đây chính là bài toán \emph{đường đi ngắn nhất phụ thuộc
+thời gian} (time-dependent shortest path, TDSP)~\cite{cooke1966,dreyfus1969,delling2009}.
+
+\textbf{Nhu cầu và vấn đề thực tiễn.} Hà Đông là quận cửa ngõ phía tây nam của Hà Nội (trước khi sắp xếp lại đơn vị
+hành chính năm 2025), nơi tập trung nhiều khu đô thị mới và các trục hướng tâm chịu lưu lượng lớn như Quang Trung --
+Nguyễn Trãi, Tố Hữu (Lê Văn Lương kéo dài), Văn Khê và Quốc lộ~6. Ùn tắc ở khu vực này mang ba đặc điểm điển hình của
+giao thông đô thị Việt Nam:
+\begin{itemize}
+    \item \emph{tính chu kỳ theo ngày}: ùn tắc lặp lại vào các khung giờ cao điểm sáng và chiều;
+    \item \emph{tính có hướng}: buổi sáng dòng xe đổ vào trung tâm thành phố, buổi chiều theo chiều ngược lại;
+    \item \emph{tính bất định}: ngày này khác ngày kia, và có các sự cố bất thường (va chạm, ngập, sửa đường) làm một
+    đoạn đường chậm hẳn trong một khoảng thời gian.
+\end{itemize}
+Với người tham gia giao thông, các câu hỏi rất cụ thể: nên đi tuyến nào khi xuất phát lúc 7 giờ 45? Khi thấy phía trước
+ùn tắc có nên rẽ sang đường khác? Có nên đợi thêm nửa tiếng để tránh cao điểm hay không? Khi rất nhiều người cùng dùng
+một ứng dụng chỉ đường, chỉ dẫn ``nhanh nhất'' có còn nhanh nhất?
+
+Song song với đó, các phương pháp học máy --- đặc biệt là học tăng cường (Reinforcement Learning, RL) và mạng nơ-ron
+đồ thị (Graph Neural Network, GNN) --- được kỳ vọng nhiều cho định tuyến. RL hứa hẹn học được chính sách ra quyết định
+trực tiếp từ trải nghiệm mà không cần mô hình tường minh~\cite{sutton2018}; GNN có khả năng khai thác cấu trúc đồ thị
+của mạng đường để dự báo vận tốc~\cite{li2018dcrnn,yu2018stgcn}. Tuy nhiên các phương pháp cổ điển như TD-A* lại có
+bảo đảm tối ưu (dưới các giả thiết hợp lý) và chạy rất nhanh. Câu hỏi then chốt vì vậy không phải ``RL có dùng được
+không'' mà là \emph{trong những điều kiện nào thì phương pháp học có lợi hơn thuật toán cổ điển, và lợi bao nhiêu}.
+Để trả lời công bằng, mọi phương pháp phải được đánh giá trên cùng một mạng đường thật, cùng một tập truy vấn kiểm
+tra, cùng một môi trường mô phỏng và cùng một bộ chỉ số --- đó là động lực chính của đề tài.
+
+\subsection{Mục tiêu của đề tài}\label{sec:intro:goal}
+
+\textbf{Mục tiêu chính.} Xây dựng một khung thực nghiệm hoàn chỉnh, chạy được trên máy tính cá nhân chỉ có CPU và
+\emph{tái lập được} (cố định seed, toàn bộ tham số nằm trong một tệp cấu hình), đi từ dữ liệu bản đồ mở
+OpenStreetMap~\cite{boeing2017} tới báo cáo; trong đó mô phỏng vận tốc theo 24 khung giờ cho mạng đường Hà Đông, cài
+đặt và so sánh công bằng các họ phương pháp tìm đường phụ thuộc thời gian, tái lập kế hoạch, dự báo ngắn hạn bằng GNN,
+định tuyến theo rủi ro và học tăng cường; đồng thời cung cấp giao diện minh hoạ trực quan.
+
+\textbf{Mục tiêu cụ thể.}
+\begin{enumerate}[label=(\arabic*)]
+    \item Thu thập và chuẩn hoá mạng đường lái xe quận Hà Đông từ OpenStreetMap, xử lý các tình huống thực tế (ranh giới
+    hành chính thay đổi, máy chủ dữ liệu không phản hồi, thiếu thuộc tính tốc độ).
+    \item Xây dựng mô hình vận tốc 24 khung giờ có cấu trúc, bảo đảm tính FIFO (đi trước thì đến trước), kèm mô hình
+    nhiễu và sự cố cho ``môi trường thực''.
+    \item Cài đặt hiệu quả các thuật toán: Dijkstra, A*, TD-Dijkstra, TD-A* với nhiều heuristic, phiên bản biên dịch JIT,
+    tái lập kế hoạch (đầy đủ, lười, D* Lite), dự báo bằng mạng tích chập đồ thị và định tuyến theo phân vị.
+    \item Thiết kế môi trường học tăng cường chuẩn Gymnasium và huấn luyện nhiều biến thể RL (quan sát cục bộ, quan sát
+    cây lân cận với GNN, bộ nhớ LSTM, học bắt chước, định hình thưởng, kết hợp RL với tìm kiếm).
+    \item Đánh giá trên tập kiểm tra cố định với kiểm định thống kê; phân tích theo giờ, mức nhiễu, sự cố, khoảng cách;
+    các thí nghiệm phụ về chọn giờ xuất phát và về hiệu ứng khi nhiều xe cùng được dẫn đường.
+\end{enumerate}
+
+\textbf{Câu hỏi nghiên cứu.}
+\begin{itemize}
+    \item[\textbf{RQ1.}] Tính đến sự phụ thuộc thời gian (TD-A*) cải thiện thời gian đi bao nhiêu so với tuyến ngắn nhất
+    hoặc tuyến theo vận tốc tự do? Lợi ích thay đổi như thế nào theo giờ trong ngày?
+    \item[\textbf{RQ2.}] Khi dự báo sai (nhiễu ngày, sự cố), tái lập kế hoạch dựa trên quan sát cục bộ, dự báo GNN từ cảm
+    biến, hay định tuyến theo phân vị 90\% giúp được bao nhiêu? Có thể tái lập kế hoạch với chi phí tính toán thấp hơn
+    (replan lười, D* Lite) mà không mất chất lượng không?
+    \item[\textbf{RQ3.}] RL chọn từng cạnh có cạnh tranh được với tìm kiếm có mô hình không? Các cải tiến (quan sát rộng
+    hơn, bộ nhớ, học bắt chước, định hình thưởng) và cách kết hợp RL với tìm kiếm giúp đến đâu?
+    \item[\textbf{RQ4.}] Chọn giờ xuất phát có lợi trong điều kiện nào? Điều gì xảy ra khi nhiều xe cùng làm theo một
+    chỉ dẫn?
+\end{itemize}
+
+\textbf{Giả thuyết.} Từ lý thuyết, chúng tôi kỳ vọng: (H1) TD-A* tốt hơn rõ rệt tuyến tĩnh vì nó tối ưu dưới FIFO;
+(H2) tái lập kế hoạch có lợi chủ yếu khi dự báo sai cục bộ và lớn (sự cố); (H3) RL chọn từng cạnh với thông tin cục bộ
+khó vượt được tìm kiếm có mô hình, vì nó phải tự học lại cấu trúc đồ thị mà tìm kiếm đã có sẵn; (H4) dẫn đường cá nhân
+tối ưu có thể làm hệ thống tệ đi khi tỉ lệ người dùng lớn. Phần~\ref{sec:exp} kiểm chứng từng giả thuyết bằng số liệu.
+
+\subsection{Đóng góp chính của đề tài}\label{sec:intro:contrib}
+
+\begin{enumerate}[label=(\arabic*)]
+    \item \textbf{Khung thực nghiệm tái lập được.} Toàn bộ quy trình chạy bằng một lệnh, với hai chế độ (\emph{smoke}
+    vài phút để kiểm tra và \emph{full} cho kết quả chính thức); mọi bảng, hình và \emph{mọi con số trong báo cáo này}
+    được sinh tự động từ kết quả chạy, không có số liệu gõ tay.
+    \item \textbf{Mô hình vận tốc 24 khung giờ cho Hà Đông.} Mô hình có cấu trúc, minh bạch về giả định: profile ùn tắc
+    chu kỳ ngày, độ nhạy theo loại đường, các trục nóng, hiệu ứng hướng vào/ra trung tâm, nhiễu tương quan không gian ---
+    thời gian; bảo đảm FIFO kể cả khi có sự cố nhờ thủ tục ``FIFO hoá'' có chứng minh.
+    \item \textbf{Bộ thuật toán hiệu quả trên cấu trúc CSR.} TD-A* với ba heuristic (khoảng cách chim bay, cận dưới chính
+    xác, ALT), phiên bản Numba; ba cơ chế tái lập kế hoạch; dự báo GCN từ 15\% cạnh có cảm biến; định tuyến theo P90.
+    \item \textbf{Sáu hướng cải tiến RL trên cùng một môi trường} và một phân tích trung thực về khi nào RL có và không
+    có lợi --- bao gồm cả các kết quả âm (RL thua tìm kiếm, định tuyến P90 không có lợi).
+    \item \textbf{Hai thí nghiệm phụ} (chọn giờ xuất phát bằng Q-learning; mô phỏng nhiều xe với phản hồi tải BPR) và
+    \textbf{ứng dụng minh hoạ} trên nền Streamlit, được đóng gói Docker.
+\end{enumerate}
+
+\subsection{Cấu trúc báo cáo}\label{sec:intro:outline}
+
+Phần~\ref{sec:problem} phát biểu bài toán bằng ngôn ngữ tự nhiên và dưới dạng mô hình toán học, kèm ví dụ minh hoạ
+và phân tích các khó khăn. Phần~\ref{sec:related} tổng quan các nghiên cứu liên quan, gồm các thuật toán cổ điển và
+các hướng tiếp cận hiện đại, kết thúc bằng bảng so sánh và khoảng trống nghiên cứu. Phần~\ref{sec:method} trình bày
+chi tiết phương pháp đề xuất: dữ liệu, mô hình mô phỏng, từng thuật toán, môi trường học tăng cường, phân tích độ phức
+tạp và tính đúng đắn, cùng sơ đồ hệ thống. Phần~\ref{sec:exp} mô tả thiết lập thực nghiệm và phân tích kết quả.
+Phần~\ref{sec:conclusion} tổng kết, nêu hạn chế và hướng phát triển. Phụ lục liệt kê tham số cấu hình và các điểm nóng
+ùn tắc được giả định.

@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Regret trung bình (\%) so với oracle theo mức nhiễu $\sigma$ (chuyến tới đích).}
+\label{tab:tab_by_sigma}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Nhóm & n & Dijkstra (ngắn nhất) & Plan-once TD-A* & Plan-once + GCN & Replan TD-A* & Replan + GCN & RL lai (β + TD-A*) & RL cây-GNN + BC \\
+\midrule
+0.05 & 76 & 10{,}84 & 0{,}46 & 0{,}54 & 0{,}04 & 0{,}04 & 0{,}04 & 36{,}15 \\
+0.15 & 56 & 8{,}49 & 0{,}61 & 0{,}30 & 0{,}25 & 0{,}13 & 0{,}26 & 39{,}16 \\
+0.3 & 68 & 13{,}34 & 2{,}77 & 0{,}88 & 1{,}14 & 0{,}41 & 1{,}38 & 37{,}38 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

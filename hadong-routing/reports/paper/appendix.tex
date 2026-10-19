@@ -1,0 +1,18 @@
+% !TEX root = main.tex
+\newpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section{Phụ lục: Tham số cấu hình}\label{app:config}
+
+Bảng~\ref{tab:tab_config} liệt kê các tham số chính trong tệp \texttt{configs/config.yaml}. Mọi tham số của dự án đều nằm
+trong tệp này; chế độ \emph{smoke} ghi đè một số tham số để chạy nhanh.
+
+\input{../tables/tab_config.tex}
+
+\section{Phụ lục: Các điểm nóng ùn tắc}\label{app:hotspots}
+
+Các hệ số trong Bảng~\ref{tab:tab_hotspots} là \textbf{giả định} của nhóm dựa trên hiểu biết chung về giao thông khu vực Hà
+Đông, không phải số đo, và cần được hiệu chỉnh theo trải nghiệm thực tế hoặc dữ liệu đo. Toạ độ các điểm nóng xác định theo
+bán kính được lấy từ dịch vụ Nominatim (OpenStreetMap).
+
+\input{../tables/tab_hotspots.tex}

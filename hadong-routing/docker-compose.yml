@@ -1,0 +1,17 @@
+# docker compose up app            → giao diện tại http://localhost:8501
+# docker compose run --rm pipeline → chạy pipeline smoke, kết quả ghi ra thư mục máy chủ
+services:
+  app:
+    build: .
+    image: hadong-routing
+    ports: ["8501:8501"]
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+  pipeline:
+    image: hadong-routing
+    command: ["python", "run_all.py", "--mode", "smoke"]
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./reports:/app/reports

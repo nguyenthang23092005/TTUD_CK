@@ -1,0 +1,380 @@
+# =============================================================================
+# Cấu hình toàn cục cho dự án hadong-routing.
+# Mọi tham số của pipeline nằm ở đây (không hard-code trong mã nguồn).
+# Giá trị ở cấp cao nhất là chế độ FULL; khối `modes.smoke` ghi đè cho chế độ SMOKE.
+# Đường dẫn tương đối tính từ thư mục gốc dự án (hadong-routing/).
+# =============================================================================
+
+project:
+  name: hadong-routing
+  seed: 42                 # seed toàn cục; mọi seed con được dẫn xuất từ đây
+  log_level: INFO
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  speeds_dir: data/speeds
+  eval_dir: data/eval
+  results_dir: results
+  models_dir: results/models
+  figures_dir: reports/figures
+  tables_dir: reports/tables
+  hotspots_file: configs/hotspots.yaml
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 1: đồ thị
+# -----------------------------------------------------------------------------
+graph:
+  # Lưu ý: từ 1/7/2025 Hà Nội bỏ cấp quận; trên OSM "Hà Đông" có thể là phường mới (nhỏ hơn).
+  # Thử lần lượt các truy vấn; nếu thất bại -> hợp các phường mới -> bounding box.
+  place_queries:
+    - "Quận Hà Đông, Hà Nội, Việt Nam"
+    - "Ha Dong District, Hanoi, Vietnam"
+  fallback_place_union:
+    - "Phường Hà Đông, Hà Nội"
+    - "Phường Dương Nội, Hà Nội"
+    - "Phường Yên Nghĩa, Hà Nội"
+    - "Phường Phú Lương, Hà Nội"
+    - "Phường Kiến Hưng, Hà Nội"
+  min_boundary_area_km2: 20.0          # polygon nhỏ hơn ngưỡng này bị coi là sai (vd. chỉ 1 phường)
+  fallback_bbox: [105.705, 20.910, 105.805, 20.998]   # [west, south, east, north]
+  buffer_m: 500
+  network_type: drive
+  graphml_name: hadong_drive.graphml
+  boundary_name: boundary.geojson
+  requests_timeout_s: 90
+  overpass_urls:                       # thử lần lượt nếu máy chủ trước lỗi/timeout
+    - https://overpass-api.de/api
+    - https://overpass.kumi.systems/api
+    - https://maps.mail.ru/osm/tools/overpass/api
+  parallel_edge_policy: shortest       # shortest | merge (merge = giữ ngắn nhất nhưng gộp tên)
+  free_flow_factor: 0.9                # v_free = maxspeed * hệ số (đô thị hiếm khi chạy đúng tốc độ tối đa)
+  maxspeed_bounds_kmh: [10, 100]
+  default_maxspeed_kmh:                # điền khi thiếu tag maxspeed
+    trunk: 60
+    primary: 50
+    secondary: 40
+    tertiary: 30
+    residential: 20
+  highway_groups:                      # gom loại đường OSM -> nhóm
+    trunk: [motorway, motorway_link, trunk, trunk_link]
+    primary: [primary, primary_link]
+    secondary: [secondary, secondary_link]
+    tertiary: [tertiary, tertiary_link]
+    residential: [residential, unclassified, living_street, service, road, busway]
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 2: mô hình vận tốc 24 khung giờ
+# -----------------------------------------------------------------------------
+speed:
+  c_max: 0.85
+  v_min_kmh: 5.0
+  # Profile p(h): base + tổng Gaussian tuần hoàn chu kỳ 24h (mu: giờ, sigma: giờ, amp)
+  profile:
+    base: 0.06
+    night_dip: {mu: 3.0, sigma: 2.0, amp: -0.05}
+    peaks:
+      - {name: morning, mu: 8.0, sigma: 1.0, amp: 0.58}
+      - {name: midday, mu: 12.5, sigma: 2.5, amp: 0.25}
+      - {name: evening, mu: 18.0, sigma: 1.2, amp: 0.62}
+      - {name: late_evening, mu: 21.0, sigma: 1.5, amp: 0.12}
+    clip: [0.0, 1.0]
+  road_sensitivity:          # s(road_group)
+    trunk: 1.00
+    primary: 0.95
+    secondary: 0.80
+    tertiary: 0.65
+    residential: 0.40
+  direction:
+    # Hướng tâm tham chiếu: Ngã Tư Sở (Thanh Xuân) — geocode Nominatim
+    center_lat: 21.0029772
+    center_lon: 105.8202406
+    beta: 0.30               # biên độ ảnh hưởng hướng
+    morning: {mu: 8.0, sigma: 1.5}   # trọng số "vào trung tâm" buổi sáng
+    evening: {mu: 18.0, sigma: 1.5}  # trọng số "ra khỏi trung tâm" buổi chiều
+  spatial_noise:
+    sigma: 0.05              # biên độ nhiễu không gian (đơn vị: tỉ lệ ùn c)
+    smooth_iters: 4          # số lần lặp trung bình láng giềng (cạnh kề)
+    self_weight: 1.0         # trọng số của chính cạnh trong mỗi lần làm mượt
+    temporal_kernel: [0.25, 0.5, 0.25]   # làm mượt theo giờ (vòng tròn)
+    temporal_iters: 2
+    day_sigma: 0.02          # biến thiên nhỏ "theo ngày"
+    base_day_seed: 0         # ngày điển hình dùng cho V_base
+  fifo:
+    max_slope: 0.9           # yêu cầu |d tau/dt| <= max_slope < 1 (đảm bảo FIFO)
+    max_iters: 200
+  incidents:
+    severity_range: [0.1, 0.4]       # hệ số nhân vận tốc
+    duration_range_min: [30, 120]
+    ramp_in_min: 5
+    ramp_out_min: 15                 # thời gian giải toả (tuyến tính)
+    fifo_grid_step_min: 1.0
+  plot_hours: [3, 8, 14, 18]
+  # Nhiễu của MÔI TRƯỜNG THỰC (V_real = V_base·ε). Biên: ε ~ LogNormal(0, σ) như đặc tả.
+  real_noise:
+    model: correlated          # correlated | iid (iid = phiên bản đầu tiên)
+    rho_hourly: 0.8            # tương quan AR(1) giữa hai khung giờ liên tiếp
+    smooth_iters: 4            # số lần làm mượt không gian (qua cạnh kề)
+    iid_frac: 0.3              # tỉ trọng phương sai i.i.d.
+    mean_one: false            # true: dùng μ=−σ²/2 để E[ε]=1
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 3: kịch bản
+# -----------------------------------------------------------------------------
+scenarios:
+  n_queries: 1000
+  split: [0.6, 0.2, 0.2]          # train / val / test (theo cặp O-D)
+  min_od_dist_m: 1000
+  max_tries_factor: 50
+  hour_weights: [0.3, 0.2, 0.2, 0.2, 0.3, 0.6, 1.2, 2.5, 2.5, 1.5, 1.0, 1.0,
+                 1.2, 1.0, 1.0, 1.2, 1.6, 2.5, 2.5, 1.8, 1.2, 0.8, 0.5, 0.4]
+  sigma_levels: [0.05, 0.15, 0.30]   # eps ~ LogNormal(0, sigma)
+  n_incidents_choices: [0, 1, 2, 3]
+  n_incidents_probs: [0.35, 0.30, 0.20, 0.15]
+  incident_on_route_prob: 0.0        # TẬP CHÍNH: sự cố ngẫu nhiên trong hành lang O–D (không thiên lệch)
+  stress_on_route_prob: 0.7          # TẬP STRESS: ưu tiên đặt trên tuyến dự kiến V_base (gây bất lợi cho plan-once)
+  incident_corridor_m: 600           # nếu không trên tuyến: cạnh trong hành lang quanh đoạn O-D
+  incident_start_offset_min: [-20, 10]   # so với giờ xuất phát
+  distance_bins_m: [0, 2500, 4500, 100000]
+  distance_bin_labels: ["ngan (<2.5km)", "trung binh (2.5-4.5km)", "xa (>4.5km)"]
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 4: thuật toán
+# -----------------------------------------------------------------------------
+algorithms:
+  heuristic_safety: 0.995            # nhân heuristic: bù sai số chiếu phẳng (<0.1%) và dấu phẩy động
+  yen_k: 3
+  replan:
+    observation_radius_m: 400        # quan sát vận tốc thực của các cạnh trong bán kính này
+    remember_observations: true
+    persistence: additive            # additive (FIFO-safe) | none
+    lazy_threshold: 0.15             # replan lười: chạy lại khi |Δδ| > ngưỡng × τ_base của một cạnh quan sát
+  dstar:
+    refresh_min: 15                  # D* Lite (chi phí snapshot): dựng lại toàn bộ chi phí mỗi 15 phút di chuyển
+  alt:
+    n_landmarks: 8
+  risk:
+    n_samples: 30                    # số mẫu nhiễu (ngân hàng kịch bản) để ước lượng phân phối thời gian
+    k_candidates: 6                  # số tuyến ứng viên (Yen theo thời gian tại giờ xuất phát + tuyến TD-A*)
+    quantile: 0.9                    # tối ưu P90
+    eval_samples: 100                # số mẫu "sự thật" độc lập để đánh giá độ tin cậy tuyến
+    eval_n_queries: 100
+
+# -----------------------------------------------------------------------------
+# Dự báo ngắn hạn (GCN) từ cảm biến + quan sát cục bộ
+# -----------------------------------------------------------------------------
+forecast:
+  sensor_fraction: 0.15              # tỉ lệ cạnh có cảm biến/xe thăm dò (ưu tiên trục chính)
+  sensor_groups_always: [trunk, primary]
+  recompute_min: 5                   # chu kỳ cập nhật dự báo GCN khi replan (phút di chuyển)
+  gcn:
+    hidden: 32
+    layers: 3
+    train_steps: 1500
+    batch_fields: 4
+    lr: 0.005
+    weight_decay: 0.0001
+    val_fields: 20
+
+# -----------------------------------------------------------------------------
+# Mô phỏng nhiều xe cùng được dẫn đường (ùn tắc dịch chuyển)
+# -----------------------------------------------------------------------------
+multiagent:
+  depart_window_min: [450, 480]      # 7:30–8:00
+  n_agents_list: [50, 100, 200, 400, 800]
+  vehicles_per_agent: 20             # mỗi tác tử đại diện cho một nhóm xe
+  slot_min: 15
+  capacity_vph: {trunk: 1800, primary: 1200, secondary: 900, tertiary: 600, residential: 300}
+  bpr_alpha: 0.5
+  bpr_beta: 2.0
+  fixed_point_iters: 3
+  min_od_dist_m: 2000
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 5: môi trường RL
+# -----------------------------------------------------------------------------
+env:
+  pos_scale_m: 8000
+  v_norm_kmh: 60.0                   # chuẩn hoá vận tốc quan sát
+  len_scale_m: 500
+  time_scale_min: 1.0
+  ctg_scale_min: 20.0
+  ctg_delta_scale_min: 1.0
+  obs_speed_noise: 0.05              # nhiễu nhân (chuẩn) lên vận tốc quan sát
+  max_steps_factor: 3.0              # max_steps = factor * số cạnh tuyến tham chiếu + slack
+  max_steps_slack: 20
+  reward:
+    time_weight: 1.0                 # -tt (phút) * weight / time_scale
+    shaping: euclid                  # euclid (khoảng cách chim bay) | ctg (cost-to-go tự do, mục B5)
+    shaping_lambda: 1.0              # lambda * (d_truoc - d_sau) / 1000 (theo km), x thời gian tự do tham chiếu
+    shaping_ref_speed_kmh: 30        # chuyển km -> phút cho shaping
+    goal_bonus: 10.0
+    revisit_penalty: 1.0
+    timeout_penalty: 10.0
+    deadend_penalty: 10.0
+  mask_visited: false
+  obs_mode: local                    # local | tree (cây lân cận, mục B1)
+  tree_depth: 3
+  train_incident_on_route_prob: 0.35 # khi huấn luyện: trộn sự cố trên tuyến và ngẫu nhiên
+  hybrid:                            # môi trường RL + tìm kiếm (mục B3)
+    betas: [0.0, 0.5, 1.0, 2.0, 4.0] # hệ số tin/duy trì độ lệch quan sát δ khi TD-A* lập kế hoạch
+  use_cost_to_go: false              # đặc trưng toàn cục (chỉ bật trong biến thể ablation)
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 6: RL
+# -----------------------------------------------------------------------------
+rl:
+  algo: maskable_ppo                 # mặc định cho biến thể không khai báo algo: maskable_ppo | recurrent_ppo | dqn
+  seeds: [0, 1, 2]
+  total_timesteps: 400000            # mặc định cho biến thể không khai báo timesteps
+  max_timesteps: null                # chặn trên (smoke)
+  n_envs: 8
+  n_parallel_runs: 10                # số tiến trình huấn luyện chạy song song
+  curriculum:
+    fractions: [0.2, 0.5]            # chuyển mức 1->2 tại 20%, 2->3 tại 50% timesteps
+    level1_max_dist_m: 2500
+  eval_freq: 25000                   # timesteps (tổng, mọi env)
+  eval_n_queries: 100
+  gnn_hidden: 64
+  lstm_hidden: 128
+  bc:                                # behavior cloning từ oracle (mục B4)
+    n_episodes: 1500
+    explore_prob: 0.2
+    epochs: 8
+    batch_size: 512
+    lr: 0.001
+  variants:
+    - name: rl                       # đúng đặc tả: quan sát cục bộ, định hình theo khoảng cách chim bay
+      timesteps: 400000
+      env: {use_cost_to_go: false}
+    - name: rl_ctg                   # ablation: thêm cost-to-go tự do vào QUAN SÁT (thông tin toàn cục tĩnh)
+      timesteps: 400000
+      env: {use_cost_to_go: true}
+    - name: rl_shape                 # B5: quan sát cục bộ, định hình THƯỞNG theo cost-to-go (B6: 1M bước)
+      timesteps: 1000000
+      env: {reward: {shaping: ctg}}
+    - name: rl_tree                  # B1: cây lân cận 3 bước + GNN trên cây, định hình ctg
+      timesteps: 800000
+      policy: tree_gnn
+      env: {obs_mode: tree, tree_depth: 3, reward: {shaping: ctg}}
+    - name: rl_lstm                  # B2: RecurrentPPO (LSTM), quan sát cục bộ, định hình ctg
+      algo: recurrent_ppo            # không hỗ trợ mask → ánh xạ hành động a mod bậc_ra
+      timesteps: 500000
+      env: {reward: {shaping: ctg}, invalid_action: wrap}
+    - name: rl_tree_bc               # B4: như rl_tree + học trước bằng behavior cloning từ oracle
+      timesteps: 800000
+      policy: tree_gnn
+      bc: true
+      ppo: {learning_rate: 0.0001, ent_coef: 0.002}   # tinh chỉnh nhẹ để không phá chính sách đã bắt chước
+      env: {obs_mode: tree, tree_depth: 3, reward: {shaping: ctg}}
+    - name: rl_hybrid                # B3: RL chọn hệ số tin quan sát β, TD-A* tìm đường
+      env_class: hybrid
+      timesteps: 60000
+      n_envs: 4
+      eval_freq: 10000
+  ppo:
+    learning_rate: 0.0003
+    n_steps: 512
+    batch_size: 256
+    n_epochs: 10
+    gamma: 0.995
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+    vf_coef: 0.5
+    net_arch: [128, 128]
+  dqn:
+    learning_rate: 0.0005
+    buffer_size: 100000
+    learning_starts: 5000
+    batch_size: 128
+    gamma: 0.995
+    exploration_fraction: 0.3
+    exploration_final_eps: 0.05
+    target_update_interval: 2000
+    net_arch: [128, 128]
+    invalid_action_penalty: 1.0
+
+departure:
+  wait_step_min: 10                  # bước chờ ngắn hơn (bản đầu: 30 phút)
+  max_waits: 6                       # tối đa 1 giờ
+  wait_cost_weights: [1.0, 0.5, 0.25]  # 1.0 = "tổng thời gian chờ + đi"; <1 = chờ rẻ hơn lái (độ nhạy)
+  congestion_bins: [1.15, 1.35, 1.6] # biên nhóm mức ùn = TT_dự_báo / TT_tự_do (đặc trưng riêng của cặp O–D)
+  n_train_queries: 600
+  episodes: 200000                   # Q-learning dạng bảng: rẻ, cần nhiều tập để phủ trạng thái
+  min_visits: 20                     # chỉ tin Q ở ô đã cập nhật đủ số lần; ngược lại mặc định "đi ngay"
+  alpha: 0.1
+  gamma: 1.0
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+
+# -----------------------------------------------------------------------------
+# Giai đoạn 7: đánh giá
+# -----------------------------------------------------------------------------
+evaluation:
+  n_workers: 8
+  peak_hours: [7, 8, 17, 18]
+  bootstrap_samples: 5000
+  ci_level: 0.95
+  saving_by_hour_n_queries: 200      # số truy vấn test dùng cho phân tích "nhanh nhất vs ngắn nhất" theo giờ
+  single_thread_n_queries: 50        # đo thời gian tính đơn luồng (công bằng)
+  noise_sweep_sigmas: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+  noise_sweep_n_queries: 100
+  pairs:                             # cặp so sánh thống kê (A - B)
+    - [plan_once, dijkstra_length]
+    - [replan, plan_once]
+    - [oracle, replan]
+    - [replan_lazy, replan]
+    - [replan_dstar, replan]
+    - [replan_gnn, replan]
+    - [plan_once_sensor, plan_once]
+    - [plan_once_gnn, plan_once]
+    - [plan_once_gnn, plan_once_sensor]
+    - [risk_p90, plan_once]
+    - [rl_hybrid, replan]
+    - [rl_tree_bc, plan_once]
+    - [rl_ctg, freeflow]
+  figure_dpi: 300
+
+app:
+  default_hour: 8
+  show_speed_layer_groups: [trunk, primary, secondary, tertiary]
+
+# -----------------------------------------------------------------------------
+# Ghi đè cho chế độ SMOKE (chạy vài phút)
+# -----------------------------------------------------------------------------
+modes:
+  smoke:
+    paths:
+      eval_dir: data/eval/smoke
+      results_dir: results/smoke
+      models_dir: results/smoke/models
+      figures_dir: reports/smoke/figures
+      tables_dir: reports/smoke/tables
+    scenarios:
+      n_queries: 50
+    rl:
+      seeds: [0, 1]
+      max_timesteps: 3000
+      n_envs: 2
+      n_parallel_runs: 8
+      eval_freq: 100000              # smoke: chỉ đánh giá cuối
+      eval_n_queries: 5
+      ppo: {n_steps: 128, batch_size: 64, n_epochs: 2}
+      bc: {n_episodes: 10, epochs: 1}
+    departure:
+      n_train_queries: 30
+      episodes: 3000
+    forecast:
+      gcn: {train_steps: 60, batch_fields: 2, val_fields: 4}
+    algorithms:
+      risk: {n_samples: 8, eval_samples: 20, eval_n_queries: 5}
+    multiagent:
+      n_agents_list: [20, 40]
+    evaluation:
+      n_workers: 4
+      bootstrap_samples: 500
+      saving_by_hour_n_queries: 10
+      noise_sweep_sigmas: [0.0, 0.2, 0.4]
+      noise_sweep_n_queries: 10
+  full: {}

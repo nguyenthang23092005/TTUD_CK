@@ -1,0 +1,15 @@
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.git
+results/rl/tb
+results/smoke
+results/trial
+reports/smoke
+reports/paper/*.aux
+reports/paper/*.log
+reports/paper/*.bbl
+reports/paper/*.blg
+reports/paper/*.out
+reports/paper/*.toc
+*.log

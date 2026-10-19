@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Regret trung bình (\%) so với oracle theo giờ xuất phát (cao điểm: 7h, 8h, 17h, 18h) (chuyến tới đích).}
+\label{tab:tab_by_peak}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Nhóm & n & Dijkstra (ngắn nhất) & Plan-once TD-A* & Plan-once + GCN & Replan TD-A* & Replan + GCN & RL lai (β + TD-A*) & RL cây-GNN + BC \\
+\midrule
+cao điểm & 5 & 9.26 & 3.69 & 3.69 & 1.19 & 1.19 & 0.26 & -- \\
+thấp điểm & 5 & 11.50 & 0.30 & 0.30 & 0.43 & 0.52 & 0.43 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

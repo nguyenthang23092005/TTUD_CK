@@ -1,0 +1,341 @@
+% !TEX program = xelatex
+% !BIB program = bibtex
+\documentclass[12pt,a4paper]{article}
+\usepackage{caption}     % ← BỎ dấu % để kích hoạt
+\usepackage{listings}
+
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{makecell}       % ← THÊM package này
+\usepackage{tocloft,calc}
+\usepackage[
+top=3.5cm,
+bottom=3.0cm,
+left=3.5cm,
+right=2.0cm,
+headheight=16pt,
+headsep=15pt
+]{geometry} % căn lề theo quy chuẩn KLTN
+\usepackage{amsmath,latexsym,amscd,amsfonts,mathrsfs,enumerate} \usepackage{ upgreek }
+\usepackage[thref,thmmarks,standard,amsmath,hyperref]{ntheorem}
+\usepackage[mathscr]{eucal}
+\usepackage[unicode,colorlinks=true, bookmarks=true, pdfstartview=FitH,]{hyperref} %pagebackref=true,
+\hypersetup{
+pdftitle={Báo cáo Thuật toán ứng dụng},
+pdfauthor={Nguyễn Văn Thăng,Phạm Văn Sự, Đặng Anh Tuyền },
+colorlinks = true,
+linkcolor = blue,
+citecolor = blue,
+}
+\usepackage{fancyhdr}
+\usepackage{fancybox,cite}
+
+\usepackage{array}
+\usepackage{float}
+
+\usepackage{enumitem}
+% =========================
+% PACKAGES CHO TOÁN
+% =========================
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{mathtools}
+
+% =========================
+% FONT TIẾNG VIỆT
+% =========================
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage[vietnamese]{babel}
+
+% =========================
+% GÓI BỔ SUNG CHO NỘI DUNG BÁO CÁO (bảng cấu hình, sơ đồ khối)
+% =========================
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\graphicspath{{../figures/}{./}}
+\setlength{\emergencystretch}{2em} % cho phép giãn dòng thêm để tránh tràn lề quanh công thức/khoảng tin cậy
+\floatname{algorithm}{Thuật toán}
+\renewcommand{\algorithmicrequire}{\textbf{Vào:}}
+\renewcommand{\algorithmicensure}{\textbf{Ra:}}
+
+%\usepackage{refcheck}
+
+
+\newtheorem{tc}{Tính chất}[section]
+\newtheorem{md}{Mệnh đề}[section]
+\newtheorem{bd}{Bổ đề}[section]
+\newtheorem{hq}{Hệ quả}[section]
+\newtheorem{dl}{Định lý}[section]
+
+\allowdisplaybreaks
+%Môi trường định nghĩa
+\theoremheaderfont{\bfseries} % In ra chữ "định nghĩa": đậm, thẳng đứng.
+\theorembodyfont{} % Nội dung của định nghia được viết bằng chữ thẳng đứng.
+\theoremseparator {}         % Ngăn cách giữa định nghĩa và nội dung định nghĩa bởi dấu chấm.
+\newtheorem{dn}{Định nghĩa}[section] % Lệnh này để trong file kết quả in ra chữ nhận xét thay vì nếu ta để mặc định.
+
+%Môi trường Ví dụ
+\theoremheaderfont{\bfseries} % In ra chữ "Ví dụ": đậm, thẳng đứng.
+\theorembodyfont{\normalfont} % Nội dung của ví dụ được viết bằng chữ thẳng đứng.
+\theoremseparator {.}         % Ngăn cách giữa Ví dụ và nội dung ví dụ bởi dấu chấm.
+\newtheorem{vd}{Ví dụ}[section] % Lệnh này để trong file kết quả in ra chữ Ví dụ thay vì Example nếu ta để mặc định.
+
+%Môi trường Chú ý
+\theoremstyle{plain} %Không đánh sỗ chú ý
+\theoremheaderfont{\bfseries} % In ra chữ "chú ý": đậm, thẳng đứng.
+\theorembodyfont{\normalfont} % Nội dung của chú ý được viết bằng chữ thẳng đứng.
+\theoremseparator {}         % Ngăn cách giữa "chú ý" và nội dung chú ý bởi dấu chấm.
+\newtheorem{cy}{Chú ý} % Lệnh này để trong file kết quả in ra chữ "chú ý" thay vì  remark nếu ta để mặc định.
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+%Môi trường Bài tập
+\theoremheaderfont{\bfseries} % In ra chữ "chú ý": đậm, thẳng đứng.
+\theorembodyfont{\normalfont} % Nội dung của chú ý được viết bằng chữ thẳng đứng.
+\theoremseparator {}         % Ngăn cách giữa "chú ý" và nội dung chú ý bởi dấu chấm.\newtheorem{bt}{Bài tập} % Lệnh này để trong file kết quả in ra chữ "chú ý" thay vì  remark nếu ta để mặc định.
+
+%Môi trường nhân xét
+\theoremheaderfont{\bfseries} % In ra chữ "Nhân xét": đậm, thẳng đứng.
+\theorembodyfont{\normalfont} % Nội dung của nhạn xét được viết bằng chữ thẳng đứng.
+\theoremseparator {}         % Ngăn cách giữa nhận xét và nội dung nhận xét bởi dấu chấm.
+\newtheorem{nx}{Nhận xét}[section] % Lệnh này để trong file kết quả in ra chữ nhận xét thay vì nếu ta để mặc định.
+
+%Môi trường định lý
+\theoremstyle{plain} %Sử dụng phong cách plain để đánh số Định lý, chẳng hạn: Định lý 1, Định lý 2,...
+\theoremheaderfont{\normalfont\bfseries} % In ra chữ "Định lý": đậm, thẳng đứng.
+\theorembodyfont{\normalfont} % Nội dung của Định lý được viết bằng chữ nghiêng.
+\theoremseparator {.}         % Ngăn cách giữa Định lý và nội dung định lý bởi dấu chấm.
+\renewtheorem{theorem}{Định lý} % Lệnh này để trong file kết quả in ra chữ Định lý thay vì theorem nếu ta để mặc định.
+%Môi trường Mệnh đề
+\theoremstyle{plain} %Sử dụng phong cách plain để đánh số Mệnh đề, chẳng hạn: Mệnh đề 1, Mệnh đề 2,...
+\theoremheaderfont{\normalfont\bfseries} % In ra chữ "Mệnh đề": đậm, thẳng đứng.
+\theorembodyfont{\normalfont} % Nội dung của Mệnh đề được viết bằng chữ thẳng đứng.
+\theoremseparator {.}         % Ngăn cách giữa Mệnh đề và nội dung mệnh đề bởi dấu chấm.
+\renewtheorem{proposition}{Mệnh đề} % Lệnh này để trong file kết quả in ra chữ Mệnh đề thay vì proposition nếu ta để mặc định.
+%Môi trường Chứng minh
+\theoremstyle{nonumberplain}  % Kiểu định dạng dành cho chứng minh
+\theoremheaderfont{\normalfont\bfseries} % Tiêu đề "Chứng minh" in nghiêng
+\theorembodyfont{\normalfont}
+\theoremseparator{.}
+\theoremsymbol{\ensuremath{\square}} % Dấu kết thúc chứng minh là ô vuông
+\newtheorem{cm}{Chứng minh}[section]
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+
+    \fancyhead[L]{\itshape Tìm đường tối ưu trong mạng giao thông động quận Hà Đông}
+
+    \fancyfoot[L]{\itshape Thuật toán ứng dụng}
+    \fancyfoot[C]{}
+    \fancyfoot[R]{\thepage}
+
+    \renewcommand{\headrulewidth}{1.2pt}
+    \renewcommand{\footrulewidth}{1.2pt}
+}
+
+\renewcommand{\headrulewidth}{1.2pt}
+\renewcommand{\footrulewidth}{1.2pt}
+ % Cái này là tiêu đề chạy
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section} % đánh số bảng theo phần, nhất quán với hình
+
+% =========================
+% HEADER - FOOTER CHUNG
+% =========================
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{\itshape Tìm đường tối ưu trong mạng giao thông động quận Hà Đông}
+
+\fancyfoot[L]{\itshape Thuật toán ứng dụng}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\headrulewidth}{1.2pt}
+\renewcommand{\footrulewidth}{1.2pt}
+
+% Số liệu sinh tự động từ results/ (src/evaluation/plots.py) — không gõ tay
+\input{../tables/macros.tex}
+
+% Logo bìa: đặt file vào reports/paper/image/phenikaa_image.png
+\newcommand{\phenikaalogo}{\IfFileExists{image/phenikaa_image.png}%
+  {\includegraphics[width=0.5\textwidth]{image/phenikaa_image.png}}%
+  {\framebox[0.5\textwidth][c]{\rule{0pt}{3.5cm}\normalsize (logo: image/phenikaa\_image.png)}}}
+
+\begin{document}
+ \fontsize{14pt}{20pt}\selectfont % Lệnh thay đổi cỡ chữ thành cỡ 14, cỡ dòng 20 (theo quy chuẩn của Khóa Luận TN).
+
+ \thisfancypage{\setlength{\fboxsep}{0.2cm}\setlength{\fboxrule}{1pt}\doublebox}{}
+ \begin{titlepage}
+\begin{center}
+	\Large
+	BỘ GIÁO DỤC VÀ ĐÀO TẠO\\
+	{\bf ĐẠI HỌC PHENIKAA}
+	{——————————o0o——————————}
+\end{center}
+\vspace{1 cm}
+\begin{center}
+    \phenikaalogo
+\end{center}
+\vspace{0.3 cm}
+\begin{center}
+    \bf\Large{BÁO CÁO THUẬT TOÁN ỨNG DỤNG}
+\end{center}
+\vspace{0.3 cm}
+\begin{center}
+	\bf\large TÌM ĐƯỜNG TỐI ƯU TRONG MẠNG GIAO THÔNG ĐỘNG QUẬN HÀ ĐÔNG VỚI 24 KHUNG GIỜ: SO SÁNH THUẬT TOÁN CỔ ĐIỂN VÀ HỌC TĂNG CƯỜNG
+\end{center}
+\vskip 1 cm
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{4cm}|p{1.7cm}|p{6.7cm}|}
+\hline
+\centering\textbf{Họ và tên} &
+\centering\textbf{MSSV} &
+\centering\arraybackslash\textbf{Email} \\
+\hline
+Nguyễn Văn Thăng &
+23010572 &
+23010572@st.phenikaa-uni.edu.vn \\
+\hline
+Nguyễn Thị Nhung &
+23010607 &
+23010607@st.phenikaa-uni.edu.vn \\
+\hline
+Nguyễn Thị Khánh Linh &
+23016112 &
+23016112@st.phenikaa-uni.edu.vn \\
+\hline
+\end{tabular}
+\end{table}
+\vskip 1 cm
+\begin{center}
+	GVHD: TS. Trần Đình Tân
+\end{center}
+\vskip 1 cm
+  \begin{center}
+   {\bf HÀ NỘI - 2026}
+  \end{center}
+ \end{titlepage}
+
+ %%%%%%%%%%%%%%%%%%%%
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+ %%%%%%%
+
+ \thisfancypage{\setlength{\fboxsep}{0.2cm}\setlength{\fboxrule}{1pt}\doublebox}{}
+ \begin{titlepage}
+\begin{center}
+	\Large
+	BỘ GIÁO DỤC VÀ ĐÀO TẠO\\
+	{\bf ĐẠI HỌC PHENIKAA}
+	{——————————o0o——————————}
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+    \phenikaalogo
+\end{center}
+\begin{center}
+    \bf\Large {BÁO CÁO THUẬT TOÁN ỨNG DỤNG}
+\end{center}
+\begin{center}
+	\bf\large{TÌM ĐƯỜNG TỐI ƯU TRONG MẠNG GIAO THÔNG ĐỘNG QUẬN HÀ ĐÔNG VỚI 24 KHUNG GIỜ: SO SÁNH THUẬT TOÁN CỔ ĐIỂN VÀ HỌC TĂNG CƯỜNG}
+\end{center}
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|>{\centering\arraybackslash}p{3.5cm}|>{\centering\arraybackslash}p{1.7cm}|p{7cm}|>{\centering\arraybackslash}p{1.5cm}|}
+\hline
+\centering\textbf{Họ và tên} &
+\centering\textbf{MSSV} &
+\centering\textbf{Nhiệm Vụ} &
+\centering\arraybackslash\textbf{Đóng góp}
+\\
+\hline
+Nguyễn Văn Thăng &
+23010572 &
+Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
+33\%
+\\
+\hline
+Nguyễn Thị Nhung &
+23010607 & Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
+33\%
+\\
+\hline
+Nguyễn Thị Khánh Linh &
+23016112 &
+Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
+33\%
+\\
+\hline
+\end{tabular}
+\end{table}
+\begin{center}
+	GVHD: TS. Trần Đình Tân
+\end{center}
+\begin{center}
+	\large {\bf HÀ NỘI - 2026}
+\end{center}
+ \end{titlepage}
+ \clearpage
+\pagestyle{fancy}
+	%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%
+
+\pagestyle{fancy}
+\hypersetup{linkcolor=black}
+% Chèn mục lục
+\tableofcontents
+\vspace{1.5cm}
+
+
+\newpage
+\renewcommand{\listfigurename}{Danh mục hình ảnh}
+\listoffigures
+\hypersetup{linkcolor=blue}
+
+\renewcommand{\listtablename}{Danh mục bảng biểu}
+\hypersetup{linkcolor=black}
+\listoftables
+\hypersetup{linkcolor=blue}
+\newpage
+
+
+\newpage
+
+\input{sec1}
+\input{sec2}
+\input{sec3}
+\input{sec4}
+\input{sec5}
+\input{sec6}
+
+\newpage
+\phantomsection
+\renewcommand{\refname}{Tài liệu tham khảo}
+\addcontentsline{toc}{section}{Tài liệu tham khảo}
+\nocite{*}
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\input{appendix}
+\end{document}

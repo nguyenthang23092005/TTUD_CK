@@ -1,0 +1,22 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Kết quả trên tập con kiểm tra không có sự cố (81 truy vấn).}
+\label{tab:tab_results_noinc}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Phương pháp & Tới đích (\%) & TB (phút) & Trung vị & P90 & Regret TB (\%) & Regret TV (\%) & Regret P90 (\%) & Dài (km) \\
+\midrule
+Dijkstra (ngắn nhất) & 100{,}00 & 20{,}24 & 15{,}96 & 40{,}92 & 10{,}48 & 7{,}45 & 26{,}73 & 6{,}20 \\
+A* (thời gian tự do) & 100{,}00 & 19{,}61 & 14{,}92 & 44{,}10 & 4{,}17 & 0{,}32 & 13{,}68 & 6{,}57 \\
+Plan-once TD-A* & 100{,}00 & 18{,}66 & 14{,}77 & 38{,}74 & 0{,}83 & 0{,}00 & 2{,}62 & 6{,}57 \\
+Plan-once + GCN & 100{,}00 & 18{,}57 & 14{,}39 & 37{,}68 & 0{,}37 & 0{,}00 & 0{,}97 & 6{,}49 \\
+Replan TD-A* & 100{,}00 & 18{,}56 & 14{,}43 & 38{,}49 & 0{,}35 & 0{,}00 & 1{,}58 & 6{,}58 \\
+Replan + GCN & 100{,}00 & 18{,}51 & 14{,}39 & 37{,}62 & 0{,}17 & 0{,}00 & 0{,}00 & 6{,}55 \\
+RL lai (β + TD-A*) & 100{,}00 & 18{,}57 & 14{,}43 & 38{,}49 & 0{,}44 & 0{,}00 & 1{,}66 & 6{,}58 \\
+Oracle TD-A* & 100{,}00 & 18{,}47 & 14{,}39 & 37{,}62 & 0{,}00 & 0{,}00 & 0{,}00 & 6{,}59 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

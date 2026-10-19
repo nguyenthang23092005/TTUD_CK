@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Regret trung bình (\%) so với oracle theo số sự cố (chuyến tới đích).}
+\label{tab:tab_by_incidents}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Nhóm & n & Dijkstra (ngắn nhất) & Plan-once TD-A* & Plan-once + GCN & Replan TD-A* & Replan + GCN & RL lai (β + TD-A*) & RL cây-GNN + BC \\
+\midrule
+0 & 3 & 5.23 & 2.03 & 2.03 & 1.98 & 1.98 & 0.43 & -- \\
+1 & 4 & 15.72 & 1.72 & 1.72 & 0.54 & 0.65 & 0.54 & -- \\
+2 & 2 & 12.61 & 3.48 & 3.48 & 0.00 & 0.00 & 0.00 & -- \\
+3 & 1 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

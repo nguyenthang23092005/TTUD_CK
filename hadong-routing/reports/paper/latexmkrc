@@ -1,0 +1,5 @@
+# Báo cáo dùng fontspec nên bắt buộc biên dịch bằng XeLaTeX
+$pdf_mode = 5;
+$bibtex_use = 2;
+# Khi trình soạn thảo gọi "latexmk -pdf", vẫn chạy xelatex thay cho pdflatex
+$pdflatex = 'xelatex %O %S';

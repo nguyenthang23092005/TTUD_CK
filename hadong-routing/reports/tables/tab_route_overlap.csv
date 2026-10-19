@@ -1,0 +1,12 @@
+pair,n,identical_pct,jaccard_pct
+RL + ctg (quan sát) vs A* (thời gian tự do),200,64.0,91.72807348340305
+RL cây-GNN + BC vs Oracle TD-A*,200,3.5000000000000004,32.142072558184694
+RL cây-GNN + BC vs Plan-once TD-A*,200,2.5,31.59139785312518
+RL lai (β + TD-A*) vs Replan TD-A*,200,93.5,98.09417921784029
+Plan-once TD-A* vs Oracle TD-A*,200,57.49999999999999,84.14665052733665
+Replan TD-A* vs Oracle TD-A*,200,81.5,91.04022396395598
+Replan lười vs Replan TD-A*,200,96.0,99.13958419927519
+Replan D* Lite vs Replan TD-A*,200,88.0,94.86467293834988
+Replan + GCN vs Replan TD-A*,200,86.5,92.21214180156065
+Định tuyến P90 vs Plan-once TD-A*,200,77.5,94.59548264624866
+A* (thời gian tự do) vs Dijkstra (ngắn nhất),200,12.5,47.063012272889054

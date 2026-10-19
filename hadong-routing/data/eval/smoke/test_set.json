@@ -1,0 +1,313 @@
+{
+  "mode": "smoke",
+  "seed": 42,
+  "n": 10,
+  "queries": [
+    {
+      "id": "test_0000",
+      "split": "test",
+      "origin": 1438,
+      "dest": 1353,
+      "depart_min": 1049.228,
+      "hour": 17,
+      "sigma": 0.3,
+      "noise_seed": 857350035,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 1504.6,
+      "distance_bin": 0,
+      "ref_hops": 22,
+      "ref_time_base_min": 7.852
+    },
+    {
+      "id": "test_0001",
+      "split": "test",
+      "origin": 2444,
+      "dest": 1215,
+      "depart_min": 905.604,
+      "hour": 15,
+      "sigma": 0.3,
+      "noise_seed": 1440903856,
+      "incidents": [
+        {
+          "edge": 4058,
+          "start_min": 886.9035793234042,
+          "duration_min": 47.82422255059443,
+          "severity": 0.15838452249719562
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6676,
+          "start_min": 886.9035793234042,
+          "duration_min": 47.82422255059443,
+          "severity": 0.15838452249719562
+        }
+      ],
+      "od_dist_m": 3047.8,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 10.6107
+    },
+    {
+      "id": "test_0002",
+      "split": "test",
+      "origin": 578,
+      "dest": 772,
+      "depart_min": 1122.187,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 475127175,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 5510.8,
+      "distance_bin": 2,
+      "ref_hops": 51,
+      "ref_time_base_min": 40.6397
+    },
+    {
+      "id": "test_0003",
+      "split": "test",
+      "origin": 1358,
+      "dest": 2525,
+      "depart_min": 486.579,
+      "hour": 8,
+      "sigma": 0.3,
+      "noise_seed": 226699033,
+      "incidents": [
+        {
+          "edge": 4052,
+          "start_min": 495.6360465815001,
+          "duration_min": 35.8909198000188,
+          "severity": 0.22265929753534436
+        },
+        {
+          "edge": 4283,
+          "start_min": 494.11739872435453,
+          "duration_min": 82.11461786213039,
+          "severity": 0.27896729937709164
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 874,
+          "start_min": 495.6360465815001,
+          "duration_min": 35.8909198000188,
+          "severity": 0.22265929753534436
+        },
+        {
+          "edge": 3799,
+          "start_min": 494.11739872435453,
+          "duration_min": 82.11461786213039,
+          "severity": 0.27896729937709164
+        }
+      ],
+      "od_dist_m": 1807.8,
+      "distance_bin": 0,
+      "ref_hops": 31,
+      "ref_time_base_min": 10.947
+    },
+    {
+      "id": "test_0004",
+      "split": "test",
+      "origin": 897,
+      "dest": 1364,
+      "depart_min": 802.188,
+      "hour": 13,
+      "sigma": 0.05,
+      "noise_seed": 1152344389,
+      "incidents": [
+        {
+          "edge": 4922,
+          "start_min": 786.7518945118046,
+          "duration_min": 55.109888268792204,
+          "severity": 0.20512290137076314
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 4326,
+          "start_min": 786.7518945118046,
+          "duration_min": 55.109888268792204,
+          "severity": 0.20512290137076314
+        }
+      ],
+      "od_dist_m": 3192.3,
+      "distance_bin": 1,
+      "ref_hops": 42,
+      "ref_time_base_min": 8.5276
+    },
+    {
+      "id": "test_0005",
+      "split": "test",
+      "origin": 3003,
+      "dest": 289,
+      "depart_min": 219.374,
+      "hour": 3,
+      "sigma": 0.3,
+      "noise_seed": 3787280051,
+      "incidents": [
+        {
+          "edge": 5674,
+          "start_min": 223.53738677443937,
+          "duration_min": 111.42522829862789,
+          "severity": 0.2759442371487502
+        },
+        {
+          "edge": 1508,
+          "start_min": 200.3598711731313,
+          "duration_min": 115.78320285463738,
+          "severity": 0.17541469725962006
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 820,
+          "start_min": 223.53738677443937,
+          "duration_min": 111.42522829862789,
+          "severity": 0.2759442371487502
+        },
+        {
+          "edge": 5615,
+          "start_min": 200.3598711731313,
+          "duration_min": 115.78320285463738,
+          "severity": 0.17541469725962006
+        }
+      ],
+      "od_dist_m": 2816.4,
+      "distance_bin": 1,
+      "ref_hops": 28,
+      "ref_time_base_min": 7.0436
+    },
+    {
+      "id": "test_0006",
+      "split": "test",
+      "origin": 277,
+      "dest": 600,
+      "depart_min": 444.663,
+      "hour": 7,
+      "sigma": 0.3,
+      "noise_seed": 3500424005,
+      "incidents": [
+        {
+          "edge": 1766,
+          "start_min": 438.1589862487552,
+          "duration_min": 35.36166840602529,
+          "severity": 0.3760233985496342
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 6588,
+          "start_min": 438.1589862487552,
+          "duration_min": 35.36166840602529,
+          "severity": 0.3760233985496342
+        }
+      ],
+      "od_dist_m": 2217.1,
+      "distance_bin": 0,
+      "ref_hops": 31,
+      "ref_time_base_min": 10.365
+    },
+    {
+      "id": "test_0007",
+      "split": "test",
+      "origin": 2010,
+      "dest": 202,
+      "depart_min": 1233.789,
+      "hour": 20,
+      "sigma": 0.15,
+      "noise_seed": 3549351724,
+      "incidents": [],
+      "incidents_stress": [],
+      "od_dist_m": 3710.4,
+      "distance_bin": 1,
+      "ref_hops": 28,
+      "ref_time_base_min": 8.2723
+    },
+    {
+      "id": "test_0008",
+      "split": "test",
+      "origin": 1212,
+      "dest": 893,
+      "depart_min": 1401.342,
+      "hour": 23,
+      "sigma": 0.05,
+      "noise_seed": 2108652979,
+      "incidents": [
+        {
+          "edge": 856,
+          "start_min": 1399.8157469787504,
+          "duration_min": 53.66453222366822,
+          "severity": 0.10066921188135389
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 85,
+          "start_min": 1399.8157469787504,
+          "duration_min": 53.66453222366822,
+          "severity": 0.10066921188135389
+        }
+      ],
+      "od_dist_m": 2850.3,
+      "distance_bin": 1,
+      "ref_hops": 40,
+      "ref_time_base_min": 5.8906
+    },
+    {
+      "id": "test_0009",
+      "split": "test",
+      "origin": 914,
+      "dest": 2812,
+      "depart_min": 1125.058,
+      "hour": 18,
+      "sigma": 0.15,
+      "noise_seed": 1096334938,
+      "incidents": [
+        {
+          "edge": 4907,
+          "start_min": 1114.3737055090012,
+          "duration_min": 45.32255146763502,
+          "severity": 0.10981097446067022
+        },
+        {
+          "edge": 2684,
+          "start_min": 1133.0542076558786,
+          "duration_min": 88.39480157050562,
+          "severity": 0.3336794483547376
+        },
+        {
+          "edge": 2695,
+          "start_min": 1113.150241916447,
+          "duration_min": 89.48596788469445,
+          "severity": 0.36564820337972004
+        }
+      ],
+      "incidents_stress": [
+        {
+          "edge": 8194,
+          "start_min": 1114.3737055090012,
+          "duration_min": 45.32255146763502,
+          "severity": 0.10981097446067022
+        },
+        {
+          "edge": 2707,
+          "start_min": 1133.0542076558786,
+          "duration_min": 88.39480157050562,
+          "severity": 0.3336794483547376
+        },
+        {
+          "edge": 1553,
+          "start_min": 1113.150241916447,
+          "duration_min": 89.48596788469445,
+          "severity": 0.36564820337972004
+        }
+      ],
+      "od_dist_m": 3211.0,
+      "distance_bin": 1,
+      "ref_hops": 34,
+      "ref_time_base_min": 15.8215
+    }
+  ]
+}

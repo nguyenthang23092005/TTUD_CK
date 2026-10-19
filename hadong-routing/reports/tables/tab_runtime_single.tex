@@ -1,0 +1,38 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Chi phí tính toán đơn luồng (một tiến trình, tuần tự, 50 truy vấn kiểm tra, sau khi làm nóng). Với RL, cột nút mở rộng là số bước chính sách.}
+\label{tab:tab_runtime_single}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrr}
+\toprule
+Phương pháp & Nút mở rộng / bước TB & Thời gian TB (ms) & P90 (ms) & Tiền xử lý / truy vấn (ms) \\
+\midrule
+Dijkstra (ngắn nhất) & 1759 & 1{,}91 & 2{,}91 & -- \\
+A* (ngắn nhất) & 524 & 0{,}65 & 1{,}39 & -- \\
+A* (thời gian tự do) & 742 & 0{,}80 & 1{,}46 & -- \\
+TD-Dijkstra (V\_base) & 1734 & 2{,}94 & 4{,}57 & -- \\
+TD-A* (chim bay) = plan-once & 1101 & 1{,}77 & 3{,}03 & -- \\
+TD-A* + heuristic LB & 498 & 0{,}83 & 1{,}88 & 3{,}24 \\
+TD-A* + ALT & 884 & 1{,}36 & 2{,}83 & 1{,}55 \\
+TD-A* (Numba) & 1101 & 0{,}32 & 0{,}50 & 0{,}00 \\
+Oracle TD-A* & 1334 & 2{,}73 & 4{,}71 & -- \\
+Plan-once + cảm biến & 1097 & 2{,}19 & 3{,}67 & -- \\
+Plan-once + GCN & 1092 & 21{,}77 & 24{,}66 & -- \\
+Định tuyến P90 & 1101 & 214{,}83 & 398{,}02 & -- \\
+Replan TD-A* & 28424 & 53{,}16 & 123{,}52 & -- \\
+Replan lười & 11996 & 27{,}10 & 67{,}91 & -- \\
+Replan D* Lite & 2244 & 35{,}31 & 53{,}96 & -- \\
+Replan + GCN & 27618 & 124{,}38 & 240{,}06 & -- \\
+Tham lam cục bộ & 125 & 31{,}37 & 45{,}90 & -- \\
+RL cục bộ & 121 & 75{,}85 & 120{,}16 & -- \\
+RL + ctg (quan sát) & 47 & 43{,}51 & 53{,}69 & -- \\
+RL + định hình ctg & 109 & 72{,}52 & 119{,}55 & -- \\
+RL cây-GNN & 86 & 102{,}03 & 219{,}35 & -- \\
+RL LSTM & 163 & 127{,}95 & 169{,}26 & -- \\
+RL cây-GNN + BC & 86 & 108{,}22 & 215{,}29 & -- \\
+RL lai (β + TD-A*) & 47 & 104{,}62 & 202{,}55 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

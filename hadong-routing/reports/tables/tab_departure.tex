@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Kết quả thí nghiệm chọn giờ xuất phát trên tập kiểm tra (bước chờ 10 phút, tối đa 6 lần).}
+\label{tab:tab_departure}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrrr}
+\toprule
+w & Chính sách & Chi phí TB (phút) & Đi TB (phút) & Chờ+đi TB (phút) & Tỉ lệ chờ & Regret (phút) \\
+\midrule
+0{,}25 & Đi ngay & 17{,}26 & 17{,}26 & 17{,}26 & 0{,}000 & 0{,}183 \\
+0{,}25 & Giờ tối ưu (vét cạn) & 17{,}08 & 16{,}62 & 18{,}47 & 0{,}050 & 0{,}000 \\
+0{,}25 & Q-learning & 17{,}73 & 16{,}75 & 20{,}65 & 0{,}160 & 0{,}649 \\
+0{,}50 & Đi ngay & 17{,}26 & 17{,}26 & 17{,}26 & 0{,}000 & 0{,}007 \\
+0{,}50 & Giờ tối ưu (vét cạn) & 17{,}26 & 17{,}18 & 17{,}33 & 0{,}010 & 0{,}000 \\
+0{,}50 & Q-learning & 17{,}55 & 17{,}10 & 18{,}00 & 0{,}060 & 0{,}294 \\
+1{,}00 & Đi ngay & 17{,}26 & 17{,}26 & 17{,}26 & 0{,}000 & 0{,}000 \\
+1{,}00 & Giờ tối ưu (vét cạn) & 17{,}26 & 17{,}26 & 17{,}26 & 0{,}000 & 0{,}000 \\
+1{,}00 & Q-learning & 17{,}26 & 17{,}26 & 17{,}26 & 0{,}000 & 0{,}000 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

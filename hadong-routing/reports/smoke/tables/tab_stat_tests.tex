@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{So sánh ghép cặp (truy vấn cả hai cùng tới đích): bootstrap 95\% CI hiệu trung bình thời gian, Wilcoxon signed-rank.}
+\label{tab:tab_stat_tests}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Cặp (A − B) & n & Hiệu TB (phút) & CI 95\% thấp & CI 95\% cao & Hiệu TB (\%) & A tốt hơn (\%) & p (Wilcoxon) \\
+\midrule
+Plan-once TD-A* − Dijkstra (ngắn nhất) & 10 & -0.473 & -1.177 & 0.416 & -6.789 & 50.000 & 0.4375 \\
+Replan TD-A* − Plan-once TD-A* & 10 & -0.125 & -0.305 & 0.015 & -1.112 & 30.000 & 0.3750 \\
+Oracle TD-A* − Replan TD-A* & 10 & -0.268 & -0.752 & 0.000 & -0.771 & 20.000 & 0.5000 \\
+Replan lười − Replan TD-A* & 10 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 1.0000 \\
+Replan D* Lite − Replan TD-A* & 10 & 0.006 & 0.000 & 0.016 & 0.044 & 0.000 & 0.5000 \\
+Replan + GCN − Replan TD-A* & 10 & 0.005 & 0.000 & 0.015 & 0.043 & 0.000 & 1.0000 \\
+Plan-once + cảm biến − Plan-once TD-A* & 10 & -0.233 & -0.767 & 0.139 & -0.424 & 20.000 & 0.6250 \\
+Plan-once + GCN − Plan-once TD-A* & 10 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 1.0000 \\
+Plan-once + GCN − Plan-once + cảm biến & 10 & 0.233 & -0.139 & 0.767 & 0.509 & 20.000 & 0.6250 \\
+Định tuyến P90 − Plan-once TD-A* & 10 & 0.123 & -0.012 & 0.314 & 1.397 & 20.000 & 0.6250 \\
+RL lai (β + TD-A*) − Replan TD-A* & 10 & -0.190 & -0.570 & 0.000 & -0.439 & 10.000 & 1.0000 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

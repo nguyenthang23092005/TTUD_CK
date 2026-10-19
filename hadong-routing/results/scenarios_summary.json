@@ -1,0 +1,46 @@
+{
+  "n": {
+    "train": 600,
+    "val": 200,
+    "test": 200
+  },
+  "od_overlap_train_test": 0,
+  "od_overlap_train_val": 0,
+  "test_incident_edges_seen_in_train": 0,
+  "mean_od_dist_m": {
+    "train": 4324.817,
+    "val": 4534.5535,
+    "test": 4584.116
+  },
+  "mean_incidents": {
+    "train": 1.1516666666666666,
+    "val": 1.24,
+    "test": 1.025
+  },
+  "hour_hist_all": [
+    6,
+    8,
+    7,
+    7,
+    7,
+    22,
+    42,
+    90,
+    96,
+    64,
+    41,
+    43,
+    41,
+    34,
+    29,
+    45,
+    54,
+    101,
+    99,
+    53,
+    43,
+    34,
+    21,
+    13
+  ]
+}
