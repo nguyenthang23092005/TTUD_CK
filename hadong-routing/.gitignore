@@ -13,3 +13,11 @@ results/rl/tb/
 results/smoke/rl/tb/
 results/trial/
 results/*.log
+reports/paper/*.fdb_latexmk
+reports/paper/*.fls
+reports/paper/*.lof
+reports/paper/*.lot
+reports/paper/*.thm
+reports/paper/*.xdv
+reports/paper/*.synctex.gz
+reports/paper/*.synctex(busy)

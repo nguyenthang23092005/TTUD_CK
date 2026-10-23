@@ -31,8 +31,8 @@ Kiểm thử & pytest (55 kiểm thử đơn vị) \\
 \textbf{Cách chọn tham số và số lần lặp.} Seed toàn cục là \Seed{}; mọi seed con (nhiễu của từng truy vấn, môi trường RL,
 khởi tạo mạng) được dẫn xuất tất định từ seed này. Các tham số mô phỏng (biên độ cao điểm, độ nhạy loại đường, hệ số
 hướng, mức nhiễu) được chọn theo hiểu biết chung về giao thông đô thị và hiệu chỉnh sơ bộ để vận tốc trung bình hợp lý; các
-tham số thuật toán (bán kính quan sát, ngưỡng lười, số điểm mốc, hệ số thưởng) được thử sơ bộ trên tập kiểm định và
-\emph{cố định trước khi chạy tập kiểm tra}. Mỗi biến thể RL được huấn luyện với \RlNSeeds{} seed; ngân sách số bước từ 60
+tham số thuật toán (bán kính quan sát, ngưỡng lười, số điểm mốc, hệ số thưởng) được đặt theo giá trị hợp lý, không tinh chỉnh
+theo kết quả trên tập kiểm tra, và nằm cố định trong tệp cấu hình. Mỗi biến thể RL được huấn luyện với \RlNSeeds{} seed; ngân sách số bước từ 60
 nghìn (biến thể lai) tới 1 triệu (định hình ctg), xem Bảng~\ref{tab:tab_rl_seeds}. Chính sách được đánh giá định kỳ trên 100
 truy vấn kiểm định và lưu checkpoint có điểm cao nhất theo
 \begin{equation}
@@ -68,7 +68,7 @@ theo Mục~\ref{sec:method:noise}. Tập truy vấn gồm 1000 truy vấn đư�
 điểm ít nhất 1 km, giờ xuất phát lấy mẫu có trọng số ưu tiên cao điểm, mức nhiễu $\sigma\in\{0{,}05;0{,}15;0{,}30\}$, số sự
 cố $\{0,1,2,3\}$ với xác suất $0{,}35/0{,}30/0{,}20/0{,}15$. Tập được chia \NTrain/\NVal/\NTest{} (huấn luyện/kiểm
 định/kiểm tra) \emph{theo cặp điểm đi--đến}, không có cặp nào xuất hiện ở hai tập; các cạnh có sự cố trong tập kiểm tra
-chưa từng xuất hiện trong tập huấn luyện. Tập kiểm tra có khoảng cách chim bay trung bình \TestMeanDistKm{} km và trung bình
+không trùng với cạnh có sự cố trong các truy vấn của tập huấn luyện. Tập kiểm tra có khoảng cách chim bay trung bình \TestMeanDistKm{} km và trung bình
 \TestMeanInc{} sự cố mỗi truy vấn.
 
 \textbf{Hai bộ sự cố trên cùng truy vấn.} Mỗi truy vấn kiểm tra có hai bộ sự cố cùng số lượng, cùng thời điểm và cùng mức
@@ -99,7 +99,9 @@ truy vấn.
     W = \sum_{i:\,D_i\neq 0} \operatorname{sgn}(D_i)\, R_i,
     \label{eq:wilcoxon}
     \end{equation}
-    trong đó $R_i$ là hạng của $|D_i|$; kiểm định không giả định phân phối chuẩn, phù hợp với phân phối lệch của regret.
+    trong đó $R_i$ là hạng của $|D_i|$; kiểm định không giả định phân phối chuẩn, phù hợp với phân phối lệch của regret. Cần đọc
+    cùng khoảng tin cậy: khoảng tin cậy nói về hiệu trung bình, Wilcoxon nói về xu hướng theo hạng, nên hai kết quả có thể không
+    cùng chiều khi phân phối hiệu lệch hoặc có nhiều giá trị bằng 0.
     \item \textbf{Riêng cho từng thí nghiệm.} Dự báo GCN dùng sai số căn quân phương trên các cạnh chưa quan sát:
     \begin{equation}
     \mathrm{RMSE} = \sqrt{\frac{1}{|U|}\sum_{e\in U}\bigl(\hat{r}_e - r_e\bigr)^2},
@@ -143,10 +145,16 @@ giá trị $p$ của kiểm định Wilcoxon \eqref{eq:wilcoxon}:
     \item Replan lười so với replan: $\bar{D}=\DiffReplanLazyReplan$ phút, khoảng tin cậy \CiReplanLazyReplan{} --- thực tế
     không khác biệt; D* Lite so với replan: $\bar{D}=\DiffReplanDstarReplan$ phút, khoảng tin cậy \CiReplanDstarReplan{} chứa 0.
     \item Định tuyến P90 so với plan-once: $\bar{D}=\DiffRiskPPlanOnce$ phút, khoảng tin cậy \CiRiskPPlanOnce, $p$
-    \PRiskPPlanOnce{} --- định tuyến P90 hơi \emph{chậm hơn}.
+    \PRiskPPlanOnce. Hai kết quả này đo hai đại lượng khác nhau: khoảng tin cậy áp dụng cho hiệu \emph{trung bình}, còn
+    Wilcoxon (bỏ các cặp có $D_i=0$, vốn chiếm đa số vì hai tuyến thường trùng nhau) kiểm tra xu hướng lệch theo \emph{hạng} của
+    hiệu. Ở các truy vấn hai phương pháp đi khác nhau, P90 thường chậm hơn nhẹ (nên Wilcoxon có ý nghĩa), nhưng một số ít
+    truy vấn nhanh hơn nhiều kéo trung bình về gần 0 (nên khoảng tin cậy chứa 0). Kết luận thận trọng: P90 không cho lợi ích
+    nhất quán, và nếu có chênh lệch thì rất nhỏ so với phương sai giữa các truy vấn.
 \end{itemize}
-Các khác biệt tính bằng phút là nhỏ vì phần lớn truy vấn không chịu ảnh hưởng của sự cố, nhưng nhất quán (khoảng tin cậy
-không chứa 0) ở các cặp chính.
+Các khác biệt tính bằng phút là nhỏ vì phần lớn truy vấn không chịu ảnh hưởng của sự cố. Khoảng tin cậy không chứa 0 ở
+ba cặp chính (plan-once so với Dijkstra, replan so với plan-once, oracle so với replan) và ở plan-once + GCN so với
+plan-once; các cặp còn lại (replan lười, D* Lite, replan + GCN, P90) có khoảng tin cậy chứa 0 hoặc chênh lệch rất nhỏ,
+nên chỉ nên đọc là ``không phân biệt được'' hoặc ``cải thiện nhẹ''.
 
 \input{../tables/tab_stat_tests.tex}
 
@@ -160,7 +168,7 @@ mỗi đích; ALT giảm \AltReduction\% với \AltPrep{} ms để tính heurist
 TD-A* biên dịch Numba nhanh gấp \NumbaSpeedup{} lần bản Python với cùng số nút mở rộng. Replan tốn \RtRp{} ms mỗi chuyến
 (\RpReplans{} lần tìm kiếm); replan lười nhanh gấp \LazySpeedup{} lần (\RpLazyReplans{} lần tìm kiếm); D* Lite nhanh gấp
 \DstarSpeedup{} lần (\RpDstarExpanded{} nút mở rộng so với \RpExpanded{} của replan). Suy luận chính sách RL (PyTorch, từng
-bước) tốn \RtRl{}--\RtRlTreeBc{} ms mỗi chuyến, chậm hơn TD-A* nhiều lần trên đồ thị cỡ này.
+bước) tốn \RtRlc{}--\RtRlLstm{} ms mỗi chuyến tuỳ biến thể, chậm hơn TD-A* nhiều lần trên đồ thị cỡ này.
 
 \input{../tables/tab_runtime_single.tex}
 
@@ -210,7 +218,7 @@ luyện GCN.}
 \textbf{Định tuyến P90 không mang lại lợi ích.} Trên \RiskEvalNQ{} truy vấn, mỗi tuyến được đánh giá trên 100 kịch bản độc
 lập (Bảng~\ref{tab:tab_risk}). Tuyến P90 khác tuyến plan-once ở \RiskChangedPct\% số truy vấn, nhưng ở các truy vấn đó phân vị
 90\% thực tế thay đổi trung bình \RiskDiffPnChanged{} phút (dương nghĩa là tệ hơn) và chỉ tốt hơn ở \RiskBetterPnPct\% số truy
-vấn. Có hai nguyên nhân: (i) với $M=\RiskM$ kịch bản, phân vị ước lượng có sai số đáng kể, nên việc chọn ứng viên có phân vị
+vấn trong nhóm đã đổi tuyến đó. Có hai nguyên nhân: (i) với $M=\RiskM$ kịch bản, phân vị ước lượng có sai số đáng kể, nên việc chọn ứng viên có phân vị
 \emph{ước lượng} nhỏ nhất dẫn đến hiện tượng ``lời nguyền người thắng'' --- ứng viên được chọn thường là ứng viên được ước
 lượng thấp hơn thực tế; (ii) trong mô phỏng, các tuyến ứng viên chồng lấp nhiều và nhiễu tương quan không gian khiến chúng
 chịu rủi ro gần như nhau, nên không tồn tại tuyến ``an toàn'' rõ rệt.
@@ -269,12 +277,13 @@ lam thủ công đạt \GrSuccess\%.
 \begin{itemize}
     \item \emph{Quan sát rộng hơn có tác dụng lớn nhất trong nhóm chọn từng cạnh.} Cây lân cận \TreeDepth{} bước với GNN nâng
     tỉ lệ tới đích từ \RlSuccess\% lên \RlTreeSuccess\% và giảm regret từ \RlRegret\% xuống \RlTreeRegret\%: tác tử nhìn thấy ngõ
-    cụt phía trước (\DeadEndPct\% số nút là ngõ cụt) thay vì chỉ thấy hướng chim bay. Đường cong học vẫn đang đi lên ở cuối ngân
-    sách, nên huấn luyện lâu hơn có thể còn cải thiện.
+    cụt phía trước (\DeadEndPct\% số nút là ngõ cụt) thay vì chỉ thấy hướng chim bay. Đường cong học tăng nhanh ở nửa đầu
+    rồi dao động mạnh quanh một mức gần như không đổi ở nửa sau ngân sách (Hình~\ref{fig:rl}); chưa đủ bằng chứng để nói
+    huấn luyện lâu hơn sẽ cải thiện thêm.
     \item \emph{Học bắt chước cho kết quả tốt nhất.} Chỉ riêng giai đoạn BC đã đạt độ chính xác bắt chước \RlTreeBcBcAcc\% và
     \RlTreeBcAfterBc\% tới đích trên tập kiểm định (trung bình 3 seed) trước khi chạy PPO; seed được chọn đạt \RlTreeBcSuccess\%
     trên tập kiểm tra (regret \RlTreeBcRegret\%). Tuy nhiên PPO tinh chỉnh \emph{không} cải thiện thêm mà làm chính sách dao động
-    và giảm dần (Hình~\ref{fig:rl}); checkpoint tốt nhất thường xuất hiện sớm. Đây là hiện tượng thường gặp khi tinh chỉnh bằng
+    và, ở một số seed, giảm dần (Hình~\ref{fig:rl}); checkpoint tốt nhất thường xuất hiện sớm. Đây là hiện tượng thường gặp khi tinh chỉnh bằng
     gradient chính sách với phần thưởng thưa sau giai đoạn bắt chước.
     \item \emph{Định hình theo cost-to-go} tăng tỉ lệ tới đích (\RlShapeSuccess\% so với \RlSuccess\%) nhưng regret trên các
     chuyến tới đích không giảm (\RlShapeRegret\%): định hình chỉ hướng tác tử về đích mà không dạy nó tránh đoạn chậm.
@@ -283,13 +292,15 @@ lam thủ công đạt \GrSuccess\%.
     đi lòng vòng.
     \item \emph{Thí nghiệm đối chứng có thông tin toàn cục} (cost-to-go trong quan sát) tới đích \RlcSuccess\% với regret
     \RlcRegret\%, nhưng tuyến của nó trùng hệt tuyến A* thời gian tự do ở \RouteSameRlcFf\% số truy vấn và thời gian không khác
-    biệt so với A* tự do (Bảng~\ref{tab:tab_stat_tests}): chính sách chủ yếu bám theo gradient của cost-to-go tĩnh.
+    biệt đáng kể so với A* tự do về trung bình (hiệu \DiffRlCtgFreeflow{} phút, khoảng tin cậy \CiRlCtgFreeflow;
+    Bảng~\ref{tab:tab_stat_tests}): chính sách chủ yếu bám theo gradient của cost-to-go tĩnh.
     \item \emph{RL lai đạt 100\% tới đích với regret \RlHybRegret\%} nhưng không vượt được replan thuần (\RpRegret\%): hiệu
     \DiffRlHybridReplan{} phút mỗi chuyến, khoảng tin cậy \CiRlHybridReplan, Wilcoxon $p$ \PRlHybridReplan. Tác tử học được
     $\bar\beta=\HybMeanBeta$, gần với $\beta=1$ của replan, và tuyến trùng replan ở \RouteSameRlHybRp\% số truy vấn. Giá trị của RL
     ở đây là \emph{giữ được} bảo đảm tới đích và chất lượng của tìm kiếm, chứ chưa tạo thêm lợi ích.
 \end{itemize}
-Mọi biến thể RL chọn từng cạnh vẫn kém plan-once rất xa: biến thể tốt nhất (cây-GNN + BC) chậm hơn plan-once
+Mọi biến thể RL chọn từng cạnh \emph{không dùng thông tin toàn cục} vẫn kém plan-once rất xa: biến thể tốt nhất trong nhóm
+này (cây-GNN + BC) chậm hơn plan-once
 \DiffRlTreeBcPlanOnce{} phút mỗi chuyến trên các truy vấn nó tới đích (\CiRlTreeBcPlanOnce) và chỉ tốt hơn ở
 \BetterRlTreeBcPlanOnce\% số truy vấn. Kết quả xác nhận giả thuyết H3.
 
@@ -308,7 +319,7 @@ Mọi biến thể RL chọn từng cạnh vẫn kém plan-once rất xa: biến
 Bảng~\ref{tab:tab_departure} và Hình~\ref{fig:dep} trình bày kết quả. Khi tính đủ thời gian chờ ($w=1$), chờ không bao giờ
 có lợi trên tập kiểm tra (lời giải vét cạn chọn chờ ở \DepOptWOneWait\% số truy vấn) và Q-learning học đúng chính sách ``đi
 ngay''. Khi chờ rẻ hơn ($w=\DepLowW$), lời giải vét cạn chọn chờ ở \DepOptWLowWait\% số truy vấn và giảm chi phí trung bình
-từ \DepGoWLowCost{} xuống \DepOptWLowCost{} phút --- có truy vấn tiết kiệm tới \DepMaxSaving{} phút nhờ tránh cao điểm --- nhưng
+từ \DepGoWLowCost{} xuống \DepOptWLowCost{} phút --- có truy vấn giảm được tới \DepMaxSaving{} phút thời gian di chuyển (chưa tính thời gian chờ) nhờ tránh cao điểm --- nhưng
 Q-learning dạng bảng \emph{không} nhận diện được các truy vấn đó: chi phí \DepQWLowCost{} phút, regret \DepQWLowRegret{} phút
 so với \DepGoWLowRegret{} phút của ``đi ngay''. Trong lần chạy đầu, việc khởi tạo $Q=0$ (lạc quan vì mọi phần thưởng đều âm)
 khiến tác tử chờ quá nhiều ở các trạng thái hiếm gặp; quy tắc chỉ tin $Q$ ở ô đã cập nhật đủ \DepMinVisits{} lần

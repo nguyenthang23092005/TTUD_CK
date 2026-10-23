@@ -30,11 +30,16 @@ giới đã lưu từ lần chạy trước, và cuối cùng là một hình ch
 ra/vào quận.
 
 \textbf{Tải và làm sạch.} Mạng đường dành cho ô tô được tải qua OSMnx~\cite{boeing2017}; chương trình thử lần lượt ba máy
-chủ Overpass (trong lần chạy chính thức, máy chủ chính không phản hồi và máy chủ dự phòng thứ ba đã đáp ứng), rồi lưu
+chủ Overpass (nếu máy chủ trước lỗi hoặc quá hạn thì chuyển sang máy chủ kế tiếp), rồi lưu
 bản sao cục bộ để các lần sau chạy không cần mạng. Đồ thị thô có \RawNodes{} nút và \RawEdges{} cạnh. Quá trình làm sạch
 gồm: bỏ \SelfLoops{} cạnh tự vòng; gộp \ParallelEdges{} cạnh song song (giữ cạnh ngắn nhất); giữ thành phần liên thông
 mạnh lớn nhất (bỏ \DroppedNodes{} nút không đi tới/đi về được). Kết quả: \NNodes{} nút, \NEdges{} cạnh, tổng chiều dài
 \TotalKm{} km, chiều dài cạnh trung bình \MeanEdgeLen{} m, bậc ra lớn nhất \MaxOutDeg{} và trung bình \MeanOutDeg.
+Việc gộp cạnh song song theo chiều dài là một phép xấp xỉ vì cạnh ngắn hơn chưa chắc nhanh hơn ở mọi thời điểm. Chúng tôi đã đối
+chiếu \ParallelEdges{} cặp bị gộp: ở 50 cặp, cạnh được giữ vừa ngắn hơn vừa cùng nhóm đường với vận tốc tự do không thấp hơn nên
+trội hơn về thời gian trong mô hình; ở 2 cặp còn lại cạnh được giữ ngắn hơn và thuộc nhóm đường cao hơn (vận tốc tự do cao
+hơn). Do đó trong mô hình vận tốc của đề tài, phép gộp hầu như không loại mất tuyến nhanh hơn, ngoại trừ ảnh hưởng của nhiễu
+riêng từng cạnh và hệ số điểm nóng; ảnh hưởng này chưa được đánh giá riêng và là một hạn chế.
 
 \textbf{Chuẩn hoá thuộc tính.} Thẻ \texttt{highway} được gom về năm nhóm: \emph{trunk} (gồm cả motorway), \emph{primary},
 \emph{secondary}, \emph{tertiary} và \emph{residential} (gồm các loại còn lại). Chỉ \MaxspeedCoverage\% số cạnh có thẻ
@@ -103,7 +108,8 @@ trong đó $\vec{c}$ là toạ độ Ngã Tư Sở (tâm tham chiếu), $\vec{m}
 là các Gaussian tuần hoàn quanh 8h và 18h, $\beta=0{,}3$.
 
 \textbf{Nhiễu không gian $\xi(e,h)$} được tạo bằng cách làm mượt nhiễu Gaussian $k$ lần qua ma trận kề cạnh--cạnh chuẩn
-hoá theo hàng $\hat{A}$ (hai cạnh kề nếu chung đầu mút), sau đó chuẩn hoá về độ lệch chuẩn $\sigma_\xi$:
+hoá theo hàng $\hat{A}$ (hai cạnh kề nếu chung đầu mút), làm mượt thêm theo giờ bằng nhân $(0{,}25;\,0{,}5;\,0{,}25)$ vòng
+24 giờ, sau đó chuẩn hoá về độ lệch chuẩn $\sigma_\xi$:
 \begin{equation}
 \Xi^{(k)} = \hat{A}^{\,k}\,\Xi^{(0)}, \qquad \Xi^{(0)}_{e,h}\sim\mathcal{N}(0,1),
 \label{eq:smooth}
@@ -117,7 +123,8 @@ v_e(t) = (1-\phi)\,v(e,h) + \phi\, v\bigl(e,(h+1)\bmod 24\bigr).
 \label{eq:interp}
 \end{equation}
 
-\textbf{Bảo đảm FIFO cho vận tốc nền.} Trong một khung giờ, nếu vận tốc tăng tuyến tính từ $v_\ell$ lên $v_u$ thì
+\textbf{Bảo đảm FIFO cho vận tốc nền.} Trong một khung giờ (60 phút), nếu vận tốc (tính bằng m/phút) tăng tuyến tính từ
+$v_\ell$ lên $v_u$ thì
 $\tau_e(t)=L_e/v_e(t)$ giảm với tốc độ lớn nhất tại đầu mút có vận tốc thấp:
 \begin{equation}
 \max_t\left(-\frac{d\tau_e}{dt}\right) = \frac{L_e\,(v_u-v_\ell)}{60\,v_\ell^{2}}.
@@ -236,6 +243,15 @@ h_{\text{ALT}}(v) = \max_{\ell\in\mathcal{L}} \max\Bigl(d(v,\ell)-d(d,\ell),\; d
 
 \emph{Biên dịch JIT.} Cùng thuật toán TD-A* được viết lại cho Numba~\cite{lam2015numba}, chạy trực tiếp trên mảng CSR và
 ma trận vận tốc, cho kết quả và số nút mở rộng trùng khớp với bản Python (đã kiểm chứng bằng kiểm thử đơn vị).
+\textbf{Phạm vi hiệu lực của cận vận tốc.} Các heuristic chỉ chấp nhận được khi $v_{\max}$ (và $\tau_{\min}$) là cận của
+\emph{chính mô hình thời gian mà lần tìm kiếm đang dùng}. Nhiễu nhân $e^{\sigma Z}$ có thể đưa vận tốc của $V_{\text{real}}$
+vượt $V_{\text{base}}$; thủ tục $\mathcal F$ chỉ nâng vận tốc thấp lên không quá vận tốc đầu mút cao hơn nên không làm tăng cực đại,
+còn sự cố chỉ làm chậm. Vì vậy: (i) tìm kiếm trên dự báo (plan-once và mọi heuristic LB, ALT) dùng cận của $V_{\text{base}}$;
+(ii) oracle dùng $v_{\max}$ tính lại trên chính $V_{\text{real}}$ của từng truy vấn, và không dùng LB hay ALT; (iii) replan, D* Lite,
+RL lai và replan + GCN lập kế hoạch trên $\tau^{\text{obs}}$ hoặc vận tốc dự báo $V_{\text{base}}e^{\hat r}$ vốn có thể nhanh hơn
+$V_{\text{base}}$, nên chi phí cạnh bị chặn dưới bởi $L_e/v_{\max}$ của dự báo như ở \eqref{eq:tau-obs}. Cận chặn này là điều kiện
+để Mệnh đề~\ref{md:heur} áp dụng; nếu không có nó thì phải dùng $h=0$ (TD-Dijkstra).
+
 Contraction Hierarchies không được cài đặt: ở quy mô vài nghìn nút, TD-A* biên dịch đã chạy dưới một mili-giây mỗi truy
 vấn; CH chỉ thật sự cần thiết khi mở rộng ra toàn thành phố.
 
@@ -484,7 +500,8 @@ $\tau_e(t)\ge\tau_{\min}(e)\ge L_e/v_{\max}\ge \text{dist}(u,v)/v_{\max}$. Với
 $\text{dist}(u,d)\le\text{dist}(u,v)+\text{dist}(v,d)$. Với $h_{\text{LB}}$: theo định nghĩa khoảng cách ngắn nhất,
 $d_{\tau_{\min}}(u,d)\le\tau_{\min}(e)+d_{\tau_{\min}}(v,d)$. Với $h_{\text{ALT}}$: mỗi số hạng trong \eqref{eq:h-alt} là cận dưới
 nhất quán theo bất đẳng thức tam giác trên đồ thị $\tau_{\min}$~\cite{goldberg2005alt}, và cực đại của các heuristic nhất
-quán vẫn nhất quán. Hệ số an toàn nhỏ hơn 1 chỉ làm $h$ nhỏ đi. Cuối cùng, với $h$ nhất quán, hàng đợi theo khoá
+quán vẫn nhất quán. Hệ số an toàn nhỏ hơn 1 chỉ làm $h$ nhỏ đi. Các bất đẳng thức trên được hiểu theo mô hình thời gian mà
+lần tìm kiếm đang dùng (xem ``Phạm vi hiệu lực của cận vận tốc''). Cuối cùng, với $h$ nhất quán, hàng đợi theo khoá
 \eqref{eq:astar-key} tương đương TD-Dijkstra trên trọng số rút gọn không âm, nên Định lý~\ref{dl:tdd} áp dụng được.
 \end{cm}
 
@@ -509,14 +526,19 @@ của một dãy không giảm vẫn là hàm không giảm.
 \end{cm}
 
 \begin{md}\label{md:shaping}
-Định hình \eqref{eq:shaping} là định hình theo thế năng nên (với hệ số chiết khấu xấp xỉ 1) không làm thay đổi tập chính
-sách tối ưu~\cite{ng1999}; tổng định hình trên mọi quỹ đạo từ $s$ tới đích bằng $\lambda\,\text{ctg}_{\text{tự do}}(s)$, không
-phụ thuộc đường đi.
+Định hình \eqref{eq:shaping} có dạng thế năng. Với tổng thưởng không chiết khấu ($\gamma=1$) nó không làm thay đổi tập chính
+sách tối ưu~\cite{ng1999} và tổng định hình trên mọi quỹ đạo từ $s$ tới đích bằng $\lambda\,\text{ctg}_{\text{tự do}}(s)$,
+không phụ thuộc đường đi. Với $\gamma=0{,}995$ như cấu hình PPO, bất biến này chỉ \emph{xấp xỉ}; dạng bảo toàn chính xác là
+$F(u,u')=\gamma\Phi(u')-\Phi(u)$.
 \end{md}
 \begin{cm}
 Tổng $\sum_k \bigl(\Phi(u_{k+1})-\Phi(u_k)\bigr)$ là tổng lồng nhau, bằng $\Phi(d)-\Phi(s)=\text{ctg}(s)$ vì $\text{ctg}(d)=0$.
-Hằng số này chỉ phụ thuộc trạng thái đầu nên không làm thay đổi thứ tự giữa các chính sách. Tính chất này được kiểm
-chứng bằng kiểm thử đơn vị.
+Hằng số này chỉ phụ thuộc trạng thái đầu nên không làm thay đổi thứ tự giữa các chính sách. Với chiết khấu $\gamma<1$ và
+$F$ không nhân $\gamma$, tổng định hình chiết khấu của quỹ đạo $u_0,\dots,u_T=d$ bằng
+$\text{ctg}(u_0)-(1-\gamma)\sum_{j=1}^{T-1}\gamma^{\,j-1}\text{ctg}(u_j)$; số hạng sau phụ thuộc đường đi, khác 0 nhưng nhỏ vì
+$1-\gamma=0{,}005$, và nghiêng về các quỹ đạo đi qua nút gần đích hơn. Vì vậy cài đặt hiện tại không bảo đảm chính xác việc
+giữ nguyên chính sách tối ưu; cách sửa là dùng $F=\gamma\Phi(u')-\Phi(u)$ và huấn luyện lại. Kiểm thử đơn vị chỉ kiểm chứng
+đẳng thức không chiết khấu.
 \end{cm}
 
 \textbf{Độ phức tạp.} Với hàng đợi nhị phân và việc tính $\tau_e(t)$ mất $O(1)$, độ phức tạp của các thành phần chính được

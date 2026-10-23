@@ -26,7 +26,7 @@ headsep=15pt
 \usepackage[unicode,colorlinks=true, bookmarks=true, pdfstartview=FitH,]{hyperref} %pagebackref=true,
 \hypersetup{
 pdftitle={Báo cáo Thuật toán ứng dụng},
-pdfauthor={Nguyễn Văn Thăng,Phạm Văn Sự, Đặng Anh Tuyền },
+pdfauthor={Nguyễn Văn Thăng, Nguyễn Thị Nhung, Nguyễn Thị Khánh Linh},
 colorlinks = true,
 linkcolor = blue,
 citecolor = blue,
@@ -178,8 +178,21 @@ citecolor = blue,
   {\includegraphics[width=0.5\textwidth]{image/phenikaa_image.png}}%
   {\framebox[0.5\textwidth][c]{\rule{0pt}{3.5cm}\normalsize (logo: image/phenikaa\_image.png)}}}
 
+% Cỡ chữ tiêu đề: mục lớn 15, mục nhỏ (subsection, subsubsection) 14
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}{2.3ex \@plus.2ex}%
+  {\normalfont\fontsize{15pt}{20pt}\selectfont\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
+  {\normalfont\fontsize{14pt}{19pt}\selectfont\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
+  {\normalfont\fontsize{14pt}{19pt}\selectfont\bfseries}}
+\makeatother
+
 \begin{document}
- \fontsize{14pt}{20pt}\selectfont % Lệnh thay đổi cỡ chữ thành cỡ 14, cỡ dòng 20 (theo quy chuẩn của Khóa Luận TN).
+ \fontsize{14pt}{20pt}\selectfont % Cỡ chữ trang bìa (giữ nguyên)
 
  \thisfancypage{\setlength{\fboxsep}{0.2cm}\setlength{\fboxrule}{1pt}\doublebox}{}
  \begin{titlepage}
@@ -199,7 +212,7 @@ citecolor = blue,
 \end{center}
 \vspace{0.3 cm}
 \begin{center}
-	\bf\large TÌM ĐƯỜNG TỐI ƯU TRONG MẠNG GIAO THÔNG ĐỘNG QUẬN HÀ ĐÔNG VỚI 24 KHUNG GIỜ: SO SÁNH THUẬT TOÁN CỔ ĐIỂN VÀ HỌC TĂNG CƯỜNG
+	\bf\large TÌM ĐƯỜNG TỐI ƯU TRONG MẠNG GIAO THÔNG ĐỘNG QUẬN HÀ ĐÔNG VỚI 24 KHUNG GIỜ
 \end{center}
 \vskip 1 cm
 \begin{table}[h]
@@ -256,7 +269,7 @@ Nguyễn Thị Khánh Linh &
     \bf\Large {BÁO CÁO THUẬT TOÁN ỨNG DỤNG}
 \end{center}
 \begin{center}
-	\bf\large{TÌM ĐƯỜNG TỐI ƯU TRONG MẠNG GIAO THÔNG ĐỘNG QUẬN HÀ ĐÔNG VỚI 24 KHUNG GIỜ: SO SÁNH THUẬT TOÁN CỔ ĐIỂN VÀ HỌC TĂNG CƯỜNG}
+	\bf\large{TÌM ĐƯỜNG TỐI ƯU TRONG MẠNG GIAO THÔNG ĐỘNG QUẬN HÀ ĐÔNG VỚI 24 KHUNG GIỜ}
 \end{center}
 \begin{table}[h]
 \centering
@@ -271,18 +284,18 @@ Nguyễn Thị Khánh Linh &
 \hline
 Nguyễn Văn Thăng &
 23010572 &
-Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
+Tìm hiểu tài liệu; Xây dựng đồ thị và mô hình vận tốc; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
 33\%
 \\
 \hline
 Nguyễn Thị Nhung &
-23010607 & Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
+23010607 & Tìm hiểu tài liệu; Xây dựng đồ thị và mô hình vận tốc; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
 33\%
 \\
 \hline
 Nguyễn Thị Khánh Linh &
 23016112 &
-Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
+Tìm hiểu tài liệu; Xây dựng đồ thị và mô hình vận tốc; Cài đặt thuật toán; Huấn luyện RL; Đánh giá; Viết báo cáo &
 33\%
 \\
 \hline
@@ -296,6 +309,7 @@ Tìm hiểu tài liệu; Xây dựng đồ thị; Cài đặt thuật toán; Hu�
 \end{center}
  \end{titlepage}
  \clearpage
+ \fontsize{13pt}{19pt}\selectfont % Cỡ chữ nội dung: 13
 \pagestyle{fancy}
 	%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%

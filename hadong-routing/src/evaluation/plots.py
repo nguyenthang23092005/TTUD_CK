@@ -158,7 +158,7 @@ def config_table(c: Ctx) -> None:
     lines += [r"\bottomrule", r"\end{tabularx}", r"\end{table}"]
     (c.tab / "tab_config.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
     c.macros.update(Seed=cfg["project"]["seed"], ReplanRadius=cfg["algorithms"]["replan"]["observation_radius_m"],
-                    LazyTheta=cfg["algorithms"]["replan"]["lazy_threshold"], DstarRefresh=cfg["algorithms"]["dstar"]["refresh_min"],
+                    LazyTheta=f"{cfg['algorithms']['replan']['lazy_threshold']:g}", DstarRefresh=cfg["algorithms"]["dstar"]["refresh_min"],
                     NLandmarks=cfg["algorithms"]["alt"]["n_landmarks"], RiskM=cfg["algorithms"]["risk"]["n_samples"],
                     RiskK=cfg["algorithms"]["risk"]["k_candidates"], SensorFrac=f"{100 * cfg['forecast']['sensor_fraction']:.0f}",
                     GcnRecompute=cfg["forecast"]["recompute_min"], WaitStep=cfg["departure"]["wait_step_min"],
